@@ -4,7 +4,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { QuantumField } from "@/components/3d/QuantumField";
 import { Marquee } from "@/components/ui/Marquee";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { StatusIndicator } from "@/components/ui/StatusIndicator";
 import { useScrollReveal } from "@/lib/animations";
 import Link from "next/link";
@@ -16,7 +15,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col pt-20">
-      <CustomCursor />
       <Marquee />
       <Navbar />
       {/* Hero Section */}
