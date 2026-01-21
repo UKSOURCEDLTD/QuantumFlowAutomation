@@ -30,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceMono.variable} antialiased bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black`}
       >
-        <div className="shadow-frame"></div>
         <div className="micro-grid"></div>
         <div className="glass-prism"></div>
         {children}
