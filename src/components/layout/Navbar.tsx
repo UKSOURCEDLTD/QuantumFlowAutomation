@@ -8,9 +8,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-    { name: "Services", href: "/services", id: "NAV_01" },
-    { name: "Intelligence", href: "/intelligence", id: "NAV_02" },
-    { name: "Network", href: "/network", id: "NAV_03" },
+    { name: "Our Story", href: "/story", id: "NAV_01" },
+    { name: "Services", href: "/services", id: "NAV_02" },
+    { name: "AI Readiness", href: "/ai-readiness", id: "NAV_03" },
+    { name: "Blog", href: "/blog", id: "NAV_04" },
+    { name: "Contact", href: "/contact", id: "NAV_05" },
 ];
 
 export function Navbar() {
