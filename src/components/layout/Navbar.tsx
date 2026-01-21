@@ -21,7 +21,7 @@ export function Navbar() {
 
     return (
         <header className="fixed top-0 w-full z-50 segmented-border backdrop-blur-md bg-black/50 scanlines">
-            <div className="container mx-auto px-6 h-20 flex items-center justify-between relative corner-brackets">
+            <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
                 <Link href="/" className="flex items-center gap-2 group relative z-10">
                     <div className="w-3 h-3 bg-primary status-pulse" />
                     <span className="font-bold tracking-wider text-xl text-mono">QUANTUM FLOW</span>
