@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Space_Mono } from "next/font/google";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceMono.variable} antialiased bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black`}
       >
-        <CustomCursor />
         <div className="shadow-frame"></div>
         <div className="micro-grid"></div>
         <div className="glass-prism"></div>
