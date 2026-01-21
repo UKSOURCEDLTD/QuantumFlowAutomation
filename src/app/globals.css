@@ -293,38 +293,7 @@ body::after {
   font-family: var(--font-mono);
 }
 
-/* Glitch Effect for Nav */
-@keyframes glitch-clip {
-  0% {
-    clip-path: inset(0 0 0 0);
-  }
-
-  20% {
-    clip-path: inset(0 0 98% 0);
-    transform: translate(-2px, -2px);
-  }
-
-  40% {
-    clip-path: inset(0 0 0 0);
-  }
-
-  60% {
-    clip-path: inset(98% 0 0 0);
-    transform: translate(2px, 2px);
-  }
-
-  80% {
-    clip-path: inset(0 0 0 0);
-  }
-
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-.nav-link:hover {
-  animation: glitch-clip 0.3s ease-in-out;
-}
+/* Removed glitch animation - was causing flicker */
 
 /* Scanline Overlay for Nav */
 .scanlines {

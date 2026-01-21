@@ -28,18 +28,16 @@ export function Navbar() {
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8 relative z-10">
                     {navItems.map((item) => (
-                        <div key={item.href} className="relative">
-                            <span className="nav-link-id">[{item.id}]</span>
-                            <Link
-                                href={item.href}
-                                className={cn(
-                                    "nav-link text-sm",
-                                    pathname === item.href ? "text-primary" : "text-gray-400"
-                                )}
-                            >
-                                {item.name}
-                            </Link>
-                        </div>
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={cn(
+                                "nav-link text-base",
+                                pathname === item.href ? "text-primary" : "text-gray-400"
+                            )}
+                        >
+                            {item.name}
+                        </Link>
                     ))}
                     <Link
                         href="/network"
@@ -66,16 +64,14 @@ export function Navbar() {
                     className="md:hidden absolute top-20 left-0 w-full bg-black/95 backdrop-blur-md border-b border-white/10 p-6 flex flex-col gap-4 scanlines"
                 >
                     {navItems.map((item) => (
-                        <div key={item.href} className="relative">
-                            <span className="nav-link-id">[{item.id}]</span>
-                            <Link
-                                href={item.href}
-                                className="nav-link text-lg text-gray-400 hover:text-primary block mt-2"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {item.name}
-                            </Link>
-                        </div>
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className="nav-link text-lg text-gray-400 hover:text-primary"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {item.name}
+                        </Link>
                     ))}
                     <Link
                         href="/network"
