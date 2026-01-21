@@ -8,11 +8,12 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Navbar />
-      <QuantumField />
-
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-40 relative">
-        <div className="max-w-4xl">
+      <section className="container mx-auto px-6 pt-32 pb-40 relative overflow-hidden">
+        {/* 3D Background confined to Hero */}
+        <QuantumField />
+
+        <div className="max-w-4xl relative z-10">
           <div className="flex items-center gap-4 mb-8">
             <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Status: Cutting Edge</span>
             <div className="w-12 h-[1px] bg-primary"></div>
@@ -40,7 +41,7 @@ export default function Home() {
         </div>
 
         {/* Feature Grid Placeholders */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-32">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-32 relative z-10">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="relative aspect-video bg-white/5 border border-white/10 flex items-center justify-center group overflow-hidden">
               <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
