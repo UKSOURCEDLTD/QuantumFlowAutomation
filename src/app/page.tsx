@@ -48,28 +48,55 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Feature Grid Placeholders */}
+
+        {/* Info Cards Section */}
         <div
           ref={featureGridReveal.ref}
-          className={`grid grid-cols-2 md:grid-cols-4 gap-4 mt-32 relative z-10 transition-all duration-1000 ${featureGridReveal.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-32 relative z-10 transition-all duration-1000 ${featureGridReveal.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="relative aspect-video bg-white/5 border border-white/10 flex items-center justify-center group overflow-hidden hover:border-primary/50 transition-all hover:neon-glow-primary">
-              <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
-              {/* Scanline effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity z-20 pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 160, 0.1) 2px, rgba(0, 229, 160, 0.1) 4px)' }}></div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`/images/vis${i}.png`}
-                alt="Quantum Data Vis"
-                className="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
-              />
-              <div className="absolute bottom-2 left-2 flex items-center gap-1 z-20">
-                <div className="w-1 h-1 bg-primary animate-[blink-led_1.5s_ease-in-out_infinite]"></div>
-                <span className="text-[10px] uppercase text-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity">SYS_0{i}</span>
-              </div>
+          {/* Card 1: AI Systems */}
+          <div className="glass-card p-8 group hover:border-primary/50 transition-all hover:neon-glow-primary relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors"></div>
+            <div className="relative z-10">
+              <Cpu className="w-8 h-8 text-primary mb-4" />
+              <div className="text-6xl font-bold text-primary mb-2 text-mono">24+</div>
+              <h3 className="text-lg font-bold mb-2">AI Systems Deployed</h3>
+              <p className="text-gray-400 text-sm">Custom automation solutions running in production</p>
             </div>
-          ))}
+          </div>
+
+          {/* Card 2: Response Time */}
+          <div className="glass-card p-8 group hover:border-secondary/50 transition-all hover:neon-glow-secondary relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl group-hover:bg-secondary/20 transition-colors"></div>
+            <div className="relative z-10">
+              <Zap className="w-8 h-8 text-secondary mb-4" />
+              <div className="text-6xl font-bold text-secondary mb-2 text-mono">&lt;2s</div>
+              <h3 className="text-lg font-bold mb-2">Avg Response Time</h3>
+              <p className="text-gray-400 text-sm">Lightning-fast AI processing across all systems</p>
+            </div>
+          </div>
+
+          {/* Card 3: Uptime */}
+          <div className="glass-card p-8 group hover:border-accent/50 transition-all hover:shadow-[0_0_20px_rgba(255,0,255,0.3)] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl group-hover:bg-accent/20 transition-colors"></div>
+            <div className="relative z-10">
+              <Shield className="w-8 h-8 text-accent mb-4" />
+              <div className="text-6xl font-bold text-accent mb-2 text-mono">99.9%</div>
+              <h3 className="text-lg font-bold mb-2">System Uptime</h3>
+              <p className="text-gray-400 text-sm">Enterprise-grade reliability you can count on</p>
+            </div>
+          </div>
+
+          {/* Card 4: Global Reach */}
+          <div className="glass-card p-8 group hover:border-primary/50 transition-all hover:neon-glow-primary relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors"></div>
+            <div className="relative z-10">
+              <Globe className="w-8 h-8 text-primary mb-4" />
+              <div className="text-6xl font-bold text-primary mb-2 text-mono">24/7</div>
+              <h3 className="text-lg font-bold mb-2">Active Automations</h3>
+              <p className="text-gray-400 text-sm">Your business runs while you sleep</p>
+            </div>
+          </div>
         </div>
       </section>
 
