@@ -254,6 +254,97 @@ body::after {
   z-index: -1;
 }
 
+/* Shadow Frame - Application Border */
+.shadow-frame {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(0, 229, 160, 0.2);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.shadow-frame::before,
+.shadow-frame::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--primary);
+}
+
+.shadow-frame::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+  box-shadow: 0 0 10px rgba(0, 229, 160, 0.3);
+}
+
+.shadow-frame::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+  box-shadow: 0 0 10px rgba(0, 229, 160, 0.3);
+}
+
+/* Micro-Grid Overlay */
+.micro-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle, rgba(0, 229, 160, 0.04) 1px, transparent 1px);
+  background-size: 8px 8px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* Glass Prism Effect */
+.glass-prism {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background:
+    linear-gradient(135deg,
+      rgba(0, 229, 160, 0.1) 0%,
+      rgba(0, 184, 255, 0.08) 50%,
+      rgba(255, 0, 255, 0.06) 100%);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: prism-float 20s ease-in-out infinite;
+}
+
+@keyframes prism-float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-50px, 50px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(-100px, 0) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-50px, -50px) rotate(270deg);
+  }
+}
+
 /* Nav Link HUD Effects */
 .nav-link {
   position: relative;
