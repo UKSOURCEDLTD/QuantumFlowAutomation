@@ -96,18 +96,42 @@ export function useVoiceAgent(): VoiceAgent {
         synthesisRef.current.speak(utterance);
     }, []);
 
-    const handleUserQuery = useCallback((text: string) => {
+    const handleUserQuery = useCallback(async (text: string) => {
         setState('thinking');
         addMessage(text, true);
 
-        // SIMULATED AI LATENCY & RESPONSE
-        // In a real app, this would call Vapi / OpenAI
-        setTimeout(() => {
-            const response = generateMockResponse(text);
-            addMessage(response, false);
-            speak(response);
-        }, 1200);
-    }, [speak]);
+        try {
+            // Transform local message history to Gemini format (user/model)
+            const history = messages.map(m => ({
+                role: m.isUser ? "user" : "model",
+                parts: [{ text: m.text }]
+            }));
+
+            const res = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: text,
+                    history: history
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) throw new Error(data.error || "Failed to fetch");
+
+            const responseText = data.response;
+
+            addMessage(responseText, false);
+            speak(responseText);
+
+        } catch (error) {
+            console.error("Agent Error:", error);
+            const errorMsg = "Connectivity Error. Please check your neural link configuration (API Key).";
+            addMessage(errorMsg, false);
+            speak(errorMsg);
+        }
+    }, [speak, messages]);
 
     const startSession = useCallback(() => {
         if (recognitionRef.current && state === 'idle') {
