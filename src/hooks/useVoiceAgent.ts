@@ -2,20 +2,44 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 
 type AgentState = 'idle' | 'listening' | 'thinking' | 'speaking';
 
+export interface RequestData {
+    text: string;
+    isUser: boolean;
+    timestamp: number;
+}
+
 interface VoiceAgent {
     state: AgentState;
     transcript: string;
+    messages: RequestData[];
     startSession: () => void;
     endSession: () => void;
+    processQuery: (text: string) => void;
 }
 
 export function useVoiceAgent(): VoiceAgent {
     const [state, setState] = useState<AgentState>('idle');
     const [transcript, setTranscript] = useState('');
+    const [messages, setMessages] = useState<RequestData[]>([]);
 
     // Refs for speech capabilities
     const recognitionRef = useRef<any>(null);
     const synthesisRef = useRef<SpeechSynthesis | null>(null);
+
+    // Initial greeting
+    useEffect(() => {
+        if (messages.length === 0) {
+            setMessages([{
+                text: "Greetings. I am the Quantum Flow interface. How can I assist you?",
+                isUser: false,
+                timestamp: Date.now()
+            }]);
+        }
+    }, []);
+
+    const addMessage = (text: string, isUser: boolean) => {
+        setMessages(prev => [...prev, { text, isUser, timestamp: Date.now() }]);
+    };
 
     useEffect(() => {
         // Initialize Web Speech API
@@ -74,11 +98,13 @@ export function useVoiceAgent(): VoiceAgent {
 
     const handleUserQuery = useCallback((text: string) => {
         setState('thinking');
+        addMessage(text, true);
 
         // SIMULATED AI LATENCY & RESPONSE
         // In a real app, this would call Vapi / OpenAI
         setTimeout(() => {
             const response = generateMockResponse(text);
+            addMessage(response, false);
             speak(response);
         }, 1200);
     }, [speak]);
@@ -103,8 +129,10 @@ export function useVoiceAgent(): VoiceAgent {
     return {
         state,
         transcript,
+        messages,
         startSession,
-        endSession
+        endSession,
+        processQuery: handleUserQuery
     };
 }
 
