@@ -43,7 +43,7 @@ export default function PrivacyPage() {
 
                         <h3>4. Data Security</h3>
                         <p>
-                            We employ enterprise-grade security measures, including encryption and strict access controls, to protect your data. However, no digital transmission is completely secure.
+                            We employ enterprise-grade security measures, including encryption and strict access controls, to protect your data. However, no data transmission is completely secure.
                         </p>
 
                         <h3>5. Your Rights</h3>

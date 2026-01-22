@@ -33,9 +33,9 @@ export default function NetworkPage() {
             <main className="container mx-auto px-6 py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
                     <div>
-                        <h1 className="text-6xl font-bold mb-4">SECURE CHANNEL</h1>
+                        <h1 className="text-6xl font-bold mb-4">Let's Connect</h1>
                         <p className="text-gray-400 text-xl mb-12">
-                            Ready to upgrade your infrastructure? Initiate a handshake protocol.
+                            Ready to upgrade your infrastructure? Start the conversation.
                         </p>
 
                         <div className="space-y-8">
@@ -44,7 +44,7 @@ export default function NetworkPage() {
                                     <Terminal className="w-5 h-5 text-primary" />
                                 </div>
                                 <div>
-                                    <div className="text-xs text-gray-500 uppercase tracking-widest">Direct Line</div>
+                                    <div className="text-xs text-gray-500 uppercase tracking-widest">Contact Info</div>
                                     <div className="font-mono text-lg">enquiries@qfa.ai</div>
                                 </div>
                             </div>
@@ -62,60 +62,60 @@ export default function NetworkPage() {
                     <div className="bg-black/40 backdrop-blur-md p-10 border border-white/10">
                         <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
                             <div className="w-2 h-2 bg-primary animate-pulse" />
-                            TRANSMISSION FORM
+                            Send a Message
                         </h2>
 
                         {status === "sent" ? (
                             <div className="text-center py-20 text-green-500">
                                 <Send className="w-16 h-16 mx-auto mb-4" />
-                                <h3 className="text-2xl font-bold">TRANSMISSION RECEIVED</h3>
-                                <p className="mt-2 text-gray-400">Our agents will analyze your request.</p>
+                                <h3 className="text-2xl font-bold">Message Sent</h3>
+                                <p className="mt-2 text-gray-400">We will review your message shortly.</p>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Identify Self</label>
+                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Name</label>
                                     <input
                                         type="text"
                                         required
                                         className="w-full bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-primary transition-colors font-mono"
-                                        placeholder="NAME / DESIGNATION"
+                                        placeholder="Your Name"
                                         value={formState.name}
                                         onChange={e => setFormState({ ...formState, name: e.target.value })}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Organization</label>
+                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Company</label>
                                     <input
                                         type="text"
                                         required
                                         className="w-full bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-primary transition-colors font-mono"
-                                        placeholder="CORP / ENTITY"
+                                        placeholder="Company Name"
                                         value={formState.org}
                                         onChange={e => setFormState({ ...formState, org: e.target.value })}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Comms Array</label>
+                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Email</label>
                                     <input
                                         type="email"
                                         required
                                         className="w-full bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-primary transition-colors font-mono"
-                                        placeholder="EMAIL ADDRESS"
+                                        placeholder="your@email.com"
                                         value={formState.email}
                                         onChange={e => setFormState({ ...formState, email: e.target.value })}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Payload</label>
+                                    <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Message</label>
                                     <textarea
                                         rows={4}
                                         required
                                         className="w-full bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-primary transition-colors font-mono"
-                                        placeholder="OUTLINE YOUR OBJECTIVES..."
+                                        placeholder="Tell us about your project..."
                                         value={formState.message}
                                         onChange={e => setFormState({ ...formState, message: e.target.value })}
                                     />
@@ -126,7 +126,7 @@ export default function NetworkPage() {
                                     disabled={status === "sending"}
                                     className="w-full py-4 bg-primary text-black font-bold uppercase tracking-widest hover:bg-white transition-colors disabled:opacity-50"
                                 >
-                                    {status === "sending" ? "TRANSMITTING..." : "SEND TRANSMISSION"}
+                                    {status === "sending" ? "Sending..." : "Send Message"}
                                 </button>
                             </form>
                         )}

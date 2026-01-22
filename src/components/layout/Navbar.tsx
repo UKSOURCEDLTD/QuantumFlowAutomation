@@ -15,6 +15,8 @@ const navItems = [
     { name: "Contact", href: "/contact", id: "NAV_05" },
 ];
 
+import { BookingButton } from "@/components/ui/BookingButton";
+
 export function Navbar() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
@@ -41,12 +43,9 @@ export function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-                    <Link
-                        href="/network"
-                        className="px-6 py-2 bg-primary text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-all neon-glow-primary hover:btn-glow-pulse text-mono"
-                    >
+                    <BookingButton className="px-6 py-2 bg-primary text-black font-bold text-xs uppercase tracking-widest hover:bg-white transition-all neon-glow-primary hover:btn-glow-pulse text-mono cursor-pointer">
                         Book Call
-                    </Link>
+                    </BookingButton>
                 </nav>
 
                 {/* Mobile Menu Toggle */}
@@ -75,13 +74,12 @@ export function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-                    <Link
-                        href="/network"
-                        className="w-full text-center py-3 bg-primary text-black font-bold text-sm uppercase tracking-widest hover:btn-glow-pulse transition-all text-mono"
-                        onClick={() => setIsOpen(false)}
+                    <BookingButton
+                        onOpen={() => setIsOpen(false)}
+                        className="w-full text-center py-3 bg-primary text-black font-bold text-sm uppercase tracking-widest hover:btn-glow-pulse transition-all text-mono cursor-pointer"
                     >
                         Book Call
-                    </Link>
+                    </BookingButton>
                 </motion.div>
             )}
         </header>

@@ -8,11 +8,11 @@ import * as THREE from "three";
 function StructuralGridNetwork() {
     const groupRef = useRef<THREE.Group>(null!);
 
-    // Grid Config: 6x6x6 = 216 nodes (Less dense)
-    const gridSize = 6;
-    const spacing = 6.5; // Wider spacing
+    // Grid Config: 5x5x5 = 125 nodes (Optimized for memory)
+    const gridSize = 5;
+    const spacing = 8; // Increased spacing to cover similar volume with fewer points
     const count = gridSize * gridSize * gridSize;
-    const walkerCount = 10;
+    const walkerCount = 8; // Reduced concurrent walkers
 
     // Generate Grid Positions
     const { positions, gridMap } = useMemo(() => {
@@ -193,7 +193,11 @@ export function QuantumField() {
     return (
         // Changed to absolute to fit inside relative containers
         <div className="absolute inset-0 z-[-1] opacity-50 mix-blend-screen pointer-events-none fade-in-scale">
-            <Canvas camera={{ position: [0, 0, 45], fov: 50 }} gl={{ alpha: true, antialias: true }}>
+            <Canvas
+                camera={{ position: [0, 0, 45], fov: 50 }}
+                gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
+                dpr={[1, 1.5]} // Cap pixel ratio to optimize performance on high-DPI screens
+            >
                 <StructuralGridNetwork />
             </Canvas>
         </div>

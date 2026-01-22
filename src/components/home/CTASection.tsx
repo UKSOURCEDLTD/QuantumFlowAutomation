@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, ChevronRight, Hexagon, Zap } from 'lucide-react';
+import { BookingButton } from "@/components/ui/BookingButton";
 
 export function CTASection() {
     return (
@@ -41,16 +42,15 @@ export function CTASection() {
                             Deploy your own dedicated AI infrastructure today and secure your market position for the next decade.
                         </p>
 
-                        <Link
-                            href="/network"
-                            className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 hover:scale-105"
+                        <BookingButton
+                            className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 hover:scale-105 cursor-pointer"
                         >
                             <Zap className="w-5 h-5 group-hover:fill-black transition-all" />
                             <span>Start Deployment</span>
                             <div className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-2 transition-transform">
                                 <ChevronRight className="w-4 h-4" />
                             </div>
-                        </Link>
+                        </BookingButton>
 
                         {/* Footer decoration */}
                         <div className="mt-16 flex items-center gap-8 text-xs text-gray-600 font-mono uppercase tracking-widest hidden md:flex">

@@ -20,9 +20,9 @@ export default function IntelligencePage() {
             <QuantumField />
 
             <main className="container mx-auto px-6 py-20">
-                <h1 className="text-6xl font-bold mb-4">INTELLIGENCE FEED</h1>
+                <h1 className="text-6xl font-bold mb-4">Latest Insights</h1>
                 <p className="text-gray-400 text-xl max-w-2xl mb-20">
-                    Transmissions from the edge of automation.
+                    Insights and updates from the world of automation.
                     Analysis, forecasts, and technical breakdowns.
                 </p>
 
@@ -41,13 +41,13 @@ export default function IntelligencePage() {
                                 </div>
 
                                 <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity text-primary font-mono text-xs">
-                                    Read Transmission -&gt;
+                                    Read Article -&gt;
                                 </div>
                             </div>
                         </Link>
                     ))}
                     {articles.length === 0 && (
-                        <div className="text-gray-500 font-mono">Loading transmission...</div>
+                        <div className="text-gray-500 font-mono">Loading...</div>
                     )}
                 </div>
             </main>

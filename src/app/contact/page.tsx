@@ -4,98 +4,120 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const QuantumField = dynamic(() => import('@/components/3d/QuantumField').then(mod => mod.QuantumField), {
+    ssr: false,
+});
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-primary selection:text-black font-sans">
+        <div className="min-h-screen pt-20">
             <Navbar />
+            <QuantumField />
 
-            <main className="pt-32 pb-24 relative overflow-hidden">
-                {/* Background Atmosphere */}
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none" />
+            <main className="container mx-auto px-6 py-20 relative z-10">
+                {/* Header Section */}
+                <div className="mb-24 text-center animate-fade-in-up">
+                    <div className="inline-block px-4 py-1 mb-6 border border-primary/30 rounded-full bg-primary/5 backdrop-blur-sm">
+                        <span className="text-primary text-xs font-mono tracking-[0.2em] uppercase">Contact Us</span>
+                    </div>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+                        READY TO TRANSFORM <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-glow">
+                            YOUR BUSINESS?
+                        </span>
+                    </h1>
+                    <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed">
+                        We are currently accepting new enterprise partners for Q3 2026.
+                        Let's discuss how we can help you scale.
+                    </p>
+                </div>
 
-                <div className="container mx-auto px-6 max-w-6xl relative z-10">
-                    <div className="grid md:grid-cols-2 gap-24">
+                <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
 
-                        {/* Left Column: The Signal */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="space-y-12"
-                        >
-                            <div>
-                                <h1 className="text-6xl md:text-7xl font-bold tracking-tighter mb-6">
-                                    Initiate <br />
-                                    <span className="text-zinc-500">Signal.</span>
-                                </h1>
-                                <p className="text-xl text-zinc-400 font-light max-w-md leading-relaxed">
-                                    Ready to deploy Agentic AI? We are currently accepting new enterprise partners for Q3 2026.
-                                </p>
-                            </div>
+                    {/* Left Column: Contact Info */}
+                    <div className="space-y-12">
+                        <div className="p-8 glass-card rounded-xl border border-white/10">
+                            <h3 className="text-2xl font-bold mb-6 text-white">Get in Touch</h3>
 
                             <div className="space-y-8">
                                 <div className="group">
-                                    <h3 className="text-sm font-mono text-primary uppercase tracking-widest mb-2">Direct Line</h3>
-                                    <a href="mailto:hello@quantumflow.ai" className="text-2xl font-light hover:text-white transition-colors flex items-center gap-2 group-hover:gap-4 duration-300">
+                                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Email</h4>
+                                    <a href="mailto:hello@quantumflow.ai" className="text-xl font-medium text-primary hover:text-white transition-colors flex items-center gap-2 group-hover:gap-4 duration-300">
                                         hello@quantumflow.ai
                                         <ArrowUpRight className="w-5 h-5 opacity-50 group-hover:opacity-100" />
                                     </a>
                                 </div>
 
                                 <div>
-                                    <h3 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-2">Base of Operations</h3>
-                                    <p className="text-2xl font-light text-zinc-300">
+                                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Location</h4>
+                                    <p className="text-xl font-medium text-white">
                                         Lancashire, UK <br />
-                                        <span className="text-lg text-zinc-500">Serving Global</span>
+                                        <span className="text-base text-gray-500 font-normal">Serving Global Clients</span>
                                     </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
 
-                        {/* Right Column: The Transmission */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="bg-zinc-900/30 backdrop-blur-sm border border-white/5 p-8 md:p-12 rounded-2xl"
-                        >
-                            <form className="space-y-8">
+                        <div className="p-8 bg-primary/5 rounded-xl border border-primary/10">
+                            <h3 className="text-lg font-bold text-primary mb-3">Why Partner with Us?</h3>
+                            <ul className="space-y-3 text-gray-400">
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                                    Dedicated AI Implementation Team
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                                    Enterprise-Grade Security & Privacy
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                                    24/7 Support & Monitoring
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Right Column: Key Form */}
+                    <div className="relative group">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-lg opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                        <div className="relative p-8 md:p-12 glass-card rounded-xl border border-white/10">
+                            <form className="space-y-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-mono text-zinc-500 uppercase tracking-widest ml-1">Identity</label>
+                                    <label className="text-sm font-medium text-gray-300 ml-1">Name</label>
                                     <input
                                         type="text"
-                                        placeholder="Name"
-                                        className="w-full bg-transparent border-b border-white/10 py-4 text-xl focus:outline-none focus:border-primary transition-colors placeholder:text-zinc-700"
+                                        placeholder="John Doe"
+                                        className="w-full bg-black/50 border border-white/10 rounded-lg py-4 px-5 text-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-gray-600 text-white"
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-xs font-mono text-zinc-500 uppercase tracking-widest ml-1">Coordinates</label>
+                                    <label className="text-sm font-medium text-gray-300 ml-1">Email</label>
                                     <input
                                         type="email"
-                                        placeholder="Email Address"
-                                        className="w-full bg-transparent border-b border-white/10 py-4 text-xl focus:outline-none focus:border-primary transition-colors placeholder:text-zinc-700"
+                                        placeholder="john@company.com"
+                                        className="w-full bg-black/50 border border-white/10 rounded-lg py-4 px-5 text-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-gray-600 text-white"
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-xs font-mono text-zinc-500 uppercase tracking-widest ml-1">Transmission</label>
+                                    <label className="text-sm font-medium text-gray-300 ml-1">Message</label>
                                     <textarea
                                         rows={4}
                                         placeholder="Tell us about your project..."
-                                        className="w-full bg-transparent border-b border-white/10 py-4 text-xl focus:outline-none focus:border-primary transition-colors placeholder:text-zinc-700 resize-none"
+                                        className="w-full bg-black/50 border border-white/10 rounded-lg py-4 px-5 text-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-gray-600 text-white resize-none"
                                     />
                                 </div>
 
-                                <button type="button" className="w-full bg-white text-black font-bold uppercase tracking-widest py-6 hover:bg-primary transition-colors duration-300 mt-8">
-                                    Send Transmission
+                                <button type="button" className="w-full bg-primary hover:bg-primary/90 text-black font-bold text-lg py-4 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] mt-4 shadow-lg shadow-primary/20">
+                                    Send Message
                                 </button>
                             </form>
-                        </motion.div>
-
+                        </div>
                     </div>
+
                 </div>
             </main>
 

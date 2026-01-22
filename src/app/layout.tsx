@@ -1,23 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { CustomCursor } from "@/components/ui/CustomCursor";
+import { SmoothScroll } from "@/components/ui/SmoothScroll";
+import { VoiceOrb } from "@/components/agent/VoiceOrb";
 
-const inter = Inter({
-  variable: "--font-inter",
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  display: "swap",
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
-  weight: ["400", "700"],
-  subsets: ["latin"],
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Quantum Flow Automation | AI First Agency",
-  description: "Propelling enterprises into unparalleled efficiency with autonomous ecosystems. The future of high-impact B2B automation.",
+  description: "We build digital intelligence.",
 };
 
 export default function RootLayout({
@@ -27,12 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} ${spaceMono.variable} antialiased bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black`}
-      >
-        <div className="micro-grid"></div>
-        <div className="glass-prism"></div>
-        {children}
+      <body className={`${inter.variable} ${jetbrainsMono.variable} bg-black text-white antialiased selection:bg-primary/30 selection:text-white`}>
+        <SmoothScroll>
+          <CustomCursor />
+          {children}
+          <VoiceOrb />
+        </SmoothScroll>
       </body>
     </html>
   );

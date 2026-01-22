@@ -2,13 +2,18 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { QuantumField } from "@/components/3d/QuantumField";
 import { Marquee } from "@/components/ui/Marquee";
 import { StatusIndicator } from "@/components/ui/StatusIndicator";
 import { ValueProps } from "@/components/home/ValueProps";
 import { CTASection } from "@/components/home/CTASection";
 import Link from "next/link";
 import { ArrowRight, Cpu, Zap, Shield, Globe } from "lucide-react";
+import { BookingButton } from "@/components/ui/BookingButton";
+import dynamic from 'next/dynamic';
+
+const QuantumField = dynamic(() => import('@/components/3d/QuantumField').then(mod => mod.QuantumField), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -36,13 +41,12 @@ export default function Home() {
               While you focus on strategy, our automation handles the execution.
             </p>
 
-            <Link
-              href="/network"
-              className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest flex items-center gap-4 hover:bg-white transition-all neon-glow-primary hover:btn-glow-pulse"
+            <BookingButton
+              className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest flex items-center gap-4 hover:bg-white transition-all neon-glow-primary hover:btn-glow-pulse cursor-pointer"
             >
               See How It Works
               <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-            </Link>
+            </BookingButton>
           </div>
         </div>
 
