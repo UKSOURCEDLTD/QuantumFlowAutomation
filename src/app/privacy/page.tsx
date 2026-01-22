@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
                         <h3>5. Your Rights</h3>
                         <p>
-                            You have the right to access, correct, or delete your personal data. Contact us at <a href="mailto:legal@quantumflow.ai" className="text-primary hover:underline">legal@quantumflow.ai</a> to exercise these rights.
+                            You have the right to access, correct, or delete your personal data. Contact us at <a href="mailto:info@quantumflowautomation.ai" className="text-primary hover:underline">info@quantumflowautomation.ai</a> to exercise these rights.
                         </p>
 
                         <h3>6. Updates</h3>

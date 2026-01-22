@@ -45,7 +45,7 @@ export default function NetworkPage() {
                                 </div>
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase tracking-widest">Contact Info</div>
-                                    <div className="font-mono text-lg">enquiries@qfa.ai</div>
+                                    <div className="font-mono text-lg">info@quantumflowautomation.ai</div>
                                 </div>
                             </div>
 

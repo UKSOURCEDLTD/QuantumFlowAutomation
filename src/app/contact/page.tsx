@@ -44,8 +44,8 @@ export default function ContactPage() {
                             <div className="space-y-8">
                                 <div className="group">
                                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Email</h4>
-                                    <a href="mailto:hello@quantumflow.ai" className="text-xl font-medium text-primary hover:text-white transition-colors flex items-center gap-2 group-hover:gap-4 duration-300">
-                                        hello@quantumflow.ai
+                                    <a href="mailto:info@quantumflowautomation.ai" className="text-xl font-medium text-primary hover:text-white transition-colors flex items-center gap-2 group-hover:gap-4 duration-300">
+                                        info@quantumflowautomation.ai
                                         <ArrowUpRight className="w-5 h-5 opacity-50 group-hover:opacity-100" />
                                     </a>
                                 </div>

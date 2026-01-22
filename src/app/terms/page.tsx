@@ -44,7 +44,7 @@ export default function TermsPage() {
 
                         <h3>6. Contact</h3>
                         <p>
-                            Questions about these Terms should be sent to <a href="mailto:legal@quantumflow.ai" className="text-primary hover:underline">legal@quantumflow.ai</a>.
+                            Questions about these Terms should be sent to <a href="mailto:info@quantumflowautomation.ai" className="text-primary hover:underline">info@quantumflowautomation.ai</a>.
                         </p>
                     </div>
                 </div>
