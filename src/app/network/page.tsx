@@ -52,7 +52,7 @@ export default function NetworkPage() {
                             <div className="p-6 border border-primary/20 bg-primary/5 rounded-lg">
                                 <h3 className="text-primary font-bold mb-2">Priority Access</h3>
                                 <p className="text-sm text-gray-400">
-                                    We are currently accepting a limited number of new enterprise partners for Q3 2026.
+                                    We are currently accepting a limited number of new enterprise partners for Q1 2026.
                                     Response times are currently under 4 hours for qualified leads.
                                 </p>
                             </div>

@@ -29,7 +29,7 @@ export default function ContactPage() {
                         </span>
                     </h1>
                     <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed">
-                        We are currently accepting new enterprise partners for Q3 2026.
+                        We are currently accepting new enterprise partners for Q1 2026.
                         Let's discuss how we can help you scale.
                     </p>
                 </div>
