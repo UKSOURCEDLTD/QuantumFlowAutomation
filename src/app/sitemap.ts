@@ -3,25 +3,25 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://qfa.ai',
+            url: 'https://quantumflowautomation.ai',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
         },
         {
-            url: 'https://qfa.ai/services',
+            url: 'https://quantumflowautomation.ai/services',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: 'https://qfa.ai/intelligence',
+            url: 'https://quantumflowautomation.ai/intelligence',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: 'https://qfa.ai/network',
+            url: 'https://quantumflowautomation.ai/network',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.5,

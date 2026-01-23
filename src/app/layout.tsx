@@ -13,8 +13,17 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://quantumflowautomation.ai"),
   title: "Quantum Flow Automation | AI First Agency",
   description: "We build digital intelligence.",
+  openGraph: {
+    title: "Quantum Flow Automation | AI First Agency",
+    description: "We build digital intelligence.",
+    url: "https://quantumflowautomation.ai",
+    siteName: "Quantum Flow Automation",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
