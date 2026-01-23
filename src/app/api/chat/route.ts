@@ -76,7 +76,7 @@ export async function POST(req: Request) {
     } catch (error) {
         console.error("AI Error:", error);
         return NextResponse.json(
-            { error: `Processing Error: ${error.message}` },
+            { error: `Processing Error: ${(error as Error).message}` },
             { status: 500 }
         );
     }
