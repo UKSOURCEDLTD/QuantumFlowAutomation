@@ -96,7 +96,7 @@ const MOCK_POSTS: BlogPost[] = [
         title: "Google Unified AI Stack: A Technical Deep Dive",
         date: "2026-01-10",
         category: "ENGINEERING",
-        excerpt: "How we leveraged Google's latest Gemini models to build a self-healing infrastructure.",
+        excerpt: "How we leveraged Google's unified model garden to build a self-healing infrastructure.",
         content: ""
     }
 ];

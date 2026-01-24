@@ -36,7 +36,7 @@ const POSTS: Record<string, any> = {
         readTime: "8 min read",
         content: `
             <p className="mb-6">When building enterprise-grade AI, you need infrastructure that doesn't blink. That's why we chose Google.</p>
-            <p className="mb-6">Gemini 1.5 Pro has a context window of 2 million tokens. That's not just a spec; it's a fundamental change in capability. It means an agent can read your entire codebase, your entire customer history, or your entire legal archive in a single prompt.</p>
+            <p className="mb-6">Gemini Pro 3 offers an industry-leading context window. That's not just a spec; it's a fundamental change in capability. It means an agent can read your entire codebase, your entire customer history, or your entire legal archive in a single prompt.</p>
         `
     },
     "neural-enterprise": {

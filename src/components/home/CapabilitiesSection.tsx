@@ -11,7 +11,7 @@ const capabilities = [
         subtitle: "Gemini & Vertex AI Native",
         description: "Built on the industry's most robust infrastructure. We leverage Gemini for reasoning, Vertex AI for agent orchestration, and Google Cloud for limitless scalability.",
         icon: <Layers className="w-10 h-10" />,
-        features: ["Gemini 1.5 Pro Models", "Vertex AI Architecture", "BigQuery Data Logic"],
+        features: ["Gemini Pro 3 Models", "Vertex AI Architecture", "BigQuery Data Logic"],
         color: "from-blue-500/20 to-blue-600/20",
         accent: "text-blue-400",
         border: "border-blue-500/30"

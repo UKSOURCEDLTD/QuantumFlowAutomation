@@ -19,7 +19,7 @@ const BLOG_POSTS = [
     {
         slug: "google-unified-stack",
         title: "Why We Bet on the Google Unified Stack",
-        excerpt: "From Gemini 1.5 Pro to Vertex AI, Google's ecosystem provides the only enterprise-grade infrastructure capable of supporting true agentic workflows at scale.",
+        excerpt: "From Gemini Pro 3 to Vertex AI, Google's ecosystem provides the only enterprise-grade infrastructure capable of supporting true agentic workflows at scale.",
         date: "November 5, 2025",
         tag: "Tech",
         readTime: "8 min read"
