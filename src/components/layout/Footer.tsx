@@ -42,8 +42,8 @@ export function Footer() {
                     <div className="relative">
                         <h4 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-6 text-mono">Legal</h4>
                         <ul className="space-y-4">
-                            <li><Link href="/terms" className="nav-link text-gray-400 hover:text-white text-sm">Terms of Protocol</Link></li>
-                            <li><Link href="/privacy" className="nav-link text-gray-400 hover:text-white text-sm">Privacy Core</Link></li>
+                            <li><Link href="/terms" className="nav-link text-gray-400 hover:text-white text-sm">Terms of Service</Link></li>
+                            <li><Link href="/privacy" className="nav-link text-gray-400 hover:text-white text-sm">Privacy Policy</Link></li>
                         </ul>
                     </div>
                 </div>

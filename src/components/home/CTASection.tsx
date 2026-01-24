@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, ChevronRight, Hexagon, Zap } from 'lucide-react';
+import { ArrowRight, ChevronRight, ShieldCheck, Activity, Lock } from 'lucide-react';
 import { BookingButton } from "@/components/ui/BookingButton";
 
 export function CTASection() {
@@ -17,7 +17,7 @@ export function CTASection() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="relative bg-black/60 backdrop-blur-xl border border-white/10 rounded-[3rem] p-12 md:p-24 overflow-hidden group"
+                    className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-[3rem] p-12 md:p-24 overflow-hidden group"
                 >
                     {/* Animated Border Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1.5s] ease-in-out" />
@@ -34,39 +34,37 @@ export function CTASection() {
                         </div>
 
                         <h2 className="text-5xl md:text-7xl font-bold mb-8 uppercase tracking-tighter max-w-4xl leading-none">
-                            Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Initialize?</span>
+                            Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Transform?</span>
                         </h2>
 
                         <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-                            Stop playing catch-up with legacy systems.
-                            Deploy your own dedicated AI infrastructure today and secure your market position for the next decade.
+                            Don't let legacy systems hold you back. Deploy your dedicated AI infrastructure today and secure your market leadership.
                         </p>
 
-                        <BookingButton
-                            className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 hover:scale-105 cursor-pointer"
-                        >
-                            <Zap className="w-5 h-5 group-hover:fill-black transition-all" />
-                            <span>Start Deployment</span>
-                            <div className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-2 transition-transform">
-                                <ChevronRight className="w-4 h-4" />
-                            </div>
-                        </BookingButton>
+                        <div className="flex flex-col sm:flex-row items-center gap-6">
+                            <BookingButton
+                                className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 hover:scale-105 cursor-pointer"
+                            >
+                                <span>Start Deployment</span>
+                                <div className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-2 transition-transform">
+                                    <ChevronRight className="w-4 h-4" />
+                                </div>
+                            </BookingButton>
+                        </div>
 
-                        {/* Footer decoration */}
-                        <div className="mt-16 flex items-center gap-8 text-xs text-gray-600 font-mono uppercase tracking-widest hidden md:flex">
-                            <div className="flex items-center gap-2">
-                                <Hexagon className="w-3 h-3" />
-                                <span>Secure Encryption</span>
+                        {/* Trust Signals */}
+                        <div className="mt-16 flex flex-wrap justify-center gap-8 md:gap-12 text-sm text-gray-500 font-mono uppercase tracking-widest">
+                            <div className="flex items-center gap-3">
+                                <ShieldCheck className="w-4 h-4 text-green-500" />
+                                <span>Google Cloud Partner</span>
                             </div>
-                            <div className="w-1 h-1 bg-gray-600 rounded-full" />
-                            <div className="flex items-center gap-2">
-                                <Zap className="w-3 h-3" />
-                                <span>Instant Provisioning</span>
+                            <div className="flex items-center gap-3">
+                                <Activity className="w-4 h-4 text-primary" />
+                                <span>99.9% Uptime SLA</span>
                             </div>
-                            <div className="w-1 h-1 bg-gray-600 rounded-full" />
-                            <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 border border-gray-600 rounded-full" />
-                                <span>24/7 Monitoring</span>
+                            <div className="flex items-center gap-3">
+                                <Lock className="w-4 h-4 text-gray-400" />
+                                <span>Vertex AI Powered</span>
                             </div>
                         </div>
 

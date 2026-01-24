@@ -61,7 +61,7 @@ export default function ServicesPage() {
                                 </div>
 
                                 <ul className="space-y-3 mb-8">
-                                    {["Understands human questions, not just keywords", "Personalizes content for each visitor", "Never misses a lead (even at 3 AM)", "Optimized for the new AI search engines"].map((item) => (
+                                    {["Understands human questions, not just keywords", "Adapts content for every visitor context", "Never misses a lead (even at 3 AM)", "Optimized for the new AI search engines"].map((item) => (
                                         <li key={item} className="flex items-center text-gray-300">
                                             <ChevronRight className="w-4 h-4 text-primary mr-2" />
                                             {item}
@@ -110,10 +110,10 @@ export default function ServicesPage() {
                                     </div>
                                     <span className="text-gray-500 font-mono text-sm tracking-wider">SERVICE // 02</span>
                                 </div>
-                                <h2 className="text-4xl md:text-5xl font-bold mb-6">Find Where You're Wasting Money</h2>
+                                <h2 className="text-4xl md:text-5xl font-bold mb-6">Identify Operational Inefficiencies</h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                    You're likely paying staff to do repetitive tasks that a computer could do for free.
-                                    We look at how your business runs and show you exactly where AI can handle the boring stuff.
+                                    You're likely paying skilled staff to perform repetitive tasks that software could handle instantly.
+                                    We analyze your business operations and identify exactly where automation can reclaim lost productivity.
                                 </p>
 
                                 <div className="border-l border-white/10 pl-6 my-8 space-y-6">
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                                 <div className="bg-gradient-to-r from-accent/10 to-transparent p-6 rounded-lg border border-accent/20">
                                     <div className="flex items-center gap-3 mb-2">
                                         <Shield className="w-5 h-5 text-accent" />
-                                        <span className="font-bold text-accent">Totally Secure & Private</span>
+                                        <span className="font-bold text-accent">Enterprise-Grade Security</span>
                                     </div>
                                     <p className="text-sm text-gray-400">Your business data stays yours. We build safe, private systems.</p>
                                 </div>
