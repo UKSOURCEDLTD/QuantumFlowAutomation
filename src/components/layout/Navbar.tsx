@@ -36,8 +36,8 @@ export function Navbar() {
                             key={item.href}
                             href={item.href}
                             className={cn(
-                                "nav-link text-base",
-                                pathname === item.href ? "text-primary" : "text-gray-400"
+                                "nav-link text-base font-bold",
+                                pathname === item.href ? "text-primary" : "text-gray-100"
                             )}
                         >
                             {item.name}
@@ -68,7 +68,7 @@ export function Navbar() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className="nav-link text-lg text-gray-400 hover:text-primary"
+                            className="nav-link text-lg font-bold text-gray-100 hover:text-primary"
                             onClick={() => setIsOpen(false)}
                         >
                             {item.name}
