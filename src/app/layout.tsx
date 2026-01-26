@@ -3,7 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
-import { VoiceOrb } from "@/components/agent/VoiceOrb";
+import { BookCallWidget } from "@/components/layout/BookCallWidget";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
@@ -37,7 +37,7 @@ export default function RootLayout({
         <SmoothScroll>
           <CustomCursor />
           {children}
-          <VoiceOrb />
+          <BookCallWidget />
         </SmoothScroll>
       </body>
     </html>

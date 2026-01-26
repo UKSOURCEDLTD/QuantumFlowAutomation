@@ -65,15 +65,15 @@ export default function ContactPage() {
                             <ul className="space-y-3 text-gray-400">
                                 <li className="flex items-center gap-2">
                                     <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                                    Dedicated AI Implementation Team
+                                    A Team That Speaks Your Language
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                                    Enterprise-Grade Security & Privacy
+                                    Safe, Secure, and Private
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                                    24/7 Support & Monitoring
+                                    Always Here When You Need Us
                                 </li>
                             </ul>
                         </div>
