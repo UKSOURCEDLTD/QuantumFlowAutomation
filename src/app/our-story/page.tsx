@@ -2,12 +2,14 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { AgencyHero } from "@/components/story/AgencyHero";
+import { AboutHero } from "@/components/about/AboutHero";
+import { WhoWeAre } from "@/components/about/WhoWeAre";
+import { FounderSpotlight } from "@/components/about/FounderSpotlight";
+import { OurApproach } from "@/components/about/OurApproach";
+import { ValuesSection } from "@/components/about/ValuesSection";
+import { TechStack } from "@/components/about/TechStack";
+import { ByTheNumbers } from "@/components/about/ByTheNumbers";
 import { CTASection } from "@/components/home/CTASection";
-import { BusinessVision } from "@/components/story/BusinessVision";
-import { ProfessionalCapabilities } from "@/components/story/ProfessionalCapabilities";
-import { ProfessionalMethodology } from "@/components/story/ProfessionalMethodology";
-import { ProfessionalCommitment } from "@/components/story/ProfessionalCommitment";
 
 export default function OurStoryPage() {
     return (
@@ -15,19 +17,23 @@ export default function OurStoryPage() {
             <Navbar />
 
             <main>
-                <AgencyHero />
+                <AboutHero />
 
                 <div className="relative">
-                    {/* Professional Section Transition */}
-                    <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-zinc-900 z-10" />
+                    {/* Smooth transition from hero */}
+                    <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-zinc-950 z-10" />
 
-                    <BusinessVision />
+                    <WhoWeAre />
 
-                    <ProfessionalCapabilities />
+                    <FounderSpotlight />
 
-                    <ProfessionalMethodology />
+                    <OurApproach />
 
-                    <ProfessionalCommitment />
+                    <ValuesSection />
+
+                    <TechStack />
+
+                    <ByTheNumbers />
 
                     <CTASection />
                 </div>
