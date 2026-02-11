@@ -42,6 +42,12 @@ export function Footer() {
                                     <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/benefits-of-ai" className="nav-link flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-wider group">
+                                    Benefits of AI
+                                    <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
