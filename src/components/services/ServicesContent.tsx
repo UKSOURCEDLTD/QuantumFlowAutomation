@@ -44,14 +44,14 @@ export function ServicesContent() {
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-                            Stop Drowning in Admin. <br />
+                            AI Audits. AI Websites. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-secondary">
-                                Start Running Your Business.
+                                AI Employees for Your Business.
                             </span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-                            We build AI that handles the work you shouldn't be doing yourself.
+                            We build and deploy AI that automates your operations — from intelligent websites that convert, to AI assistants that handle your admin 24/7.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
