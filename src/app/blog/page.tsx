@@ -2,115 +2,163 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BlogHero } from "@/components/blog/BlogHero";
+import { BlogCategoryFilter } from "@/components/blog/BlogCategoryFilter";
+import { BlogCard } from "@/components/blog/BlogCard";
+import { BlogNewsletter } from "@/components/blog/BlogNewsletter";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, Calendar, Tag } from "lucide-react";
+import { useState, useMemo } from "react";
+import { BookOpen } from "lucide-react";
+import type { BlogPost } from "@/lib/cms";
 
-// Mock Data
-const BLOG_POSTS = [
+// Mock Data — will be replaced by CMS fetch
+const BLOG_POSTS: BlogPost[] = [
     {
         slug: "agentic-ai-revolution",
         title: "The Agentic AI Revolution: Why Chatbots Are Dead",
         excerpt: "We are moving beyond simple Q&A. Autonomous agents that can plan, execute, and correct their own actions are the new standard for business automation.",
-        date: "October 12, 2025",
-        tag: "Strategy",
-        readTime: "5 min read"
+        date: "2026-02-10",
+        category: "AI Strategy",
+        image: "",
+        author: "Luke Needham",
+        readTime: "5 min read",
+        content: ""
     },
     {
         slug: "google-unified-stack",
         title: "Why We Bet on the Google Unified Stack",
-        excerpt: "From Gemini Pro 3 to Vertex AI, Google's ecosystem provides the only enterprise-grade infrastructure capable of supporting true agentic workflows at scale.",
-        date: "November 5, 2025",
-        tag: "Tech",
-        readTime: "8 min read"
+        excerpt: "From Gemini to Vertex AI, Google's ecosystem provides the only enterprise-grade infrastructure capable of supporting true agentic workflows at scale.",
+        date: "2026-02-05",
+        category: "Engineering",
+        image: "",
+        author: "Luke Needham",
+        readTime: "8 min read",
+        content: ""
     },
     {
         slug: "neural-enterprise",
         title: "Building the Neural Enterprise",
-        excerpt: "How to structure your organization so that humans make decisions and software executes them. A guide to the modern business architecture.",
-        date: "January 15, 2026",
-        tag: "Philosophy",
-        readTime: "6 min read"
+        excerpt: "How to structure your organisation so that humans make decisions and software executes them. A guide to the modern business architecture.",
+        date: "2026-01-28",
+        category: "AI Strategy",
+        image: "",
+        author: "Luke Needham",
+        readTime: "6 min read",
+        content: ""
+    },
+    {
+        slug: "ai-readiness-assessment",
+        title: "Is Your Business Ready for AI? The 5-Point Checklist",
+        excerpt: "Before you invest in AI, you need to know if your business is ready. Here are the five critical factors that determine AI readiness.",
+        date: "2026-01-20",
+        category: "Tutorials",
+        image: "",
+        author: "Luke Needham",
+        readTime: "4 min read",
+        content: ""
+    },
+    {
+        slug: "cost-of-waiting",
+        title: "The Hidden Cost of Waiting: Why Q1 2026 is the AI Tipping Point",
+        excerpt: "Every month you delay AI adoption, your competitors gain ground. Here's the data on why early 2026 is the moment to move.",
+        date: "2026-01-15",
+        category: "Industry News",
+        image: "",
+        author: "Luke Needham",
+        readTime: "7 min read",
+        content: ""
+    },
+    {
+        slug: "ai-website-case-study",
+        title: "Case Study: How We Built an AI-Powered Website in 48 Hours",
+        excerpt: "A behind-the-scenes look at how we used agentic AI to design, develop, and deploy a complete business website in just two days.",
+        date: "2026-01-08",
+        category: "Case Studies",
+        image: "",
+        author: "Luke Needham",
+        readTime: "10 min read",
+        content: ""
     }
 ];
 
+const ALL_CATEGORIES = ["All", "AI Strategy", "Engineering", "Industry News", "Tutorials", "Case Studies"];
+
 export default function BlogPage() {
+    const [activeCategory, setActiveCategory] = useState("All");
+
+    const featuredPost = BLOG_POSTS[0];
+    const remainingPosts = BLOG_POSTS.slice(1);
+
+    const filteredPosts = useMemo(() => {
+        if (activeCategory === "All") return remainingPosts;
+        return remainingPosts.filter(post => post.category === activeCategory);
+    }, [activeCategory, remainingPosts]);
+
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-primary selection:text-black">
+        <div className="blog-theme min-h-screen bg-white text-gray-900">
             <Navbar />
 
-            <main className="pt-32 pb-24">
-                <div className="container mx-auto px-6">
-                    {/* Header */}
-                    <div className="mb-24 max-w-4xl">
+            <main className="pt-20">
+                {/* Hero — Featured Post */}
+                <BlogHero post={featuredPost} />
+
+                {/* Category Filter + Posts Grid */}
+                <section className="container mx-auto px-6 py-16 lg:py-20">
+                    {/* Section header */}
+                    <div className="text-center mb-12">
+                        <div className="flex items-center justify-center gap-2 mb-4">
+                            <BookOpen className="w-5 h-5 text-emerald-600" />
+                            <span className="text-xs font-semibold uppercase tracking-widest text-emerald-600">
+                                Latest Insights
+                            </span>
+                        </div>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                            Explore Our Knowledge Hub
+                        </h2>
+                        <p className="text-gray-500 max-w-xl mx-auto">
+                            Deep dives into Agentic AI, business automation strategy, engineering, and the future of work.
+                        </p>
+                    </div>
+
+                    {/* Category Filter */}
+                    <div className="mb-12">
+                        <BlogCategoryFilter
+                            categories={ALL_CATEGORIES}
+                            activeCategory={activeCategory}
+                            onCategoryChange={setActiveCategory}
+                        />
+                    </div>
+
+                    {/* Posts Grid */}
+                    {filteredPosts.length > 0 ? (
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="flex items-center gap-3 mb-6"
+                            key={activeCategory}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.3 }}
+                            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
                         >
-                            <div className="h-px w-12 bg-primary" />
-                            <span className="text-primary font-mono text-sm uppercase tracking-widest">Intelligence Log</span>
+                            {filteredPosts.map((post, index) => (
+                                <BlogCard key={post.slug} post={post} index={index} />
+                            ))}
                         </motion.div>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-6xl font-bold tracking-tighter mb-6"
+                    ) : (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="text-center py-20"
                         >
-                            Thoughts from the <br />
-                            <span className="text-zinc-500">Autonomous Frontier</span>.
-                        </motion.h1>
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="text-xl text-zinc-400 max-w-2xl"
-                        >
-                            Deep dives into Agentic AI, business automation, and the future of work.
-                        </motion.p>
-                    </div>
+                            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gray-100 flex items-center justify-center">
+                                <BookOpen className="w-8 h-8 text-gray-400" />
+                            </div>
+                            <p className="text-gray-500 text-lg">No articles in this category yet.</p>
+                            <p className="text-gray-400 text-sm mt-2">Check back soon — we publish new content every week.</p>
+                        </motion.div>
+                    )}
+                </section>
 
-                    {/* Blog Grid */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {BLOG_POSTS.map((post, index) => (
-                            <motion.article
-                                key={post.slug}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3 + (index * 0.1) }}
-                                className="group relative bg-zinc-900/50 border border-white/10 overflow-hidden hover:border-primary/50 transition-colors duration-300"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                                <Link href={`/blog/${post.slug}`} className="block p-8 relative z-10 h-full flex flex-col">
-                                    <div className="flex items-center gap-4 text-xs font-mono text-zinc-500 mb-6 uppercase tracking-wider">
-                                        <div className="flex items-center gap-1.5">
-                                            <Calendar className="w-3 h-3" />
-                                            {post.date}
-                                        </div>
-                                        <div className="w-px h-3 bg-zinc-800" />
-                                        <div className="flex items-center gap-1.5 text-primary">
-                                            <Tag className="w-3 h-3" />
-                                            {post.tag}
-                                        </div>
-                                    </div>
-
-                                    <h2 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                                        {post.title}
-                                    </h2>
-
-                                    <p className="text-zinc-400 leading-relaxed mb-8 flex-grow">
-                                        {post.excerpt}
-                                    </p>
-
-                                    <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide group-hover:gap-3 transition-all duration-300">
-                                        Read Article <ArrowRight className="w-4 h-4" />
-                                    </div>
-                                </Link>
-                            </motion.article>
-                        ))}
-                    </div>
-                </div>
+                {/* Newsletter CTA */}
+                <BlogNewsletter />
             </main>
 
             <Footer />

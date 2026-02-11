@@ -13,15 +13,20 @@ export default function NewPostPage() {
         title: "",
         excerpt: "",
         content: "",
-        category: "FORECAST",
-        date: new Date().toISOString().split('T')[0]
+        category: "AI Strategy",
+        date: new Date().toISOString().split('T')[0],
+        image: "",
+        author: "Luke Needham",
+        readTime: "5 min read",
+        slug: ""
     });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
         try {
-            await CmsAPI.createPost(formData);
+            const slug = formData.slug || formData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            await CmsAPI.createPost({ ...formData, slug });
             router.push("/admin");
         } catch (error) {
             console.error(error);
@@ -59,10 +64,11 @@ export default function NewPostPage() {
                                 value={formData.category}
                                 onChange={e => setFormData({ ...formData, category: e.target.value })}
                             >
-                                <option value="FORECAST">FORECAST</option>
-                                <option value="ENGINEERING">ENGINEERING</option>
-                                <option value="ARCHITECTURE">ARCHITECTURE</option>
-                                <option value="STRATEGY">STRATEGY</option>
+                                <option value="AI Strategy">AI Strategy</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Industry News">Industry News</option>
+                                <option value="Tutorials">Tutorials</option>
+                                <option value="Case Studies">Case Studies</option>
                             </select>
                         </div>
                     </div>

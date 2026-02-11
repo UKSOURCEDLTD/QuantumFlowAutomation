@@ -399,3 +399,198 @@ body::after {
   opacity: 0.5;
   transform: translate(-50%, -50%);
 }
+
+/* ========================================
+   Blog Theme — Lighter editorial overrides
+   ======================================== */
+
+/* Remove dark overlays and glows on blog pages */
+.blog-theme::before,
+.blog-theme::after {
+  display: none !important;
+}
+
+.blog-theme .shadow-frame,
+.blog-theme .micro-grid,
+.blog-theme .glass-prism {
+  display: none !important;
+}
+
+/* Override body pseudo-elements when blog-theme is active */
+body:has(.blog-theme)::before,
+body:has(.blog-theme)::after {
+  display: none !important;
+}
+
+/* Navbar stays dark in blog for contrast */
+.blog-theme header {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.blog-theme header,
+.blog-theme header * {
+  color: white;
+}
+
+.blog-theme header .text-primary {
+  color: var(--primary) !important;
+}
+
+.blog-theme header .text-black {
+  color: black !important;
+}
+
+/* Footer stays dark */
+.blog-theme footer {
+  background: #050505;
+  color: white;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   Blog Article Content — Rich Typography
+   ======================================== */
+
+.blog-article-content {
+  color: #374151;
+  font-size: 1.125rem;
+  line-height: 1.85;
+}
+
+.blog-article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-article-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+  letter-spacing: -0.025em;
+}
+
+.blog-article-content h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-article-content strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.blog-article-content em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.blog-article-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.blog-article-content ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-article-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.blog-article-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-article-content ol li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.blog-article-content blockquote {
+  border-left: 4px solid #10b981;
+  background: #f0fdf4;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: #1f2937;
+  font-style: italic;
+}
+
+.blog-article-content code {
+  background: #f3f4f6;
+  color: #059669;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: var(--font-mono);
+}
+
+.blog-article-content pre {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.blog-article-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+.blog-article-content a {
+  color: #059669;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.blog-article-content a:hover {
+  color: #047857;
+}
+
+.blog-article-content img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
