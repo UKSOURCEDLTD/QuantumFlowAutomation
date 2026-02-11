@@ -10,6 +10,10 @@ const QuantumField = dynamic(() => import('@/components/3d/QuantumField').then(m
     ssr: false,
 });
 
+const CalendlyBooking = dynamic(() => import('@/components/contact/CalendlyBooking').then(mod => mod.CalendlyBooking), {
+    ssr: false,
+});
+
 export default function ContactPage() {
     return (
         <div className="min-h-screen pt-20">
@@ -120,6 +124,8 @@ export default function ContactPage() {
 
                 </div>
             </main>
+
+            <CalendlyBooking />
 
             <Footer />
         </div>

@@ -8,7 +8,6 @@ import { FounderSpotlight } from "@/components/about/FounderSpotlight";
 import { OurApproach } from "@/components/about/OurApproach";
 import { ValuesSection } from "@/components/about/ValuesSection";
 import { TechStack } from "@/components/about/TechStack";
-import { ByTheNumbers } from "@/components/about/ByTheNumbers";
 import { CTASection } from "@/components/home/CTASection";
 
 export default function OurStoryPage() {
@@ -32,8 +31,6 @@ export default function OurStoryPage() {
                     <ValuesSection />
 
                     <TechStack />
-
-                    <ByTheNumbers />
 
                     <CTASection />
                 </div>
