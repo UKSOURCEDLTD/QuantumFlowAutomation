@@ -36,6 +36,12 @@ export function Footer() {
                                     </Link>
                                 </li>
                             ))}
+                            <li>
+                                <Link href="/agent" className="nav-link flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-wider group">
+                                    AI Agent
+                                    <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
