@@ -12,23 +12,23 @@ export function ImpactGraph() {
                     <div className="md:w-1/3">
                         <h2 className="text-3xl font-bold text-white mb-6">
                             Break the<br />
-                            <span className="text-primary">Linear Trap</span>
+                            <span className="text-primary">Admin Trap</span>
                         </h2>
                         <div className="space-y-6 text-zinc-400">
                             <p>
-                                Traditional scaling requires more people to do more work. Costs grow alongside revenue. Margins stay flat.
+                                Traditionally, if you wanted to do more, you had to hire more. Revenue grew, but costs grew right alongside it.
                             </p>
                             <p>
-                                <span className="text-white font-medium">Agentic scaling</span> breaks this correlation. Once a workflow is autonomous, it costs nearly zero to run it 1,000 times.
+                                <span className="text-white font-medium">Automation</span> breaks this link. Once a system is built, it costs nearly nothing to run it 100 times or 1,000 times.
                             </p>
                             <div className="flex items-center gap-4 pt-4">
                                 <div className="flex items-center gap-2">
                                     <div className="w-3 h-1 bg-zinc-600 rounded-full" />
-                                    <span className="text-xs uppercase tracking-wider text-zinc-500">Human Only</span>
+                                    <span className="text-xs uppercase tracking-wider text-zinc-500">Manual Work</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <div className="w-3 h-1 bg-primary rounded-full" />
-                                    <span className="text-xs uppercase tracking-wider text-primary">Agentic Swarm</span>
+                                    <span className="text-xs uppercase tracking-wider text-primary">Automated Scale</span>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ export function ImpactGraph() {
                                 whileInView={{ opacity: 1, x: 270 }}
                                 transition={{ delay: 1.2 }}
                             >
-                                DECISION: ADOPT
+                                DECISION: AUTOMATE
                             </motion.text>
 
                         </svg>

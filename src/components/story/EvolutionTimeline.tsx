@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 
 const timelineData = [
     {
-        year: "2022",
-        title: "The Spark",
-        description: "ChatGPT is released. The world realizes AI can create, not just calculate. Generative Intelligence is born.",
-        tag: "Generation"
+        year: "2023",
+        title: "The Hype",
+        description: "ChatGPT launched. Everyone talked about it. Most businesses treated it like a toy or a trick.",
+        tag: "Awareness"
     },
     {
         year: "2024",
-        title: "The Bridge",
-        description: "Copilots emerge. AI begins to assist in coding and writing, but still requires human hands on the wheel.",
-        tag: "Assistance"
+        title: "The Tools",
+        description: "Software started integrating AI. Copilots for coding, writing, and design became standard.",
+        tag: "Adoption"
     },
     {
         year: "2026",
-        title: "The Genesis",
-        description: "Agentic AI matures. Software becomes autonomous. We founded Quantum Flow to help you harness this new workforce.",
-        tag: "Autonomy"
+        title: "The Workforce",
+        description: "AI is no longer just a tool—it's a teammate. Autonomous agents now handle entire workflows, from sales to operations.",
+        tag: "Integration"
     }
 ];
 
@@ -28,9 +28,9 @@ export function EvolutionTimeline() {
         <section className="py-32 bg-black relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="mb-20 text-center max-w-2xl mx-auto">
-                    <h2 className="text-primary font-mono text-sm uppercase tracking-widest mb-3">The Timeline</h2>
+                    <h2 className="text-primary font-mono text-sm uppercase tracking-widest mb-3">The Shift</h2>
                     <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                        From Chatbot <br /> to <span className="text-primary">Employee</span>
+                        From Novelty <br /> to <span className="text-primary">Necessity</span>
                     </h3>
                 </div>
 

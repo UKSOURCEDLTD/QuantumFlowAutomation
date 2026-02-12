@@ -14,8 +14,8 @@ export function PhilosophyRead() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-[1.1]">
-                            The Technology is Here.<br />
-                            <span className="text-zinc-500">The Expertise is Not.</span>
+                            AI isn't Magic.<br />
+                            <span className="text-zinc-500">It's Leverage.</span>
                         </h2>
                         <div className="w-20 h-1 bg-primary mb-8" />
                     </motion.div>
@@ -28,15 +28,16 @@ export function PhilosophyRead() {
                         className="space-y-6 text-lg text-zinc-300 leading-relaxed"
                     >
                         <p>
-                            Agentic AI isn't just a software update. It's a fundamental shift in how business is conducted.
-                            Most companies are still trying to figure out how to write a good ChatGPT prompt, while the market leaders are deploying autonomous workforces.
+                            Most businesses are stuck in "Chatbot Mode"—using AI to write emails or generate images. That's fine, but it doesn't move the needle.
                         </p>
                         <p>
-                            We built <span className="text-white font-semibold">Quantum Flow Automation</span> to close this gap.
-                            We don't just consult; we install. We take the most advanced autonomous agents available and weave them into your existing infrastructure.
+                            Real value comes when AI takes over entire workflows. When it doesn't just "help" you do the work, but actually <span className="text-white font-semibold">does the work</span>.
+                        </p>
+                        <p>
+                            At Quantum Flow, we don't sell "AI Consulting." We engineer systems that give you your time back. We turn manual labor into automated profit.
                         </p>
                         <p className="text-primary font-medium">
-                            We are your bridge to the Agentic Era.
+                            Practical tools. Measurable results. No magic required.
                         </p>
                     </motion.div>
 

@@ -6,20 +6,20 @@ import { Clock, TrendingUp, DollarSign } from 'lucide-react';
 const benefits = [
     {
         icon: Clock,
-        title: "Save Time",
-        description: "Reclaim thousands of hours. Agents don't sleep, don't take breaks, and process data at silicon speed.",
+        title: "Reclaim Your Time",
+        description: "What would you do with an extra 20 hours a week? AI handles the admin, scheduling, and repetitive tasks so you can focus on high-value strategy.",
         color: "text-blue-400"
     },
     {
         icon: DollarSign,
-        title: "Save Money",
-        description: "Decouple growth from headcount. Scale your output infinitely without scaling your payroll linearly.",
+        title: "Increase Profit",
+        description: "Automated systems cost pennies to run compared to human hours. Scale your output without increasing your payroll.",
         color: "text-green-400"
     },
     {
         icon: TrendingUp,
-        title: "Drive Growth",
-        description: "When operations run on autopilot, your best minds are free to focus on strategy, innovation, and expansion.",
+        title: "Scale Without Chaos",
+        description: "Growth usually means more complexity and more management. AI allows you to handle 10x the volume with the same team size.",
         color: "text-purple-400"
     }
 ];
@@ -29,9 +29,9 @@ export function AgenticImpact() {
         <section className="py-24 bg-black border-b border-white/5">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Why Adopt Now?</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Why Do It Now?</h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto">
-                        The window for early adoption is closing. The efficiency gains are too large to ignore.
+                        This isn't about being "cool" or "techy." It's about efficiency.
                     </p>
                 </div>
 

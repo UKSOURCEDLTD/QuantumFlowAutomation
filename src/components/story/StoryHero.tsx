@@ -29,8 +29,8 @@ export function StoryHero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-6xl md:text-8xl font-bold leading-none tracking-tighter uppercase mb-6"
                 >
-                    The Age of<br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-glow">Agentic AI</span>
+                    Is Your Business<br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-glow">Ready for AI?</span>
                 </motion.h1>
 
                 <motion.p
@@ -39,8 +39,8 @@ export function StoryHero() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed"
                 >
-                    Intelligence is no longer just a tool you use.<br />
-                    It is a workforce you deploy.
+                    The technology is here. The question is no longer "what can AI do?"<br />
+                    It's "what will you let it do for you?"
                 </motion.p>
             </div>
 
@@ -52,7 +52,7 @@ export function StoryHero() {
                 className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
             >
                 <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
-                <span className="text-[10px] uppercase tracking-[0.2em] text-primary/50">Scroll to Explore</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-primary/50">Assess Your Readiness</span>
             </motion.div>
         </section>
     );
