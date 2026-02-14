@@ -23,7 +23,7 @@ export default function Home() {
       <Marquee />
       <Navbar />
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-40 relative overflow-hidden">
+      <section className="container mx-auto px-6 pt-20 pb-20 md:pt-32 md:pb-40 relative overflow-hidden">
         {/* 3D Background confined to Hero */}
         <QuantumField />
 
@@ -32,19 +32,19 @@ export default function Home() {
             <StatusIndicator />
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-8 tracking-tighter uppercase">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold leading-tight mb-6 md:mb-8 tracking-tighter uppercase">
             Bring your company<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-glow">into 2026</span>
           </h1>
 
-          <div className="flex flex-col md:flex-row items-start gap-12 mt-12">
+          <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 mt-8 md:mt-12">
             <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
               We build AI systems that run your critical business processes.
               While you focus on strategy, our automation handles the execution.
             </p>
 
             <BookingButton
-              className="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-widest flex items-center gap-4 hover:bg-white transition-all neon-glow-primary hover:btn-glow-pulse cursor-pointer"
+              className="group relative px-6 py-3 md:px-8 md:py-4 bg-primary text-black font-bold uppercase tracking-widest flex items-center gap-4 hover:bg-white transition-all neon-glow-primary hover:btn-glow-pulse cursor-pointer text-sm md:text-base"
             >
               See How It Works
               <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
@@ -54,7 +54,7 @@ export default function Home() {
 
 
         {/* Info Cards Section - UPDATED */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-32 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16 md:mt-32 relative z-10">
           {/* Card 1: AI Employees */}
           <div className="glass-card p-8 group hover:border-primary/50 transition-all hover:neon-glow-primary relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors"></div>

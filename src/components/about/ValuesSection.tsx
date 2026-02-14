@@ -23,7 +23,7 @@ const values = [
     {
         icon: Handshake,
         title: 'Partnership',
-        description: 'We don\'t do one-off projects. We become an extension of your team — invested in your growth, your goals, and your long-term success.',
+        description: 'Whether it\'s a single project or an ongoing partnership, we treat every client like part of the team — invested in your growth, your goals, and your long-term success.',
         gradient: 'from-accent to-pink-400',
         borderHover: 'hover:border-accent/40',
         glowColor: 'group-hover:shadow-[0_0_40px_rgba(255,0,255,0.15)]',

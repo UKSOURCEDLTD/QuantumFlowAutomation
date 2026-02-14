@@ -6,7 +6,9 @@ import { StoryHero } from "@/components/story/StoryHero";
 import { EvolutionTimeline } from "@/components/story/EvolutionTimeline";
 import { PhilosophyRead } from "@/components/story/PhilosophyRead";
 import { AgenticImpact } from "@/components/story/AgenticImpact";
-import { ImpactGraph } from "@/components/story/ImpactGraph";
+import { ReadinessChecklist } from "@/components/readiness/ReadinessChecklist";
+import { AIMyths } from "@/components/readiness/AIMyths";
+import { WhatToExpect } from "@/components/readiness/WhatToExpect";
 import { CTASection } from "@/components/home/CTASection";
 
 export default function AiReadinessPage() {
@@ -19,7 +21,9 @@ export default function AiReadinessPage() {
                 <EvolutionTimeline />
                 <PhilosophyRead />
                 <AgenticImpact />
-                <ImpactGraph />
+                <ReadinessChecklist />
+                <AIMyths />
+                <WhatToExpect />
                 <CTASection />
             </main>
 
