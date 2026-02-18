@@ -20,7 +20,7 @@ export const CONTENT_OPENCLAW = `
 
 <h2>The Hub-and-Spoke Architecture</h2>
 
-<p>OpenClaw uses a hub-and-spoke model that's deceptively simple but incredibly powerful:</p>
+<p>OpenClaw uses a hub-and-spoke model that's deceptively simple but genuinely powerful:</p>
 
 <p>The <strong>Gateway</strong> sits at the centre. It receives messages from any connected channel, normalises them into a standard format, and routes them to the appropriate agent runtime. When the agent responds, the Gateway translates the response back into the channel-specific format and delivers it.</p>
 
@@ -139,7 +139,7 @@ export const CONTENT_ANTIGRAVITY_IDE = `
 
 <p>Imagine this: you kick off three agents in the morning. Agent 1 is building a new API endpoint. Agent 2 is writing tests for yesterday's feature. Agent 3 is refactoring a legacy module. You go to your standup meeting. When you come back, all three have completed their work, generated implementation plans, recorded browser sessions showing their testing, and are waiting for your review.</p>
 
-<p>This is asynchronous development at a scale that was impossible six months ago. One developer, managing a team of AI agents, shipping the output of what would traditionally require a squad of three to four engineers.</p>
+<p>This is asynchronous development at a scale that was impossible six months ago. One developer, managing a team of AI agents, shipping far more than would traditionally be possible working solo.</p>
 
 <h2>Powered by Gemini 3: What It Means in Practice</h2>
 
@@ -177,17 +177,17 @@ export const CONTENT_ANTIGRAVITY_IDE = `
 
 <h2>Multi-Model Support: The Safety Net</h2>
 
-<p>While Gemini 3 is the primary engine, Antigravity also supports Anthropic's Claude Sonnet 4.5 and Opus 4.5, plus GPT-OSS-120B. This isn't just about choice — it's about resilience.</p>
+<p>While Gemini 3 is the primary engine, Antigravity also supports models from Anthropic and OpenAI. This isn't just about choice — it's about resilience.</p>
 
 <p>We've found that different models excel at different tasks:</p>
 <ul>
 <li><strong>Gemini 3 Pro:</strong> Best all-rounder. Excellent at full-stack development, large codebase understanding, and complex refactoring.</li>
-<li><strong>Claude Opus 4.5:</strong> Superior for nuanced writing, documentation, and code review where subtlety matters.</li>
+<li><strong>Claude (Anthropic):</strong> Superior for nuanced writing, documentation, and code review where subtlety matters.</li>
 <li><strong>Gemini 3 Deep Think:</strong> Best for architectural decisions, debugging complex race conditions, and problems requiring multi-step reasoning.</li>
 <li><strong>Gemini 3 Flash:</strong> Fastest for quick completions, simple edits, and high-volume repetitive tasks.</li>
 </ul>
 
-<p>The ability to switch models mid-task means you're never stuck. If one model struggles with a particular problem, try another. The IDE makes this seamless.</p>
+<p>The ability to switch models mid-task means you're never stuck. If one model struggles with a particular problem, try another. The IDE makes this effortless.</p>
 
 <h2>The Honest Downsides</h2>
 
@@ -214,7 +214,7 @@ export const CONTENT_ANTIGRAVITY_IDE = `
 <li><strong>Commit and push:</strong> Approved changes get committed with descriptive messages. The agent writes the commit messages too.</li>
 </ol>
 
-<p>Output increase since adopting Antigravity: roughly 4-5x. Not because of faster typing. Because the agent eliminates the gap between intention and implementation. You think it, the agent builds it, you review it. The bottleneck shifts from "how do I implement this?" to "what should I build next?"</p>
+<p>Output increase since adopting Antigravity: substantial. Not because of faster typing. Because the agent eliminates the gap between intention and implementation. You think it, the agent builds it, you review it. The bottleneck shifts from "how do I implement this?" to "what should I build next?"</p>
 
 <h2>The Bottom Line</h2>
 

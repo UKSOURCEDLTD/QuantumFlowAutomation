@@ -26,13 +26,13 @@ export const CONTENT_AGENT_ECONOMY = `
 <li>AI strategy consulting and readiness assessment</li>
 </ul>
 
-<p>Think of it like the early days of web development. The browsers and servers existed (Layer 1), but businesses needed specialists to build and maintain their websites (Layer 2). The agent deployer market is following the same pattern — except it's moving 10x faster.</p>
+<p>Think of it like the early days of web development. The browsers and servers existed (Layer 1), but businesses needed specialists to build and maintain their websites (Layer 2). The agent deployer market is following the same pattern — except the pace of change is significantly faster.</p>
 
 <h3>Layer 3: Agent-Powered Businesses (The New Model)</h3>
 <p>This is the most exciting and least understood layer. These are businesses that couldn't exist without AI agents:</p>
 <ul>
 <li><strong>One-person agencies:</strong> An individual running what looks like a full-service agency, with AI agents handling research, drafting, scheduling, client reporting, and project management</li>
-<li><strong>AI-augmented professional services:</strong> Accountants, lawyers, and consultants who serve 5-10x more clients because agents handle the preparatory work</li>
+<li><strong>AI-augmented professional services:</strong> Accountants, lawyers, and consultants who serve significantly more clients because agents handle the preparatory work</li>
 <li><strong>Automated commerce:</strong> E-commerce operations where agents manage inventory, pricing, customer service, and supplier relations — with human oversight on strategy only</li>
 <li><strong>Content businesses:</strong> Media companies where agents handle research, first drafts, distribution, and analytics — with humans focused on editorial judgment and creative direction</li>
 </ul>
@@ -40,14 +40,14 @@ export const CONTENT_AGENT_ECONOMY = `
 <h2>New Business Models Emerging</h2>
 
 <h3>Agent-as-a-Service (AaaS)</h3>
-<p>Instead of selling software licenses or SaaS subscriptions, businesses sell access to trained, specialised agents. A legal research agent that costs £200/month and replaces 20 hours of paralegal work. An insurance claims assessment agent that processes 500 claims per day at 95% accuracy. A recruitment screening agent that evaluates 1,000 CVs and produces a ranked shortlist.</p>
+<p>Instead of selling software licenses or SaaS subscriptions, businesses sell access to trained, specialised agents. A legal research agent that costs £200/month and replaces hours of paralegal work. An insurance claims assessment agent that processes hundreds of claims per day with high accuracy. A recruitment screening agent that evaluates thousands of CVs and produces a ranked shortlist.</p>
 
 <p>AaaS pricing is outcome-based rather than seat-based. You don't pay per user — you pay per task completed, per query answered, or per result delivered. This aligns cost with value in a way that traditional SaaS pricing never could.</p>
 
 <h3>The Micro-Agency</h3>
 <p>One person, three to five AI agents, earning the equivalent of a ten-person agency. We're seeing this emerge across creative services, marketing, bookkeeping, and recruiting. The founder provides judgment, relationships, and quality control. The agents provide scale, speed, and consistency.</p>
 
-<p>The economics are compelling: a traditional marketing agency with ten employees has £400,000+ in annual labour costs. A micro-agency with one founder and agents runs at £50,000-80,000 total cost (founder's salary plus infrastructure). Same output. Ten percent of the overhead.</p>
+<p>The economics are compelling: a traditional marketing agency with ten employees carries substantial labour costs. A micro-agency with one founder and agents runs at a fraction of that cost. Comparable output, dramatically lower overhead.</p>
 
 <h3>AI-Native Products</h3>
 <p>Products that are built around agents rather than user interfaces. Instead of a dashboard where you configure settings and view reports, you have a conversation where you describe what you want and the agent delivers it. The "product" is the agent's capability, not the interface.</p>

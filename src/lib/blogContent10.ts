@@ -30,12 +30,12 @@ export const CONTENT_MULTIMODAL = `
 <li>Meeting decisions live in recordings, rough notes, whiteboard photos, and follow-up emails</li>
 </ul>
 
-<p>A text-only AI agent can handle maybe 40% of this. A multimodal agent handles 95%. That gap — the 55% of business information that isn't clean text — is where most AI deployments fail. Multimodal closes it.</p>
+<p>A text-only AI agent can handle a fraction of this. A multimodal agent handles nearly all of it. That gap — the bulk of business information that isn't clean text — is where most AI deployments fall short. Multimodal closes it.</p>
 
 <h2>Real Use Cases We've Deployed</h2>
 
 <h3>1. Invoice Processing from Any Format</h3>
-<p>A client's accounts team receives invoices in every format imaginable: typed PDFs, handwritten notes photographed on a phone, email-embedded tables, and scanned faxes (yes, faxes still exist in some industries). Our agent reads all of them. It doesn't matter if the invoice is a crisp PDF or a blurry phone photo of a handwritten receipt — Gemini 3's vision capabilities extract the supplier name, amounts, dates, and line items with over 97% accuracy.</p>
+<p>A client's accounts team receives invoices in every format imaginable: typed PDFs, handwritten notes photographed on a phone, email-embedded tables, and scanned faxes (yes, faxes still exist in some industries). Our agent reads all of them. It doesn't matter if the invoice is a crisp PDF or a blurry phone photo of a handwritten receipt — Gemini 3's vision capabilities extract the supplier name, amounts, dates, and line items with high accuracy.</p>
 
 <h3>2. Visual QA for E-Commerce</h3>
 <p>For our Amazon business, we built an agent that reviews product listing images. It checks that the main image meets Amazon's requirements (white background, product fills 85%+ of frame, no text overlays), compares lifestyle images against brand guidelines, and flags any images that might trigger a listing violation. It processes 50+ images in under a minute — work that used to take someone 30 minutes per listing.</p>
@@ -55,14 +55,14 @@ export const CONTENT_MULTIMODAL = `
 
 <table>
 <thead>
-<tr><th>Capability</th><th>Gemini 3 Pro</th><th>Claude Opus 4.5</th><th>GPT-4o</th></tr>
+<tr><th>Capability</th><th>Gemini 3 Pro</th><th>Claude (Anthropic)</th><th>GPT-4o</th></tr>
 </thead>
 <tbody>
 <tr><td>Image understanding</td><td>Excellent</td><td>Excellent</td><td>Good</td></tr>
 <tr><td>Document/PDF processing</td><td>Excellent</td><td>Good</td><td>Good</td></tr>
 <tr><td>Audio processing</td><td>Native</td><td>Via transcription</td><td>Native</td></tr>
 <tr><td>Video understanding</td><td>Native</td><td>Frame extraction</td><td>Limited</td></tr>
-<tr><td>Mixed-format context</td><td>Best in class</td><td>Good</td><td>Good</td></tr>
+<tr><td>Mixed-format context</td><td>Excellent</td><td>Good</td><td>Good</td></tr>
 <tr><td>Context window for media</td><td>2M tokens</td><td>200K tokens</td><td>128K tokens</td></tr>
 </tbody>
 </table>
@@ -81,7 +81,7 @@ export const CONTENT_MULTIMODAL = `
 <li><strong>Build toward video.</strong> Video understanding is the most compute-intensive but also the most impactful for specific use cases like quality control and training.</li>
 </ol>
 
-<p>The businesses that treat AI as a text tool are using 40% of its capability. Multimodal doesn't just add features — it fundamentally expands what an AI agent can do for your business. Your operational data is multimodal. Your AI should be too.</p>`;
+<p>The businesses that treat AI as a text tool are leaving most of its capability unused. Multimodal doesn't just add features — it fundamentally expands what an AI agent can do for your business. Your operational data is multimodal. Your AI should be too.</p>`;
 
 export const CONTENT_SEVEN_AUTOMATIONS = `
 <p class="lead">Theory is cheap. Everyone can talk about what AI agents could do. Here are seven specific automations running in our business through OpenClaw right now — what they do, how they're configured, and exactly how much time and money they save. No hypotheticals. Just production systems working 24/7.</p>

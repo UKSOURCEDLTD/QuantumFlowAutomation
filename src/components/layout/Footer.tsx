@@ -22,6 +22,8 @@ export function Footer() {
                                 { label: 'Services', href: '/services' },
                                 { label: 'AI Readiness', href: '/ai-readiness' },
                                 { label: 'Blog', href: '/blog' },
+                                { label: 'Intelligence', href: '/intelligence' },
+                                { label: 'Network', href: '/network' },
                                 { label: 'Contact', href: '/contact' },
                             ].map((item) => (
                                 <li key={item.label}>
@@ -40,9 +42,9 @@ export function Footer() {
                                 { label: 'LinkedIn', href: '#' },
                             ].map((item) => (
                                 <li key={item.label}>
-                                    <Link href={item.href} className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors text-sm group">
+                                    <Link href={item.href} className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors text-sm group" target="_blank" rel="noopener noreferrer">
                                         {item.label}
-                                        <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                        <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                                     </Link>
                                 </li>
                             ))}

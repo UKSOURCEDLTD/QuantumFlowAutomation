@@ -4,7 +4,7 @@
 export const CONTENT_AI_READINESS = `
 <p class="lead">AI is the most powerful business tool since the internet. But deploying it without preparation is like strapping a jet engine to a bicycle — impressive for about three seconds, then spectacularly destructive.</p>
 
-<p>We've consulted with over 40 businesses in the last year about AI adoption. About a third of them were genuinely ready. The rest needed foundational work first. And here's the thing — <strong>the ones who acknowledged they weren't ready and fixed the foundations first got better results than the ones who rushed in.</strong></p>
+<p>We've worked with dozens of businesses on AI adoption. About a third were genuinely ready. The rest needed foundational work first. And here's the thing — <strong>the ones who acknowledged they weren't ready and fixed the foundations first got better results than the ones who rushed in.</strong></p>
 
 <p>This isn't a checklist designed to make you feel inadequate. It's a diagnostic tool. Think of it as a pre-flight check. You wouldn't take off without one, and you shouldn't deploy AI without one either.</p>
 
@@ -46,7 +46,7 @@ export const CONTENT_AI_READINESS = `
 
 <p>An AI agent's superpower is connecting systems. It reads from your CRM, writes to your accounting software, sends emails, updates spreadsheets — all programmatically. But it can only do this if your tools expose APIs (Application Programming Interfaces).</p>
 
-<p><strong>Good news:</strong> Most modern SaaS tools do. Xero, HubSpot, Salesforce, Slack, Monday.com, Shopify — they all have robust APIs.</p>
+<p><strong>Good news:</strong> Most modern SaaS tools do. Xero, HubSpot, Salesforce, Slack, Monday.com, Shopify — they all have well-documented APIs.</p>
 
 <p><strong>Bad news:</strong> If you're running legacy on-premise software from 2008 with no API access, we'd need to build custom integrations — which is doable but adds time and cost.</p>
 
@@ -107,23 +107,23 @@ export const CONTENT_COST_OF_WAITING = `
 <p>Every automated workflow generates structured data. Every agent interaction creates training data. Every decision logged becomes a pattern the system can learn from. After 18 months, early adopters have datasets that late adopters literally cannot buy — they're proprietary, specific to their business, and refined through thousands of real-world iterations.</p>
 
 <h3>2. Process Knowledge</h3>
-<p>The first AI deployment teaches you what works and what doesn't. The second builds on those lessons. By the fifth, you have an institutional playbook for AI adoption that reduces deployment time by 80%. Late adopters start from zero every time.</p>
+<p>The first AI deployment teaches you what works and what doesn't. The second builds on those lessons. By the fifth, you have an institutional playbook for AI adoption that dramatically reduces deployment time. Late adopters start from zero every time.</p>
 
 <h3>3. Cultural Readiness</h3>
 <p>Teams that have worked alongside AI for 18 months don't fear it — they demand it. "Why isn't this automated yet?" becomes the standard question. This cultural shift is worth more than any technology. It's the difference between pushing AI into a resistant organisation and being pulled by an eager one.</p>
 
 <h3>4. Competitive Moat</h3>
-<p>When your operations run 40% faster and 60% cheaper than your competitor's, price isn't your advantage — <em>capability</em> is. You can serve more customers, respond faster, handle more complexity, and still maintain higher margins. The late adopter can't compete on speed, cost, or quality. They can only compete on price — and that's a race to the bottom.</p>
+<p>When your operations run significantly faster and leaner than your competitor's, price isn't your advantage — <em>capability</em> is. You can serve more customers, respond faster, handle more complexity, and still maintain healthy margins. The late adopter can't compete on speed, cost, or quality. They can only compete on price — and that's a race to the bottom.</p>
 
 <h2>What Changed in 2026: The Three Convergences</h2>
 
 <p>There's a specific reason Q1 2026 is the inflection point, and it's not because we said so. Three independent trends converged:</p>
 
 <h3>Model Capability Crossed the Reliability Threshold</h3>
-<p>In 2024, AI agents could handle simple, single-step tasks reliably. By late 2025, they could handle multi-step, multi-tool workflows with 99%+ accuracy on structured tasks. This isn't incremental improvement — it's the difference between "interesting experiment" and "production system." Agents now reliably call APIs, navigate web interfaces, query databases, and handle error cases without human intervention.</p>
+<p>In 2024, AI agents could handle simple, single-step tasks reliably. By late 2025, they could handle multi-step, multi-tool workflows with considerably higher accuracy. This isn't incremental improvement — it's the difference between "interesting experiment" and "production system." Agents now reliably call APIs, navigate web interfaces, query databases, and handle error cases without human intervention.</p>
 
 <h3>Cost Collapsed</h3>
-<p>GPT-4 level intelligence cost roughly $60 per million tokens in early 2024. By Q1 2026, equivalent capability costs under $3 per million tokens. That's a 95% cost reduction in 24 months. Tasks that were economically unfeasible a year ago — processing every customer email, analysing every transaction, monitoring every document — are now trivially cheap.</p>
+<p>GPT-4 level intelligence cost roughly $60 per million tokens in early 2024. By early 2026, equivalent capability is available at a fraction of that cost. Tasks that were economically unfeasible a year ago — processing every customer email, analysing every transaction, monitoring every document — are now affordable at scale.</p>
 
 <h3>Infrastructure Matured</h3>
 <p>Google, AWS, and Azure now offer managed agentic AI platforms. You don't need a team of ML engineers to deploy an agent. You need a clear process definition and someone who understands your business. The barrier to entry dropped from "hire a data science team" to "book a discovery call with an AI consultancy."</p>
@@ -140,7 +140,7 @@ export const CONTENT_COST_OF_WAITING = `
 <ul>
 <li>Firm A processes 3x more clients with the same headcount</li>
 <li>Firm A's error rate on reconciliation drops to 0.1%</li>
-<li>Firm A's employees spend 60% more time on advisory (high-margin) work</li>
+<li>Firm A's employees spend significantly more time on advisory (high-margin) work</li>
 <li>Firm A has £180,000 in additional revenue from increased capacity</li>
 <li>Firm B is exactly where they were in January, but their best employees are starting to leave for firms that use AI</li>
 </ul>
@@ -153,7 +153,7 @@ export const CONTENT_COST_OF_WAITING = `
 <p>It was too early in 2023. It was borderline in 2024. In 2026, agents are processing millions of transactions daily in production at enterprises worldwide. The question has shifted from "does it work?" to "why aren't you using it?"</p>
 
 <h3>"We can't afford it."</h3>
-<p>You can't afford not to. Our AI audit costs £500. A single agent deployment starts at £5,000. The ROI payback period we see across our clients? 8-12 weeks. If you can't afford a £500 diagnostic that identifies £50,000+ in annual efficiency gains, your problem isn't budget — it's priorities.</p>
+<p>You can't afford not to. Our AI audit costs £500. A single agent deployment starts at £5,000. The ROI payback period we typically see? A matter of weeks, not months. If you can't afford a £500 diagnostic that identifies substantial annual efficiency gains, your problem isn't budget — it's priorities.</p>
 
 <h3>"Our industry is different."</h3>
 <p>We hear this from every industry. Accounting, logistics, legal, recruitment, e-commerce, manufacturing. They all say "our industry is unique." And they're all right — and it doesn't matter. AI agents don't care about your industry. They care about your processes. And every industry has processes that are repetitive, rule-based, and ripe for automation.</p>
@@ -253,15 +253,15 @@ export const CONTENT_AI_WEBSITE = `
 
 <h3>30-Day Results</h3>
 <ul>
-<li>Organic traffic: +340% (from improved SEO and page speed)</li>
-<li>Bounce rate: -52% (from improved UX and relevant content)</li>
-<li>Job applications via website: +180%</li>
-<li>Average session duration: +210%</li>
+<li>Organic traffic: significant increase (from improved SEO and page speed)</li>
+<li>Bounce rate: dropped substantially (from improved UX and relevant content)</li>
+<li>Job applications via website: more than doubled</li>
+<li>Average session duration: increased significantly</li>
 </ul>
 
 <h2>What We Learned</h2>
 
-<p><strong>Agents are multiplicative, not additive.</strong> Four agents working simultaneously don't produce 4x output — they produce 10-15x, because they eliminate the wait time between sequential steps. While the content agent writes page 3, the development agent is building page 1, and the QA agent is testing the components. Nothing waits.</p>
+<p><strong>Agents are multiplicative, not additive.</strong> Four agents working simultaneously don't produce 4x output — they produce dramatically more, because they eliminate the wait time between sequential steps. While the content agent writes page 3, the development agent is building page 1, and the QA agent is testing the components. Nothing waits.</p>
 
 <p><strong>Human judgement is irreplaceable.</strong> The agents produced excellent work, but they couldn't make taste decisions. "Should this hero section feel bold or understated?" "Does this colour palette match the client's personality?" These are human calls, and they matter enormously.</p>
 

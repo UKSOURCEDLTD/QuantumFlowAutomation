@@ -63,7 +63,7 @@ export const CONTENT_FIRST_AGENT = `
 
 <h3>4. Lead Qualification Agent</h3>
 <p><strong>What it does:</strong> Reads new lead submissions, scores them against your ideal customer profile, enriches with LinkedIn/company data, and routes hot leads to salespeople with a briefing note.</p>
-<p><strong>Why it's great:</strong> Direct revenue impact. Sales teams spend 30-50% of their time qualifying leads. An agent that handles initial qualification lets them focus on closing.</p>
+<p><strong>Why it's great:</strong> Direct revenue impact. Sales teams often spend a large portion of their time qualifying leads. An agent that handles initial qualification lets them focus on closing.</p>
 
 <h3>5. Weekly Report Agent</h3>
 <p><strong>What it does:</strong> Pulls data from your CRM, accounting system, project management tool, and any other sources. Generates a formatted report with key metrics, trends, and exceptions. Delivers to stakeholders at a scheduled time.</p>
@@ -95,14 +95,14 @@ export const CONTENT_UK_SME = `
 <p>But ask them what they've actually done, and the picture changes:</p>
 
 <ul>
-<li><strong>78%</strong> of UK SMEs say AI is "important or critical" to their future competitiveness</li>
-<li><strong>62%</strong> have "explored" AI tools (usually ChatGPT for content generation)</li>
-<li><strong>23%</strong> have deployed any AI tool in a production business process</li>
-<li><strong>8%</strong> have deployed an autonomous AI agent</li>
-<li><strong>3%</strong> have measured the ROI of their AI investment</li>
+<li>The vast majority of UK SMEs say AI is important to their future competitiveness</li>
+<li>Most have "explored" AI tools (usually ChatGPT for content generation)</li>
+<li>Far fewer have deployed any AI tool in a production business process</li>
+<li>A small fraction have deployed an autonomous AI agent</li>
+<li>Even fewer have measured the ROI of their AI investment</li>
 </ul>
 
-<p>That gap — between 78% awareness and 3% measured deployment — is the story of AI in UK SMEs in 2026.</p>
+<p>That gap — between near-universal awareness and minimal measured deployment — is the story of AI in UK SMEs in 2026.</p>
 
 <h2>Why UK SMEs Are Falling Behind</h2>
 
@@ -113,7 +113,7 @@ export const CONTENT_UK_SME = `
 <p>The UK market is flooded with "AI consultants" who are really just ChatGPT prompt engineers or traditional IT consultancies who've added "AI" to their brochures. Business owners who've engaged these firms have been burned — promised transformation, delivered a chatbot widget on their website. The resulting scepticism is rational but misdirected.</p>
 
 <h3>3. The Data Problem</h3>
-<p>UK SMEs overwhelmingly run on a combination of spreadsheets, email, and domain-specific software that doesn't integrate. The average SME we audit uses 6-8 software tools daily, of which 2-3 have no API access. This isn't a dealbreaker, but it does mean that data infrastructure work often needs to happen before or alongside AI deployment.</p>
+<p>UK SMEs overwhelmingly run on a combination of spreadsheets, email, and domain-specific software that doesn't integrate. The typical SME we work with uses half a dozen or more software tools daily, some of which have no API access. This isn't a dealbreaker, but it does mean that data infrastructure work often needs to happen before or alongside AI deployment.</p>
 
 <h3>4. The Skills Gap</h3>
 <p>There's a genuine shortage of people who understand both AI technology and business operations. Pure technologists build impressive demos that don't solve real problems. Pure business consultants recommend AI without understanding its constraints. The intersection — people who can bridge the gap — is where the value lives. And there aren't enough of them.</p>
@@ -126,7 +126,7 @@ export const CONTENT_UK_SME = `
 <p>Not "implement AI across the business." Instead: "automate invoice processing for the finance team." Specific, measurable, achievable. Every successful deployment we've seen started with a single, well-defined use case.</p>
 
 <h3>They Had Executive Sponsorship</h3>
-<p>AI adoption led by a middle manager who "thinks it's interesting" fails. AI adoption driven by a founder or director who says "this is a priority and I'm personally overseeing it" succeeds. The correlation is nearly 100%.</p>
+<p>AI adoption led by a middle manager who "thinks it's interesting" rarely goes far. AI adoption driven by a founder or director who says "this is a priority and I'm personally overseeing it" succeeds at a dramatically higher rate.</p>
 
 <h3>They Measured Obsessively</h3>
 <p>Before deployment: "This process takes 3 hours per day." After deployment: "This process takes 12 minutes per day." That kind of clarity makes the ROI case irresistible and builds momentum for expansion.</p>
@@ -143,7 +143,7 @@ export const CONTENT_UK_SME = `
 <p>Strong in customer service automation and inventory management. Multi-channel sellers are using AI agents to synchronise listings, manage pricing, and handle customer enquiries across Amazon, eBay, Shopify, and direct sales simultaneously.</p>
 
 <h3>Recruitment</h3>
-<p>One of the most natural fits for AI. CV screening, candidate matching, interview scheduling, and follow-up communication are all high-volume, pattern-based tasks. Early adopters in recruitment are processing 5-10x more candidates with the same team size.</p>
+<p>One of the most natural fits for AI. CV screening, candidate matching, interview scheduling, and follow-up communication are all high-volume, pattern-based tasks. Early adopters in recruitment are processing significantly more candidates with the same team size.</p>
 
 <h3>Manufacturing and Logistics</h3>
 <p>Slower adoption, but the opportunities are enormous. Supply chain optimisation, demand forecasting, quality control documentation, and compliance reporting are all ripe for automation. The barrier is typically legacy systems with poor integration capabilities.</p>

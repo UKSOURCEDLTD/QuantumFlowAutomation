@@ -27,7 +27,7 @@ export const CONTENT_DEEP_THINK = `
 <h3>Code Review</h3>
 <p>We now run every significant PR through Deep Think before merging. Not for style issues or formatting — that's what linters are for. For logic issues. For "this works, but here's why it'll break when you scale" issues. For "you're not handling this edge case that your tests don't cover" issues.</p>
 
-<p>The hit rate is remarkable. About one in every four reviews surfaces something genuinely important that we would have shipped to production otherwise. The cost of running Deep Think on a PR review: pennies. The cost of a production bug: hours of debugging, client impact, reputation damage.</p>
+<p>The hit rate is remarkable. A meaningful proportion of reviews surface something genuinely important that we would have shipped to production otherwise. The cost of running Deep Think on a PR review: pennies. The cost of a production bug: hours of debugging, client impact, reputation damage.</p>
 
 <h2>When NOT to Use Deep Think</h2>
 
@@ -51,7 +51,7 @@ export const CONTENT_DEEP_THINK = `
 <tbody>
 <tr><td>Quick completions, simple edits</td><td>Gemini 3 Flash</td><td>Fastest response, lowest cost</td></tr>
 <tr><td>Feature development, UI work</td><td>Gemini 3 Pro</td><td>Best balance of speed and quality</td></tr>
-<tr><td>Writing, documentation</td><td>Claude Opus 4.5</td><td>Most natural prose, best nuance</td></tr>
+<tr><td>Writing, documentation</td><td>Claude (Anthropic)</td><td>Most natural prose, best nuance</td></tr>
 <tr><td>Architecture, debugging, review</td><td>Gemini 3 Deep Think</td><td>Deepest reasoning, catches edge cases</td></tr>
 </tbody>
 </table>
@@ -61,7 +61,7 @@ export const CONTENT_DEEP_THINK = `
 <p>Deep Think isn't the model you use most. It's the model that saves you when it matters most. And for the problems where reasoning depth is the difference between "it works" and "it works correctly under every condition" — it's irreplaceable.</p>`;
 
 export const CONTENT_DEATH_OF_SAAS = `
-<p class="lead">There are 30,000+ SaaS tools on the market. The average SME subscribes to 12-15 of them. The average enterprise: 250+. And for the first time in the history of software, there's a credible alternative to most of them: AI agents that do the work, instead of tools that help you do the work. The SaaS model isn't dying — but it's about to be fundamentally disrupted.</p>
+<p class="lead">There are tens of thousands of SaaS tools on the market. The average SME subscribes to a dozen or more. The average enterprise: hundreds. And for the first time in the history of software, there's a credible alternative to most of them: AI agents that do the work, instead of tools that help you do the work. The SaaS model isn't dying — but it's about to be fundamentally disrupted.</p>
 
 <h2>The Problem with SaaS You've Learned to Ignore</h2>
 
@@ -70,7 +70,7 @@ export const CONTENT_DEATH_OF_SAAS = `
 <p>Each tool solves one problem. Each comes with its own interface, its own learning curve, its own monthly bill, and its own data silo. The result:</p>
 
 <ul>
-<li><strong>Tool fatigue:</strong> Your team spends 30% of their time switching between tools, copying data from one to another, and trying to remember which system has the information they need</li>
+<li><strong>Tool fatigue:</strong> Your team spends a significant portion of their time switching between tools, copying data from one to another, and trying to remember which system has the information they need</li>
 <li><strong>Integration tax:</strong> You subscribe to Zapier to connect the tools that should already talk to each other — adding another subscription to manage the subscriptions</li>
 <li><strong>Feature bloat:</strong> You use 20% of each tool's features and pay for 100%. Every SaaS tool has become a platform, adding features nobody asked for to justify price increases</li>
 <li><strong>Data fragmentation:</strong> Your customer data lives in your CRM, your email tool, your support tool, your analytics tool, and your billing tool — five incomplete pictures instead of one complete one</li>

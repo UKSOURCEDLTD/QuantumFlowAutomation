@@ -39,7 +39,7 @@ export const CONTENT_AGENTIC_AI = `
 <p>Gemini's 2-million token context window means an agent can hold your entire codebase, your entire customer database schema, and your entire process documentation in working memory — simultaneously. This isn't incremental. It's a phase change. An agent with this context doesn't need to "search" for information. It already knows.</p>
 
 <h3>2. Tool Use Became Reliable</h3>
-<p>Function calling in modern models has crossed the reliability threshold. When we say an agent can "use tools," we mean it can reliably call APIs, execute database queries, navigate web pages, and manipulate files with >99% accuracy on structured tasks. A year ago, this was 85%. That gap is the difference between "interesting demo" and "production system."</p>
+<p>Function calling in modern models has crossed the reliability threshold. When we say an agent can "use tools," we mean it can reliably call APIs, execute database queries, navigate web pages, and manipulate files with high accuracy on well-defined tasks. Even 12 months ago, tool use was inconsistent enough that production deployments felt risky. That gap — between "works most of the time" and "works reliably enough to trust" — is the difference between an interesting demo and a production system.</p>
 
 <h3>3. Orchestration Frameworks Matured</h3>
 <p>LangGraph, CrewAI, Google's Agent Development Kit — the infrastructure for building multi-agent systems is now battle-tested. You can define agent roles, manage state across complex workflows, and handle failure gracefully. The plumbing exists.</p>
@@ -59,7 +59,7 @@ export const CONTENT_AGENTIC_AI = `
 <li>Sends to manager for approval (waits 2-4 hours)</li>
 <li>Sends response to customer</li>
 </ol>
-<p><strong>Total time: 4-6 hours. Cost: ~£45 in labour.</strong></p>
+<p><strong>Total time: 4-6 hours. A significant chunk of someone's day — on a single complaint.</strong></p>
 
 <h3>After: The Agentic Way</h3>
 <ol>
@@ -95,7 +95,7 @@ export const CONTENT_AGENTIC_AI = `
 export const CONTENT_GOOGLE_STACK = `
 <p class="lead">We get asked this question constantly: "Why Google? Why not OpenAI? Why not Anthropic? Why not run open-source models yourself?" The answer is deceptively simple: we don't just need a great model. We need a great <em>system</em>.</p>
 
-<p>AI models are commoditising. GPT-4o, Gemini 2.0, Claude 3.5 — they're all extraordinary. Choosing between them on raw capability is like choosing between a Ferrari and a Lamborghini for your daily commute. The model isn't the bottleneck. <strong>The infrastructure around the model is.</strong></p>
+<p>AI models are commoditising. The top-tier models from OpenAI, Google, and Anthropic are all extraordinary. Choosing between them on raw capability alone is like choosing between a Ferrari and a Lamborghini for your daily commute. The model isn't the bottleneck. <strong>The infrastructure around the model is.</strong></p>
 
 <p>And this is where Google's unified stack becomes an unfair advantage.</p>
 
@@ -152,7 +152,7 @@ export const CONTENT_GOOGLE_STACK = `
 
 <p>Fair question. Our answer: you're already locked in. Every business is locked into their cloud provider, their CRM, their ERP. The question isn't "will I be locked in?" — it's "will I be locked into a platform that's winning or losing?"</p>
 
-<p>Google is investing more in AI infrastructure than any other company on earth. Gemini models are advancing at a pace that makes competitors nervous. Google Cloud is the fastest-growing cloud provider by market share. This isn't a bet on a dark horse — it's a bet on the horse that's already winning.</p>
+<p>Google is investing heavily in AI infrastructure — tens of billions annually. Gemini models are advancing rapidly, and Google Cloud is one of the fastest-growing major cloud platforms. We're not making a contrarian bet — we're backing a platform with deep AI integration and serious long-term commitment.</p>
 
 <p>And pragmatically: if you build on open standards (REST APIs, containers, standard SQL), migration is painful but possible. If you build on proprietary abstractions (we don't), migration is impossible.</p>
 
@@ -176,7 +176,7 @@ export const CONTENT_NEURAL_ENTERPRISE = `
 <p>This is your C-suite, your senior managers, your client-facing team. They set the goals. They handle the exceptions. They make the calls that no algorithm should make. <strong>They decide what to optimise for — the agents figure out how.</strong></p>
 
 <h3>The Orchestration Layer — Where AI Agents Live</h3>
-<p>This is the nervous system. AI agents coordinate workflows, route tasks, manage state, and handle the 80% of business operations that are predictable, repeatable, and rule-based.</p>
+<p>This is the nervous system. AI agents coordinate workflows, route tasks, manage state, and handle the bulk of business operations that are predictable, repeatable, and rule-based.</p>
 <p>An orchestration agent might:</p>
 <ul>
 <li>Receive a new customer enquiry and route it to the right team based on 15 different criteria</li>
@@ -233,7 +233,7 @@ export const CONTENT_NEURAL_ENTERPRISE = `
 <p>You don't need to rebuild your entire business overnight. The migration to a Neural Enterprise happens in three phases:</p>
 
 <ol>
-<li><strong>Phase 1 — Automate the Handoffs:</strong> Identify every point where data is manually transferred between systems. Automate each one with an agent. This alone typically saves 20-30 hours per week for a mid-sized team.</li>
+<li><strong>Phase 1 — Automate the Handoffs:</strong> Identify every point where data is manually transferred between systems. Automate each one with an agent. Even a handful of these automations can free up significant hours each week.</li>
 <li><strong>Phase 2 — Orchestrate the Workflows:</strong> Connect individual automations into end-to-end workflows. A single event triggers a cascade of coordinated actions across multiple systems.</li>
 <li><strong>Phase 3 — Optimise the Decisions:</strong> With agents handling execution and data flowing in real time, you have the visibility to make better strategic decisions — and the infrastructure to act on them immediately.</li>
 </ol>

@@ -54,7 +54,7 @@ export const CONTENT_QUANTUM_AI = `
 
 <ul>
 <li><strong>Willow quantum processor:</strong> Achieved below-threshold error correction in late 2024 — the single most important milestone in quantum computing history</li>
-<li><strong>Gemini models:</strong> The world's most capable AI models with the largest context windows</li>
+<li><strong>Gemini models:</strong> Among the most capable AI models available, with industry-leading context windows</li>
 <li><strong>TensorFlow Quantum:</strong> A framework specifically designed for quantum-classical hybrid machine learning</li>
 <li><strong>Cloud infrastructure:</strong> When quantum processors become available as cloud services, they'll be on GCP — the same platform we already use for everything</li>
 </ul>
@@ -138,7 +138,7 @@ export const CONTENT_DAY_IN_LIFE = `
 
 <p>Thirty seconds later, I have: number of interactions handled, average response time, customer satisfaction scores, escalation rate, and the three most common query types. I walk into the client call with data that would have taken their office manager an hour to compile.</p>
 
-<p>The agent is handling 73% of incoming enquiries without human intervention. The client's receptionist — who used to spend 4 hours daily on phone and email triage — is now focused on business development. They want to expand the agent to handle appointment scheduling and follow-up. I scope it on the call. Antigravity will have it built by Thursday.</p>
+<p>The agent is handling the majority of incoming enquiries without human intervention. The client's receptionist — who used to spend 4 hours daily on phone and email triage — is now focused on business development. They want to expand the agent to handle appointment scheduling and follow-up. I scope it on the call. Antigravity will have it built by Thursday.</p>
 
 <h2>4:00 PM — Financial Operations on Autopilot</h2>
 

@@ -39,7 +39,7 @@ export const CONTENT_AGENTS_VS_AUTOMATION = `
 <tr><td><strong>Maintenance</strong></td><td>Breaks when tools/APIs change</td><td>Adapts to changes dynamically</td></tr>
 <tr><td><strong>Unstructured data</strong></td><td>Cannot process</td><td>Native capability</td></tr>
 <tr><td><strong>Cost per action</strong></td><td>Fractions of a penny</td><td>Pennies to pounds (LLM inference)</td></tr>
-<tr><td><strong>Reliability</strong></td><td>100% (for defined paths)</td><td>~99% (with proper guardrails)</td></tr>
+<tr><td><strong>Reliability</strong></td><td>100% (for defined paths)</td><td>High (with proper guardrails)</td></tr>
 <tr><td><strong>Best for</strong></td><td>Moving data between systems</td><td>Decisions, analysis, unstructured work</td></tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ export const CONTENT_AGENTS_VS_AUTOMATION = `
 <p>The businesses that understand this distinction will invest wisely. The ones that treat AI agents as "fancy Zapier" will be disappointed. And the ones that dismiss agents as "too experimental" while their competitors deploy them will learn the hard way that being right about the technology doesn't matter if you're wrong about the timing.</p>`;
 
 export const CONTENT_AI_AUDIT = `
-<p class="lead">We've audited over 40 businesses for AI readiness in the last 12 months. The £500 AI Audit has become our most popular service — not because it's cheap, but because it's the fastest way to get an honest, expert assessment of where AI can actually help your business. Here's exactly what happens.</p>
+<p class="lead">We've audited dozens of businesses for AI readiness. The £500 AI Audit has become our most popular service — not because it's cheap, but because it's the fastest way to get an honest, expert assessment of where AI can actually help your business. Here's exactly what happens.</p>
 
 <h2>Why an Audit Exists</h2>
 
@@ -147,7 +147,7 @@ export const CONTENT_AI_AUDIT = `
 
 <h2>Patterns We See Over and Over</h2>
 
-<p>After 40+ audits, certain patterns emerge:</p>
+<p>After conducting many audits, certain patterns emerge:</p>
 
 <h3>The Data Entry Trap</h3>
 <p>Almost every business has at least one person whose primary job is entering the same data into multiple systems. CRM, accounting, project management, reporting — the same information, typed in four times. This is always the easiest and most impactful thing to automate.</p>
@@ -171,4 +171,4 @@ export const CONTENT_AI_AUDIT = `
 <li><strong>Do nothing.</strong> Some businesses genuinely aren't ready yet. If the audit reveals foundational issues (bad data, undocumented processes, team resistance), it's better to fix those first. We'll tell you honestly if that's the case.</li>
 </ol>
 
-<p>The audit pays for itself. Every time. Even if you never engage us again, the operational insights alone are worth multiples of the £500 investment. But most clients don't stop at the audit — because once you see the opportunities laid out clearly, the question isn't "should we do this?" It's "why haven't we done this already?"</p>`;
+<p>We believe the audit pays for itself. Even if you never engage us again, the operational insights alone are worth the £500 investment. And most clients don't stop at the audit — because once you see the opportunities laid out clearly, the question isn't "should we do this?" It's "why haven't we done this already?"</p>`;

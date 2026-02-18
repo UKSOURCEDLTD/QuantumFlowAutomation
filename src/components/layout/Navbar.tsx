@@ -52,6 +52,8 @@ export function Navbar() {
                 <button
                     className="md:hidden text-white relative z-10"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={isOpen}
                 >
                     {isOpen ? <X /> : <Menu />}
                 </button>

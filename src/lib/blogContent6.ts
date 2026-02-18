@@ -2,7 +2,7 @@
 // Vibe Coding and Self-Hosting AI Infrastructure
 
 export const CONTENT_VIBE_CODING = `
-<p class="lead">Google coined the term "vibe coding" when they launched Antigravity. The developer community mocked it. Then they tried it. Then they couldn't go back. Here's what vibe coding actually means in practice, why it works, and how to do it without producing the AI slop that gives the approach a bad name.</p>
+<p class="lead">The term "vibe coding" entered the mainstream when Andrej Karpathy described a new way of programming — one where you describe what you want and AI handles the implementation. Antigravity has made this approach genuinely practical. Here's what vibe coding actually means in practice, why it works, and how to do it without producing the AI slop that gives the approach a bad name.</p>
 
 <h2>The Old Way vs. The New Way</h2>
 
@@ -89,13 +89,13 @@ export const CONTENT_VIBE_CODING = `
 <p>We track our output meticulously. Since adopting vibe coding with Antigravity:</p>
 
 <ul>
-<li><strong>Feature delivery time:</strong> Down 60-70% for UI-heavy work</li>
+<li><strong>Feature delivery time:</strong> Substantially reduced for UI-heavy work</li>
 <li><strong>Bug rate:</strong> Roughly the same — the agent introduces different bugs than humans do, but not more of them</li>
 <li><strong>Code quality:</strong> Higher on average — the agent is more consistent about error handling, edge cases, and documentation than we are when we're tired</li>
 <li><strong>Developer satisfaction:</strong> Significantly higher — we spend time on interesting problems instead of boilerplate</li>
 </ul>
 
-<p>The developers who dismiss vibe coding as "not real programming" are making the same argument that assembly programmers made about high-level languages. The abstraction level has moved up. Again. The developers who adapt will thrive. The rest will be writing hand-crafted artisanal for-loops while their competitors ship features at 5x their speed.</p>
+<p>The developers who dismiss vibe coding as "not real programming" are making the same argument that assembly programmers made about high-level languages. The abstraction level has moved up. Again. The developers who adapt will thrive. The rest will be writing hand-crafted artisanal for-loops while their competitors ship features far faster.</p>
 
 <p>Vibe coding isn't the future. It's the present. Learn to do it well, or learn to compete with people who do.</p>`;
 
@@ -117,7 +117,7 @@ export const CONTENT_SELF_HOSTING = `
 <p>A typical agent workflow processes 2,000-5,000 tokens per interaction. At OpenAI's GPT-4o pricing (~$2.50 per million input tokens, $10 per million output tokens), 1,000 interactions per day costs roughly £150-300/month. That sounds reasonable until you consider that a dedicated GPU instance running an open-source model of comparable quality costs £50-100/month — and handles unlimited interactions.</p>
 
 <h3>3. Dependency Risk</h3>
-<p>In January 2026, OpenAI had three separate outages that lasted more than 2 hours each. If your entire agent infrastructure runs through their API, those outages shut down your AI workforce completely. Self-hosting with redundancy means you control your uptime.</p>
+<p>Major API providers have all experienced outages. If your entire agent infrastructure runs through a single API, those outages shut down your AI workforce completely. Self-hosting with redundancy means you control your uptime.</p>
 
 <h2>The Google Cloud Self-Hosting Stack</h2>
 
@@ -173,7 +173,7 @@ export const CONTENT_SELF_HOSTING = `
 <li>Enterprise AI platforms: £500-2,000/month (Intercom Fin, Zendesk AI, etc.)</li>
 </ul>
 
-<p>Self-hosting with OpenClaw on GCP is 3-10x cheaper than managed alternatives at SME scale. And you get more control, better privacy, and no vendor lock-in.</p>
+<p>Self-hosting with OpenClaw on GCP can be significantly cheaper than managed alternatives at SME scale. And you get more control, better privacy, and no vendor lock-in.</p>
 
 <h2>The Operational Reality</h2>
 
