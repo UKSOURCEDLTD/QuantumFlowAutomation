@@ -21,6 +21,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+    ssr: false,
+});
 
 export function ServicesContent() {
     return (
@@ -28,6 +33,23 @@ export function ServicesContent() {
 
             {/* --- HERO SECTION --- */}
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-[#050510] via-black to-black">
+                {/* Spline 3D Background */}
+                <div className="absolute inset-0 z-0">
+                    <Spline
+                        scene="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            transform: 'scale(1.15)',
+                            transformOrigin: 'center center',
+                        }}
+                    />
+                    {/* Gradient overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black pointer-events-none" />
+                </div>
                 {/* Mesh gradient blobs */}
                 <div className="absolute top-[-200px] left-1/4 w-[600px] h-[600px] bg-primary/8 rounded-full blur-[160px] pointer-events-none" />
                 <div className="absolute bottom-[-100px] right-1/4 w-[400px] h-[400px] bg-secondary/6 rounded-full blur-[140px] pointer-events-none" />
