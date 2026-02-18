@@ -6,6 +6,11 @@ import { CONTENT_FIRST_AGENT, CONTENT_UK_SME } from "./blogContent4";
 import { CONTENT_OPENCLAW, CONTENT_ANTIGRAVITY_IDE } from "./blogContent5";
 import { CONTENT_VIBE_CODING, CONTENT_SELF_HOSTING } from "./blogContent6";
 import { CONTENT_FULL_STACK } from "./blogContent7";
+import { CONTENT_QUANTUM_AI, CONTENT_DAY_IN_LIFE } from "./blogContent8";
+import { CONTENT_DEEP_THINK, CONTENT_DEATH_OF_SAAS } from "./blogContent9";
+import { CONTENT_MULTIMODAL, CONTENT_SEVEN_AUTOMATIONS } from "./blogContent10";
+import { CONTENT_AI_REGULATION, CONTENT_CONTEXT_WINDOWS } from "./blogContent11";
+import { CONTENT_AGENT_ECONOMY, CONTENT_NINETY_DAYS } from "./blogContent12";
 
 // High-quality Unsplash images for blog hero sections
 const IMAGES = {
@@ -24,10 +29,142 @@ const IMAGES = {
     vibeCoding: "https://images.unsplash.com/photo-1550439062-609e1531270e?w=1200&q=80",
     selfHosting: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
     fullStack: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
+    quantumAI: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200&q=80",
+    dayInLife: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+    deepThink: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80",
+    deathOfSaas: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    multimodal: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80",
+    sevenAutomations: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1200&q=80",
+    aiRegulation: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+    contextWindows: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200&q=80",
+    agentEconomy: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80",
+    ninetyDays: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
 };
 
 export const BLOG_POSTS_LIST: BlogPost[] = [
-    // === NEW: OpenClaw + Antigravity posts (most recent) ===
+    // === BATCH 3: 10 new posts (most recent) ===
+    {
+        id: "25",
+        slug: "zero-to-ai-first-90-days",
+        title: "From Zero to AI-First: The 90-Day Transformation Playbook",
+        date: "2026-02-28",
+        category: "Tutorials",
+        image: IMAGES.ninetyDays,
+        author: "Luke Needham",
+        readTime: "16 min read",
+        excerpt: "You've read the articles. You've attended the webinars. Now here's the week-by-week playbook we use to transform a traditional SME into an AI-first operation in 90 days. No theory. Just steps.",
+        content: CONTENT_NINETY_DAYS
+    },
+    {
+        id: "24",
+        slug: "ai-agent-economy",
+        title: "The AI Agent Economy: New Business Models, New Rules, New Opportunities",
+        date: "2026-02-27",
+        category: "AI Strategy",
+        image: IMAGES.agentEconomy,
+        author: "Luke Needham",
+        readTime: "15 min read",
+        excerpt: "A new economy is forming around AI agents — not the economy of selling AI tools, but the economy of agents creating value alongside humans. Here's how to position yourself for it.",
+        content: CONTENT_AGENT_ECONOMY
+    },
+    {
+        id: "23",
+        slug: "context-windows-explained",
+        title: "Context Windows Explained: Why 2 Million Tokens Changes Everything",
+        date: "2026-02-26",
+        category: "Engineering",
+        image: IMAGES.contextWindows,
+        author: "Luke Needham",
+        readTime: "14 min read",
+        excerpt: "The context window is the most important — and most misunderstood — spec of any AI model. The jump from 128K to 2M tokens isn't incremental. It's a qualitative shift that enables entirely new applications.",
+        content: CONTENT_CONTEXT_WINDOWS
+    },
+    {
+        id: "22",
+        slug: "ai-regulation-uk-2026",
+        title: "AI Regulation in the UK: What SMEs Actually Need to Know in 2026",
+        date: "2026-02-25",
+        category: "Industry News",
+        image: IMAGES.aiRegulation,
+        author: "Luke Needham",
+        readTime: "13 min read",
+        excerpt: "The UK took a different path from the EU's AI Act. For SMEs deploying AI agents, this creates both opportunity and uncertainty. Here's what the rules actually say — stripped of the legal jargon.",
+        content: CONTENT_AI_REGULATION
+    },
+    {
+        id: "21",
+        slug: "seven-openclaw-automations",
+        title: "7 OpenClaw Automations Running Our Business Right Now",
+        date: "2026-02-24",
+        category: "Case Studies",
+        image: IMAGES.sevenAutomations,
+        author: "Luke Needham",
+        readTime: "16 min read",
+        excerpt: "No hypotheticals. Seven specific automations running in production through OpenClaw — what they do, how they're configured, and exactly how much time and money they save.",
+        content: CONTENT_SEVEN_AUTOMATIONS
+    },
+    {
+        id: "20",
+        slug: "multimodal-ai-business",
+        title: "Multimodal AI: Why Your Agents Need Eyes, Ears, and More Than Just Text",
+        date: "2026-02-23",
+        category: "Engineering",
+        image: IMAGES.multimodal,
+        author: "Luke Needham",
+        readTime: "14 min read",
+        excerpt: "Most businesses think of AI as a text tool. But your business runs on photos, voice notes, PDFs, and video. Multimodal AI closes the 55% gap that text-only agents miss entirely.",
+        content: CONTENT_MULTIMODAL
+    },
+    {
+        id: "19",
+        slug: "death-of-saas",
+        title: "The Death of SaaS: How AI Agents Are Replacing Your Software Subscriptions",
+        date: "2026-02-22",
+        category: "AI Strategy",
+        image: IMAGES.deathOfSaas,
+        author: "Luke Needham",
+        readTime: "14 min read",
+        excerpt: "30,000+ SaaS tools on the market. The average SME subscribes to 15 of them. For the first time, there's a credible alternative: AI agents that do the work instead of tools that help you do it.",
+        content: CONTENT_DEATH_OF_SAAS
+    },
+    {
+        id: "18",
+        slug: "gemini-deep-think",
+        title: "Gemini 3 Deep Think: When AI Learns to Actually Reason",
+        date: "2026-02-21",
+        category: "Engineering",
+        image: IMAGES.deepThink,
+        author: "Luke Needham",
+        readTime: "13 min read",
+        excerpt: "Google quietly added Deep Think to Antigravity. It took us two weeks to realise it was the most important addition since launch — because it doesn't just process faster. It reasons differently.",
+        content: CONTENT_DEEP_THINK
+    },
+    {
+        id: "17",
+        slug: "day-in-life-ai-entrepreneur",
+        title: "A Day in the Life: Running a Business Where AI Agents Do the Operational Work",
+        date: "2026-02-20",
+        category: "Case Studies",
+        image: IMAGES.dayInLife,
+        author: "Luke Needham",
+        readTime: "15 min read",
+        excerpt: "Not the theory. Not the vision. The actual, daily, unglamorous reality of an entrepreneur whose business partner is software. Here's a real day, documented as it happened.",
+        content: CONTENT_DAY_IN_LIFE
+    },
+    {
+        id: "16",
+        slug: "quantum-computing-ai-convergence",
+        title: "Quantum Computing Meets AI: What's Coming, When, and What to Do About It",
+        date: "2026-02-19",
+        category: "AI Strategy",
+        image: IMAGES.quantumAI,
+        author: "Luke Needham",
+        readTime: "15 min read",
+        excerpt: "Quantum computing has been 'five years away' for twenty years. But something has shifted. Google's Willow chip, IBM's Heron processors — the implications for AI are approaching fast.",
+        content: CONTENT_QUANTUM_AI
+    },
+
+    // === BATCH 2: OpenClaw + Antigravity posts ===
     {
         id: "15",
         slug: "openclaw-antigravity-full-stack",
@@ -37,7 +174,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.fullStack,
         author: "Luke Needham",
         readTime: "14 min read",
-        excerpt: "People ask us what tools we use. The answer is three: Antigravity for building, OpenClaw for deploying, and Google Cloud for running. Here's exactly how the pieces fit together — and how you can replicate it.",
+        excerpt: "People ask us what tools we use. The answer is three: Antigravity for building, OpenClaw for deploying, and Google Cloud for running. Here's exactly how the pieces fit together.",
         content: CONTENT_FULL_STACK
     },
     {
@@ -49,7 +186,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.openclaw,
         author: "Luke Needham",
         readTime: "16 min read",
-        excerpt: "Every serious AI deployment hits the same wall: you need your agent on WhatsApp, Slack, Telegram, and email — all at once. OpenClaw solves this with a hub-and-spoke architecture that we deploy for every client.",
+        excerpt: "Every serious AI deployment hits the same wall: you need your agent on WhatsApp, Slack, Telegram, and email — all at once. OpenClaw solves this with a hub-and-spoke architecture.",
         content: CONTENT_OPENCLAW
     },
     {
@@ -61,7 +198,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.antigravity,
         author: "Luke Needham",
         readTime: "15 min read",
-        excerpt: "Google's agent-first IDE promised to change how we write software. It did — but not in the way we expected. Here's our unfiltered assessment after using it daily for 90 days.",
+        excerpt: "Google's agent-first IDE promised to change how we write software. It did — but not in the way we expected. Here's our unfiltered assessment after 90 days of daily use.",
         content: CONTENT_ANTIGRAVITY_IDE
     },
     {
@@ -85,11 +222,11 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.selfHosting,
         author: "Luke Needham",
         readTime: "14 min read",
-        excerpt: "£25-75/month for a 24/7 AI workforce? We break down our self-hosting architecture on Google Cloud — with real cost numbers, real infrastructure diagrams, and real deployment timelines.",
+        excerpt: "£25-75/month for a 24/7 AI workforce? We break down our self-hosting architecture on Google Cloud — with real cost numbers and real deployment timelines.",
         content: CONTENT_SELF_HOSTING
     },
 
-    // === Original 10 posts ===
+    // === BATCH 1: Original 10 posts ===
     {
         id: "7",
         slug: "ai-agents-vs-automation",
@@ -99,7 +236,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.agentsVsAutomation,
         author: "Luke Needham",
         readTime: "10 min read",
-        excerpt: "Zapier, Make, and n8n changed the game. But AI agents are playing a completely different sport. Here's why the distinction matters — and which one your business actually needs.",
+        excerpt: "Zapier, Make, and n8n changed the game. But AI agents are playing a completely different sport. Here's why the distinction matters.",
         content: CONTENT_AGENTS_VS_AUTOMATION
     },
     {
@@ -123,7 +260,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.agenticAI,
         author: "Luke Needham",
         readTime: "12 min read",
-        excerpt: "We are moving beyond simple Q&A. Autonomous agents that can plan, execute, and correct their own actions are the new standard for business automation — and most companies are already behind.",
+        excerpt: "We are moving beyond simple Q&A. Autonomous agents that can plan, execute, and correct their own actions are the new standard for business automation.",
         content: CONTENT_AGENTIC_AI
     },
     {
@@ -135,7 +272,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.firstAgent,
         author: "Luke Needham",
         readTime: "15 min read",
-        excerpt: "You don't need to be a developer to understand how AI agents work. This guide walks you through the anatomy of an agent, how to identify the right first project, and how to avoid the most common mistakes.",
+        excerpt: "You don't need to be a developer to understand how AI agents work. This guide walks you through the anatomy, the first project, and the most common mistakes.",
         content: CONTENT_FIRST_AGENT
     },
     {
@@ -147,7 +284,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.googleStack,
         author: "Luke Needham",
         readTime: "14 min read",
-        excerpt: "From Gemini's 2M token context window to Cloud Run's serverless compute, we explain exactly why Google's ecosystem is the only enterprise-grade infrastructure capable of supporting true agentic workflows at scale.",
+        excerpt: "From Gemini's 2M token context window to Cloud Run's serverless compute — why Google's ecosystem is the only enterprise-grade infrastructure for true agentic workflows.",
         content: CONTENT_GOOGLE_STACK
     },
     {
@@ -159,7 +296,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.ukSme,
         author: "Luke Needham",
         readTime: "12 min read",
-        excerpt: "We surveyed our network and the data is stark: UK SMEs are simultaneously the most excited about AI and the least prepared to deploy it. Here's where things actually stand — and what to do about it.",
+        excerpt: "UK SMEs are simultaneously the most excited about AI and the least prepared to deploy it. Here's where things actually stand — and what to do about it.",
         content: CONTENT_UK_SME
     },
     {
@@ -171,7 +308,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.neuralEnterprise,
         author: "Luke Needham",
         readTime: "11 min read",
-        excerpt: "Most businesses are structured like factories — slow, lossy, and inefficient. The Neural Enterprise is structured like a brain. Here's how to make the transition without breaking everything.",
+        excerpt: "Most businesses are structured like factories. The Neural Enterprise is structured like a brain. Here's how to make the transition.",
         content: CONTENT_NEURAL_ENTERPRISE
     },
     {
@@ -183,7 +320,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.aiReadiness,
         author: "Luke Needham",
         readTime: "9 min read",
-        excerpt: "Before you invest a single pound in AI, you need to know if your business can actually use it. Most can't — yet. Here are the five critical factors that determine whether you'll get ROI or waste money.",
+        excerpt: "Before you invest a single pound in AI, you need to know if your business can actually use it. Most can't — yet. Here are the five critical factors.",
         content: CONTENT_AI_READINESS
     },
     {
@@ -195,7 +332,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.costOfWaiting,
         author: "Luke Needham",
         readTime: "10 min read",
-        excerpt: "Every month you delay AI adoption, your competitors compound their advantage. Here's the hard data on why early 2026 is the moment to move — and what happens to businesses that don't.",
+        excerpt: "Every month you delay AI adoption, your competitors compound their advantage. Here's the hard data on why early 2026 is the moment to move.",
         content: CONTENT_COST_OF_WAITING
     },
     {
@@ -207,7 +344,7 @@ export const BLOG_POSTS_LIST: BlogPost[] = [
         image: IMAGES.aiWebsite,
         author: "Luke Needham",
         readTime: "13 min read",
-        excerpt: "A behind-the-scenes look at how we deployed a swarm of specialised AI agents to design, develop, and ship a complete business website — from blank canvas to production — in just two days.",
+        excerpt: "A behind-the-scenes look at how we deployed a swarm of specialised AI agents to design, develop, and ship a complete business website in just two days.",
         content: CONTENT_AI_WEBSITE
     }
 ];
