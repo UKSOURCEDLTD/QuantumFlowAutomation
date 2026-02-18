@@ -587,6 +587,100 @@ body:has(.blog-theme)::after {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* Lead paragraphs */
+.blog-article-content p.lead {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #1f2937;
+  font-weight: 400;
+  border-left: 4px solid #10b981;
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* H4 headings */
+.blog-article-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Horizontal rules */
+.blog-article-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, #06b6d4, transparent);
+  margin: 2.5rem 0;
+}
+
+/* Tables */
+.blog-article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.blog-article-content thead {
+  background: linear-gradient(135deg, #065f46, #064e3b);
+}
+
+.blog-article-content thead th {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.875rem 1.25rem;
+  text-align: left;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #10b981;
+}
+
+.blog-article-content tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.15s ease;
+}
+
+.blog-article-content tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.blog-article-content tbody tr:hover {
+  background-color: #ecfdf5;
+}
+
+.blog-article-content tbody tr:last-child {
+  border-bottom: none;
+}
+
+.blog-article-content tbody td {
+  padding: 0.75rem 1.25rem;
+  color: #374151;
+  vertical-align: top;
+}
+
+.blog-article-content tbody td strong {
+  color: #065f46;
+}
+
+/* Make tables responsive on mobile */
+@media (max-width: 640px) {
+  .blog-article-content table {
+    font-size: 0.85rem;
+  }
+
+  .blog-article-content thead th,
+  .blog-article-content tbody td {
+    padding: 0.625rem 0.75rem;
+  }
+}
+
 /* Line clamp utility */
 .line-clamp-2 {
   display: -webkit-box;
