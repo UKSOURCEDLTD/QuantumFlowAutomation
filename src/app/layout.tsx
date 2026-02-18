@@ -33,6 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Prefetch Spline 3D scene so it's cached before the user hits /services */}
+        <link rel="prefetch" href="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode" as="fetch" crossOrigin="anonymous" />
+      </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} bg-black text-white antialiased selection:bg-primary/30 selection:text-white`}>
         <SmoothScroll>
           <CustomCursor />
