@@ -9,85 +9,15 @@ import { BlogNewsletter } from "@/components/blog/BlogNewsletter";
 import { motion } from "framer-motion";
 import { useState, useMemo } from "react";
 import { BookOpen } from "lucide-react";
-import type { BlogPost } from "@/lib/cms";
-
-// Mock Data — will be replaced by CMS fetch
-const BLOG_POSTS: BlogPost[] = [
-    {
-        slug: "agentic-ai-revolution",
-        title: "The Agentic AI Revolution: Why Chatbots Are Dead",
-        excerpt: "We are moving beyond simple Q&A. Autonomous agents that can plan, execute, and correct their own actions are the new standard for business automation.",
-        date: "2026-02-10",
-        category: "AI Strategy",
-        image: "",
-        author: "Luke Needham",
-        readTime: "5 min read",
-        content: ""
-    },
-    {
-        slug: "google-unified-stack",
-        title: "Why We Bet on the Google Unified Stack",
-        excerpt: "From Gemini to Vertex AI, Google's ecosystem provides the only enterprise-grade infrastructure capable of supporting true agentic workflows at scale.",
-        date: "2026-02-05",
-        category: "Engineering",
-        image: "",
-        author: "Luke Needham",
-        readTime: "8 min read",
-        content: ""
-    },
-    {
-        slug: "neural-enterprise",
-        title: "Building the Neural Enterprise",
-        excerpt: "How to structure your organisation so that humans make decisions and software executes them. A guide to the modern business architecture.",
-        date: "2026-01-28",
-        category: "AI Strategy",
-        image: "",
-        author: "Luke Needham",
-        readTime: "6 min read",
-        content: ""
-    },
-    {
-        slug: "ai-readiness-assessment",
-        title: "Is Your Business Ready for AI? The 5-Point Checklist",
-        excerpt: "Before you invest in AI, you need to know if your business is ready. Here are the five critical factors that determine AI readiness.",
-        date: "2026-01-20",
-        category: "Tutorials",
-        image: "",
-        author: "Luke Needham",
-        readTime: "4 min read",
-        content: ""
-    },
-    {
-        slug: "cost-of-waiting",
-        title: "The Hidden Cost of Waiting: Why Q1 2026 is the AI Tipping Point",
-        excerpt: "Every month you delay AI adoption, your competitors gain ground. Here's the data on why early 2026 is the moment to move.",
-        date: "2026-01-15",
-        category: "Industry News",
-        image: "",
-        author: "Luke Needham",
-        readTime: "7 min read",
-        content: ""
-    },
-    {
-        slug: "ai-website-case-study",
-        title: "Case Study: How We Built an AI-Powered Website in 48 Hours",
-        excerpt: "A behind-the-scenes look at how we used agentic AI to design, develop, and deploy a complete business website in just two days.",
-        date: "2026-01-08",
-        category: "Case Studies",
-        image: "",
-        author: "Luke Needham",
-        readTime: "10 min read",
-        content: ""
-    }
-];
+import { BLOG_POSTS_LIST } from "@/lib/blogData";
 
 const ALL_CATEGORIES = ["All", "AI Strategy", "Engineering", "Industry News", "Tutorials", "Case Studies"];
 
 export default function BlogPage() {
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const featuredPost = BLOG_POSTS[0];
-    const remainingPosts = BLOG_POSTS.slice(1);
+    const featuredPost = BLOG_POSTS_LIST[0];
+    const remainingPosts = BLOG_POSTS_LIST.slice(1);
 
     const filteredPosts = useMemo(() => {
         if (activeCategory === "All") return remainingPosts;

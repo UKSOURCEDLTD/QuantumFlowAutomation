@@ -58,7 +58,7 @@ export default function SplineTestPage() {
                 width: '100%',
             }}>
                 <Spline
-                    scene="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode"
+                    scene="https://prod.spline.design/13hUBQ6WPaSGm2Zk/scene.splinecode"
                     onLoad={() => setLoaded(true)}
                     style={{
                         width: '100%',
