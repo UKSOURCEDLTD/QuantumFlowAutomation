@@ -688,3 +688,12 @@ body:has(.blog-theme)::after {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Hide Spline watermark */
+[data-logo="spline"] {
+  display: none !important;
+}
+
+spline-viewer::part(logo) {
+  display: none !important;
+}

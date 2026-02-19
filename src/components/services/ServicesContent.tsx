@@ -2,6 +2,7 @@
 
 import { PricingCard } from "@/components/services/PricingCard";
 import { ProcessTimeline } from "@/components/services/ProcessTimeline";
+import { SplineScene } from "@/components/3d/SplineScene";
 import {
     Bot,
     Globe,
@@ -17,15 +18,15 @@ import {
     Database,
     BarChart3,
     Users,
-    HeadphonesIcon
+    HeadphonesIcon,
+    Layers,
+    Code2,
+    Sparkles,
+    Monitor
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-    ssr: false,
-});
 
 export function ServicesContent() {
     return (
@@ -35,18 +36,13 @@ export function ServicesContent() {
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-[#050510] via-black to-black">
                 {/* Spline 3D Background */}
                 <div className="absolute inset-0 z-0">
-                    <Spline
-                        scene="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode"
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            transform: 'scale(1.15)',
-                            transformOrigin: 'center center',
-                        }}
-                    />
+                    <div className="absolute inset-0" style={{ transform: 'scale(1.15)', transformOrigin: 'center center' }}>
+                        <SplineScene
+                            scene="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode"
+                            interactive={false}
+                            rootMargin="0px"
+                        />
+                    </div>
                     {/* Gradient overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black pointer-events-none" />
                 </div>
@@ -167,8 +163,8 @@ export function ServicesContent() {
                             <div className="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
                                 <Globe className="w-7 h-7" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">AI Websites</h3>
-                            <p className="text-gray-400 mb-6 min-h-[48px]">Websites that answer questions, capture leads, and book meetings.</p>
+                            <h3 className="text-2xl font-bold mb-2">Websites & Apps</h3>
+                            <p className="text-gray-400 mb-6 min-h-[48px]">From a clean business site to a full custom platform. Info, style, or function.</p>
                             <div className="text-sm font-mono text-purple-400">From £1,000</div>
                         </Link>
 
@@ -177,85 +173,135 @@ export function ServicesContent() {
                             <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-6 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors">
                                 <Bot className="w-7 h-7" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">AI Employee</h3>
-                            <p className="text-gray-400 mb-6 min-h-[48px]">A 24/7 assistant that handles email, scheduling, and research.</p>
+                            <h3 className="text-2xl font-bold mb-2">AI Employees & Automations</h3>
+                            <p className="text-gray-400 mb-6 min-h-[48px]">AI assistants and automated workflows that handle your admin 24/7.</p>
                             <div className="text-sm font-mono text-green-400">From £1,000</div>
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* --- DETAILED SECTION 1: AUDIT --- */}
+            {/* --- DETAILED SECTION 1: AI READINESS & STRATEGIC GROWTH --- */}
             <section id="audit" className="relative py-32 border-t border-white/5 bg-gradient-to-b from-[#060612] to-black">
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px] pointer-events-none" />
                 <div className="container mx-auto px-6">
                     <div className="mb-16">
                         <span className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-2 block">Pillar 01</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">AI Audit & Consulting</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">AI Readiness & Strategic Growth</h2>
                         <p className="text-xl text-gray-400 max-w-2xl">
-                            Find out exactly where AI can transform your business before you invest.
-                            We identify <span className="text-white font-medium">repetitive tasks</span>, <span className="text-white font-medium">wasteful processes</span>, and <span className="text-white font-medium">missed opportunities</span>.
+                            Diagnosis before the prescription. We identify exactly where AI will save you <span className="text-white font-medium">time</span> and <span className="text-white font-medium">money</span> — then guide you through adopting it safely and effectively.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
-                        <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            {[
-                                { label: "Repetitive Tasks", desc: "Identify work that could be automated" },
-                                { label: "Communication Flows", desc: "Email, chat, customer enquiries" },
-                                { label: "Data & Documents", desc: "Processing, extraction, analysis" },
-                                { label: "Decision Points", desc: "Where AI could assist or automate" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex gap-4 items-start">
-                                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 mt-1">
-                                        <CheckCircle2 className="w-4 h-4 text-blue-400" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold mb-1">{item.label}</h4>
-                                        <p className="text-sm text-gray-400">{item.desc}</p>
-                                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Card 1: AI Readiness Audit */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-blue-500/40 transition-all duration-300 group hover:-translate-y-1">
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                                    <Search className="w-7 h-7" />
                                 </div>
-                            ))}
-                        </div>
+                                <h3 className="text-2xl font-bold mb-1">AI Readiness Audit</h3>
+                                <div className="flex items-baseline gap-2 mb-3">
+                                    <span className="text-3xl font-bold text-white">£500</span>
+                                    <span className="text-sm text-gray-500">one-time</span>
+                                </div>
+                                <p className="text-gray-400 italic">The &ldquo;Diagnosis before the Prescription.&rdquo;</p>
+                            </div>
 
-                        <div className="bg-gradient-to-br from-blue-900/20 to-transparent p-8 rounded-3xl border border-blue-500/20">
-                            <h3 className="text-xl font-bold mb-6">Who It's For</h3>
-                            <ul className="space-y-4">
-                                {["Business owners confused by AI hype", "Managers drowning in manual processes", "Companies considering hiring more staff"].map((item, i) => (
-                                    <li key={i} className="flex gap-3 text-sm text-gray-300">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 shrink-0" />
-                                        {item}
+                            <p className="text-sm text-gray-300 mb-6">
+                                We identify exactly where AI will save you time and money before you spend a penny on building anything.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <h4 className="text-xs font-mono text-blue-400 tracking-widest uppercase mb-4">Deliverables</h4>
+                                <ul className="space-y-4">
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                                        <div>
+                                            <span className="font-semibold text-white">90-Minute Strategy Session</span>
+                                            <p className="text-sm text-gray-400 mt-1">Deep dive into your current operations, bottlenecks, and tech stack.</p>
+                                        </div>
                                     </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                                        <div>
+                                            <span className="font-semibold text-white">The &ldquo;Money Map&rdquo; Report</span>
+                                            <p className="text-sm text-gray-400 mt-1">A prioritised list of high-ROI automation opportunities tailored to your business.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                                        <div>
+                                            <span className="font-semibold text-white">Implementation Roadmap</span>
+                                            <p className="text-sm text-gray-400 mt-1">A step-by-step plan — what to build, which tools to use, and who should build it.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <PricingCard
-                            title="Discovery Session"
-                            price="£500"
-                            description="90-min deep dive call + written report."
-                            features={["90 Minute Call", "Written Report", "Top 5 Opportunities", "Implementation Roadmap"]}
-                        />
-                        <PricingCard
-                            title="Strategic Retainer"
-                            price="£750/mo"
-                            description="Your ongoing AI strategy partner."
-                            features={["Monthly Strategy Call", "Priority Advisor Access", "First Look at Tools", "Reactive Support"]}
-                            isPopular
-                        />
-                        <PricingCard
-                            title="Full Audit"
-                            price="£2,000"
-                            description="Comprehensive operational analysis."
-                            features={["Everything in Discovery", "Staff Interviews", "Process Documentation", "90-Day Plan", "Vendor Comparisons"]}
-                        />
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                Book Your Audit <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
+
+                        {/* Card 2: Strategic Growth Partner */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-primary/50 bg-white/10 shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)] hover:border-primary/70 transition-all duration-300 group hover:-translate-y-1">
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-black text-xs font-bold rounded-full uppercase tracking-wider">
+                                Recommended
+                            </div>
+
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                    <Users className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-1">Strategic Growth Partner</h3>
+                                <div className="flex items-baseline gap-2 mb-3">
+                                    <span className="text-3xl font-bold text-white">£750</span>
+                                    <span className="text-sm text-gray-500">/ month</span>
+                                </div>
+                                <p className="text-gray-400 italic">Your Fractional Head of AI. We guide, you execute.</p>
+                            </div>
+
+                            <p className="text-sm text-gray-300 mb-6">
+                                Ensure your business adopts AI safely and effectively. We act as your safety net and navigator.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <h4 className="text-xs font-mono text-primary tracking-widest uppercase mb-4">Deliverables</h4>
+                                <ul className="space-y-4">
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                        <div>
+                                            <span className="font-semibold text-white">Proactive Strategy (Monthly)</span>
+                                            <p className="text-sm text-gray-400 mt-1">60-minute video call to review progress, set the tech roadmap, and ensure you&apos;re ahead of competitors.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                        <div>
+                                            <span className="font-semibold text-white">Unlimited Advisory Access</span>
+                                            <p className="text-sm text-gray-400 mt-1">Message us anytime (WhatsApp/Email) for a second opinion on tools, hires, or ideas. We stop you from making expensive mistakes.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                        <div>
+                                            <span className="font-semibold text-white">Architecture & Workflow Design</span>
+                                            <p className="text-sm text-gray-400 mt-1">We review software choices and engineer workflows before you buy — ensuring they fit the architecture.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-primary text-black hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                Become a Partner <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* --- DETAILED SECTION 2: WEBSITES --- */}
+            {/* --- DETAILED SECTION 2: WEBSITES & APPS --- */}
             <section id="websites" className="py-32 border-t border-white/5 relative overflow-hidden bg-gradient-to-b from-[#08060e] to-black">
                 {/* Background glow for this section */}
                 <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[150px] pointer-events-none" />
@@ -264,219 +310,352 @@ export function ServicesContent() {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="mb-16">
                         <span className="text-purple-400 font-mono text-sm tracking-widest uppercase mb-2 block">Pillar 02</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">AI-First Websites & Apps</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Websites & Apps</h2>
                         <p className="text-xl text-gray-400 max-w-2xl">
-                            Not just a website. A website that works for you.
-                            We build high-performance digital assets that <span className="text-white font-medium">convert visitors</span> and <span className="text-white font-medium">automate service</span>.
+                            From a clean online presence to a full software platform.
+                            Three tiers, one philosophy: <span className="text-white font-medium">build what you actually need</span>.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <MessageSquare className="w-8 h-8 text-purple-400 mb-4" />
-                            <h3 className="font-bold mb-2">AI Chat</h3>
-                            <p className="text-sm text-gray-400">Answer customer questions 24/7 (not a dumb chatbot).</p>
+                    {/* Tier split visual */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-12">
+                        <div className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                            <span className="text-sm font-mono text-gray-500">£1k</span>
+                            <p className="text-xs text-gray-400 mt-1">Info</p>
                         </div>
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <Zap className="w-8 h-8 text-purple-400 mb-4" />
-                            <h3 className="font-bold mb-2">Dynamic Content</h3>
-                            <p className="text-sm text-gray-400">Personalise based on visitor behaviour.</p>
+                        <div className="text-center p-4 rounded-xl bg-purple-500/10 border border-purple-500/30">
+                            <span className="text-sm font-mono text-purple-400">£3k</span>
+                            <p className="text-xs text-purple-300/60 mt-1">Style</p>
                         </div>
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <Database className="w-8 h-8 text-purple-400 mb-4" />
-                            <h3 className="font-bold mb-2">Smart Capture</h3>
-                            <p className="text-sm text-gray-400">Qualify prospects automatically before you talk to them.</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <Calendar className="w-8 h-8 text-purple-400 mb-4" />
-                            <h3 className="font-bold mb-2">Auto-Booking</h3>
-                            <p className="text-sm text-gray-400">AI-powered availability management and scheduling.</p>
+                        <div className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                            <span className="text-sm font-mono text-gray-500">£5k+</span>
+                            <p className="text-xs text-gray-400 mt-1">Function</p>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <PricingCard
-                            title="Static Site"
-                            price="£1,000"
-                            description="Clean, modern presence."
-                            features={["3-5 Pages", "Mobile Responsive", "Contact Form", "Basic SEO", "No AI Features"]}
-                        />
-                        <PricingCard
-                            title="Starter Site"
-                            price="£3,000"
-                            description="Basic AI integration."
-                            features={["5 Pages", "AI Chat Widget", "Smart Contact Form", "Mobile Optimised", "Fast Hosting"]}
-                            isPopular
-                        />
-                        <PricingCard
-                            title="Business Site"
-                            price="£6,000"
-                            description="Full AI powerhouse."
-                            features={["10+ Pages", "Booking Integration", "CRM Connection", "AI Blog Generation", "Advanced Analytics"]}
-                        />
-                        <PricingCard
-                            title="Custom App"
-                            price="£10k+"
-                            description="Bespoke application."
-                            features={["Web Application", "Complex AI Models", "User Auth", "Database", "API Integrations"]}
-                        />
+                    {/* 3-Tier Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+                        {/* Tier 1: Business Site */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300 group hover:-translate-y-1">
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6 text-gray-300 group-hover:bg-white group-hover:text-black transition-colors">
+                                    <Monitor className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-1">Business Site</h3>
+                                <div className="flex items-baseline gap-2 mb-3">
+                                    <span className="text-3xl font-bold text-white">£1,000</span>
+                                </div>
+                                <p className="text-gray-400 italic">Get online. Clean, fast, professional.</p>
+                            </div>
+
+                            <p className="text-sm text-gray-300 mb-6">
+                                A polished 2D website that gets your business online with everything you need — nothing you don&apos;t.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <ul className="space-y-3">
+                                    {[
+                                        "3–5 pages, fully responsive",
+                                        "Clean, modern design",
+                                        "Contact form & map",
+                                        "SEO optimised",
+                                        "Fast hosting setup",
+                                        "Google Analytics"
+                                    ].map((f, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-gray-500 shrink-0 mt-0.5" />
+                                            <span>{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                Get Started <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
+
+                        {/* Tier 2: Interactive Site — Featured */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-purple-500/50 bg-gradient-to-b from-purple-900/20 to-white/5 shadow-[0_0_40px_rgba(168,85,247,0.15)] hover:border-purple-400/70 transition-all duration-300 group hover:-translate-y-2 md:-mt-4">
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">
+                                Most Popular
+                            </div>
+
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                                    <Sparkles className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-1">Interactive Site</h3>
+                                <div className="flex items-baseline gap-2 mb-3">
+                                    <span className="text-3xl font-bold text-white">£3,000</span>
+                                </div>
+                                <p className="text-purple-300/80 italic">Look like a million-dollar brand.</p>
+                            </div>
+
+                            <p className="text-sm text-gray-300 mb-6">
+                                The &ldquo;wow&rdquo; factor. 3D elements, smooth animations, and a CMS so you can update it yourself. This is the one that turns heads.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <ul className="space-y-3">
+                                    {[
+                                        "Everything in Business Site",
+                                        "3D elements & animations",
+                                        "CMS (edit your own content)",
+                                        "Smart contact forms",
+                                        "Premium visual design",
+                                        "AI chat widget",
+                                        "Booking integration"
+                                    ].map((f, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                                            <span>{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-400 hover:to-pink-400 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                                Build My Site <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
+
+                        {/* Tier 3: Custom App / Platform */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300 group hover:-translate-y-1">
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                                    <Code2 className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-1">Custom App / Platform</h3>
+                                <div className="flex items-baseline gap-2 mb-3">
+                                    <span className="text-3xl font-bold text-white">£5,000+</span>
+                                </div>
+                                <p className="text-gray-400 italic">Run your business on it.</p>
+                            </div>
+
+                            <p className="text-sm text-gray-300 mb-6">
+                                Full software. Dashboards, client portals, complex logic, and integrations. This isn&apos;t a website — it&apos;s a platform.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <ul className="space-y-3">
+                                    {[
+                                        "Web application (not a site)",
+                                        "User authentication & roles",
+                                        "Database & API integrations",
+                                        "Dashboards & analytics",
+                                        "Client / customer portals",
+                                        "Custom business logic",
+                                        "Ongoing support options"
+                                    ].map((f, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                                            <span>{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                Discuss My Project <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* --- DETAILED SECTION 3: EMPLOYEE --- */}
+            {/* --- DETAILED SECTION 3: AI EMPLOYEES & AUTOMATIONS --- */}
             <section id="employee" className="py-32 border-t border-white/5 relative overflow-hidden bg-gradient-to-b from-[#060e08] to-black">
                 {/* Background glow for this section */}
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-500/5 rounded-full blur-[120px] pointer-events-none" />
-                <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-green-500/4 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="mb-16">
-                        <span className="text-green-400 font-mono text-sm tracking-widest uppercase mb-2 block">Pillar 03</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">AI Employee</h2>
-                        <p className="text-xl text-gray-400 max-w-2xl">
-                            Like hiring a brilliant assistant who costs less than a part-time hire, never takes a sick day, and gets smarter the longer they work with you.
-                        </p>
+                    {/* Hero Row — Spline + Intro */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                        <div>
+                            <span className="text-green-400 font-mono text-sm tracking-widest uppercase mb-2 block">Pillar 03</span>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6">AI Employees & Automations</h2>
+                            <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                                Like hiring a brilliant assistant who costs less than a part-time hire, never takes a sick day, and gets <span className="text-white font-medium">smarter the longer they work with you</span>.
+                            </p>
+                            <div className="flex flex-wrap gap-3">
+                                <div className="px-4 py-2 bg-green-500/15 text-green-400 rounded-full text-sm font-mono border border-green-500/20">WhatsApp</div>
+                                <div className="px-4 py-2 bg-blue-500/15 text-blue-400 rounded-full text-sm font-mono border border-blue-500/20">Slack</div>
+                                <div className="px-4 py-2 bg-purple-500/15 text-purple-400 rounded-full text-sm font-mono border border-purple-500/20">Teams</div>
+                                <div className="px-4 py-2 bg-gray-700/40 text-gray-300 rounded-full text-sm font-mono border border-white/10">Email</div>
+                            </div>
+                        </div>
+                        <div className="relative aspect-square max-w-[420px] mx-auto w-full">
+                            <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-500/5 rounded-3xl" />
+                            <div className="w-full h-full rounded-3xl border border-green-500/20 overflow-hidden relative">
+                                <SplineScene
+                                    scene="https://prod.spline.design/hUyqwd5GoR1ulQXz/scene.splinecode"
+                                />
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Feature Highlight */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                        <div className="md:col-span-2 p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center gap-8">
-                            <div className="flex-1">
-                                <h3 className="text-2xl font-bold mb-4">Lives Where You Work</h3>
-                                <p className="text-gray-400 leading-relaxed mb-6">
-                                    Your AI employee doesn't need a login. They live in <span className="text-white">WhatsApp</span>, <span className="text-white">Telegram</span>, or <span className="text-white">Slack</span>. You communicate with them just like a real person.
-                                </p>
-                                <div className="flex gap-4">
-                                    <div className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-mono">WhatsApp</div>
-                                    <div className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-mono">Telegram</div>
-                                    <div className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm font-mono">Email</div>
+                    {/* Tier split visual */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-12">
+                        <div className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                            <span className="text-sm font-mono text-gray-500">£1k + £200/mo</span>
+                            <p className="text-xs text-gray-400 mt-1">Single-Player</p>
+                        </div>
+                        <div className="text-center p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+                            <span className="text-sm font-mono text-green-400">£3k + £750/mo</span>
+                            <p className="text-xs text-green-300/60 mt-1">Multi-Player</p>
+                        </div>
+                        <div className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                            <span className="text-sm font-mono text-gray-500">£6k+</span>
+                            <p className="text-xs text-gray-400 mt-1">Infrastructure</p>
+                        </div>
+                    </div>
+
+                    {/* 3-Tier Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+                        {/* Tier 1: Personal AI Assistant */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-green-500/30 transition-all duration-300 group hover:-translate-y-1">
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-green-500/15 flex items-center justify-center mb-6 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                                    <MessageSquare className="w-7 h-7" />
                                 </div>
+                                <h3 className="text-2xl font-bold mb-1">Personal AI Assistant</h3>
+                                <div className="flex items-baseline gap-2 mb-1">
+                                    <span className="text-3xl font-bold text-white">£1,000</span>
+                                    <span className="text-sm text-gray-500">setup</span>
+                                </div>
+                                <div className="flex items-baseline gap-1">
+                                    <span className="text-lg font-semibold text-green-400">+ £200</span>
+                                    <span className="text-sm text-gray-500">/ month</span>
+                                </div>
+                                <p className="text-gray-400 italic mt-3">Single-player mode. Your own AI right-hand.</p>
                             </div>
-                            <div className="w-full md:w-1/3 aspect-square bg-black/50 rounded-2xl border border-white/5 flex items-center justify-center">
-                                <Bot className="w-20 h-20 text-green-500 opacity-80" />
+
+                            <p className="text-sm text-gray-300 mb-6">
+                                A personal AI assistant that lives in your pocket. Handles your messages, manages your calendar, and runs your daily tasks — so you don&apos;t have to.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <ul className="space-y-3">
+                                    {[
+                                        "WhatsApp / Telegram channel",
+                                        "Calendar management",
+                                        "Task & reminder system",
+                                        "Email drafting & triage",
+                                        "Personalised AI personality",
+                                        "30 days onboarding support"
+                                    ].map((f, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-green-500/60 shrink-0 mt-0.5" />
+                                            <span>{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                Get Started <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
 
-                        <div className="space-y-6">
-                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                                <h4 className="font-bold flex items-center gap-2 mb-2">
-                                    <Mail className="w-5 h-5 text-green-400" /> Handles Email
-                                </h4>
-                                <p className="text-sm text-gray-400">Reads, summarises, drafts, and manages your inbox.</p>
+                        {/* Tier 2: Team AI Assistant — Featured */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-green-500/50 bg-gradient-to-b from-green-900/20 to-white/5 shadow-[0_0_40px_rgba(34,197,94,0.12)] hover:border-green-400/70 transition-all duration-300 group hover:-translate-y-2 md:-mt-4">
+                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-green-500 to-emerald-400 text-black text-xs font-bold rounded-full uppercase tracking-wider">
+                                Most Popular
                             </div>
-                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                                <h4 className="font-bold flex items-center gap-2 mb-2">
-                                    <Calendar className="w-5 h-5 text-green-400" /> Manages Calendar
-                                </h4>
-                                <p className="text-sm text-gray-400">Scheduling, reminders, and conflict resolution.</p>
-                            </div>
-                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                                <h4 className="font-bold flex items-center gap-2 mb-2">
-                                    <Clock className="w-5 h-5 text-green-400" /> 24/7 Response
-                                </h4>
-                                <p className="text-sm text-gray-400">Instant answers to customer questions and leads.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <PricingCard
-                            title="Basic"
-                            price="£1,000"
-                            description="Quick start solution."
-                            features={["WhatsApp Channel", "Branded AI Assistant", "Basic Personality", "30 Days Support"]}
-                        />
-                        <PricingCard
-                            title="Starter"
-                            price="£2,000"
-                            description="Configured & Ready."
-                            features={["Everything in Basic", "Calendar Integration", "Custom Skills", "Key Workflow Setup", "30 Days Support"]}
-                            isPopular
-                        />
-                        <PricingCard
-                            title="Professional"
-                            price="£4,000"
-                            description="Deep business integration."
-                            features={["Everything in Starter", "Multi-channel", "Daily Automations", "Proactive Tasks", "60 Days Support"]}
-                        />
-                        <PricingCard
-                            title="Enterprise"
-                            price="Bespoke"
-                            description="Fully custom solution."
-                            features={["Website Chat", "CRM Integration", "Custom APIs", "Advanced Skills", "120 Days Support"]}
-                        />
-                    </div>
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-6 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                                    <Users className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-1">Team AI Assistant</h3>
+                                <div className="flex items-baseline gap-2 mb-1">
+                                    <span className="text-3xl font-bold text-white">£3,000</span>
+                                    <span className="text-sm text-gray-500">setup</span>
+                                </div>
+                                <div className="flex items-baseline gap-1">
+                                    <span className="text-lg font-semibold text-green-400">+ £750</span>
+                                    <span className="text-sm text-gray-500">/ month</span>
+                                </div>
+                                <p className="text-green-300/80 italic mt-3">Multi-player mode. AI for the whole team.</p>
+                            </div>
 
-                    {/* Support Add-on Strip */}
-                    <div className="mt-8 p-6 rounded-2xl border border-white/10 bg-white/[0.02] flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
-                                <HeadphonesIcon className="w-5 h-5 text-green-400" />
+                            <p className="text-sm text-gray-300 mb-6">
+                                Deploy an AI teammate into your group chats. It learns your company knowledge base, supports your whole team, and scales as you grow.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <ul className="space-y-3">
+                                    {[
+                                        "Everything in Personal",
+                                        "Slack / Teams integration",
+                                        "Group chat channels",
+                                        "Company knowledge base",
+                                        "Multi-user access & roles",
+                                        "Team onboarding & training",
+                                        "Priority support"
+                                    ].map((f, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
+                                            <span>{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <div>
-                                <h4 className="font-bold">Ongoing Support Plans</h4>
-                                <p className="text-sm text-gray-400">Keep your AI employee optimized.</p>
-                            </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-gradient-to-r from-green-500 to-emerald-400 text-black hover:from-green-400 hover:to-emerald-300 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3 shadow-[0_0_20px_rgba(34,197,94,0.25)]">
+                                Build My Team AI <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
-                        <div className="flex gap-4 text-sm">
-                            <div className="px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                                <span className="block font-bold">Standard • £150/mo</span>
-                                <span className="text-xs text-gray-500">Updates & Bug Fixes</span>
+
+                        {/* Tier 3: Custom Solutions */}
+                        <div className="relative flex flex-col p-8 rounded-3xl border border-white/10 bg-white/5 hover:border-green-500/30 transition-all duration-300 group hover:-translate-y-1">
+                            <div className="mb-6">
+                                <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 flex items-center justify-center mb-6 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                                    <Layers className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-1">Custom Solutions</h3>
+                                <div className="flex items-baseline gap-2 mb-3">
+                                    <span className="text-3xl font-bold text-white">£6,000+</span>
+                                </div>
+                                <p className="text-gray-400 italic">Infrastructure mode. Enterprise-grade AI.</p>
                             </div>
-                            <div className="px-4 py-2 rounded-lg bg-green-900/20 border border-green-500/30">
-                                <span className="block font-bold text-green-400">Growth • £500/mo</span>
-                                <span className="text-xs text-green-500/60">Strategy Call + New Workflows</span>
+
+                            <p className="text-sm text-gray-300 mb-6">
+                                Deep workflow automation and enterprise integrations. We architect AI systems that plug directly into your operations and scale with your business.
+                            </p>
+
+                            <div className="flex-grow mb-6">
+                                <ul className="space-y-3">
+                                    {[
+                                        "Bespoke AI architecture",
+                                        "Deep workflow automation",
+                                        "CRM / ERP integrations",
+                                        "Multi-agent orchestration",
+                                        "Custom API development",
+                                        "Dedicated project manager",
+                                        "Ongoing support options"
+                                    ].map((f, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                                            <span>{f}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
+
+                            <Link href="/contact" className="w-full py-3 rounded-lg font-bold text-sm bg-white/10 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                Discuss My Project <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* --- GROWTH PARTNER --- */}
-            <section className="relative py-20 bg-gradient-to-b from-black to-[#0e0a04]">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_50%_100%,rgba(245,158,11,0.04),transparent)] pointer-events-none" />
-                <div className="container mx-auto px-6">
-                    <div className="relative rounded-3xl overflow-hidden border border-amber-500/30">
-                        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-black"></div>
-                        <div className="absolute top-0 right-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
 
-                        <div className="relative z-10 p-12 md:p-20 flex flex-col lg:flex-row gap-12 items-center">
-                            <div className="flex-1">
-                                <div className="inline-block px-3 py-1 mb-6 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-mono text-xs tracking-widest uppercase">
-                                    Total Transformation
-                                </div>
-                                <h2 className="text-4xl md:text-6xl font-bold mb-6">AI Growth Partner</h2>
-                                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                                    Not just a project — a partnership. We embed AI into your operations, train your team, and keep optimising until it's running like clockwork.
-                                </p>
-                                <div className="text-3xl font-bold text-amber-400 mb-2">£15,000</div>
-                                <div className="text-sm text-gray-500 uppercase tracking-widest mb-10">6 Month Program</div>
-
-                                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 text-black font-bold rounded-full hover:bg-amber-400 transition-colors">
-                                    Apply for Partnership <ArrowRight className="w-5 h-5" />
-                                </Link>
-                            </div>
-
-                            <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {[
-                                    "Full AI Audit + Strategy",
-                                    "Custom Website / Dashboard",
-                                    "Team Training Sessions",
-                                    "Enterprise AI Employee",
-                                    "6 Months Growth Support",
-                                    "Priority Direct Access"
-                                ].map((feature, i) => (
-                                    <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-black/40 border border-white/5">
-                                        <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
-                                        <span className="text-sm font-medium">{feature}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* --- HOW WE WORK --- */}
             <section className="relative py-32 bg-gradient-to-b from-black to-[#050508]">
@@ -508,6 +687,96 @@ export function ServicesContent() {
                                 <BarChart3 className="w-5 h-5 text-primary" /> Real Results
                             </h4>
                             <p className="text-sm text-gray-400">Measurable impact on your time and operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- AI GROWTH PARTNER — PREMIUM OFFER --- */}
+            <section className="relative py-32 border-t border-white/5 overflow-hidden bg-gradient-to-b from-[#0a0806] to-black">
+                {/* Background glow */}
+                <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/5 rounded-full blur-[150px] pointer-events-none" />
+                <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+                <div className="container mx-auto px-6 relative z-10">
+                    {/* Section header */}
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6">
+                            <Sparkles className="w-4 h-4 text-amber-400" />
+                            <span className="text-xs font-mono text-amber-400 tracking-wider uppercase">Premium Engagement</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">AI Growth Partner</h2>
+                        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                            A full-spectrum AI transformation. We don&apos;t just advise — we <span className="text-white font-medium">build, deploy, and manage</span> an entire AI infrastructure tailored to your business.
+                        </p>
+                    </div>
+
+                    {/* Main card */}
+                    <div className="max-w-4xl mx-auto">
+                        <div className="relative rounded-3xl border border-amber-500/30 bg-gradient-to-b from-amber-900/10 via-white/5 to-white/[0.02] p-10 md:p-14 shadow-[0_0_60px_rgba(245,158,11,0.08)]">
+                            {/* Price header */}
+                            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 pb-10 border-b border-white/10">
+                                <div>
+                                    <p className="text-sm text-amber-400 font-mono tracking-widest uppercase mb-2">Full AI Transformation</p>
+                                    <h3 className="text-3xl md:text-4xl font-bold mb-2">AI Growth Partner</h3>
+                                    <p className="text-gray-400 max-w-md">
+                                        Everything we offer, engineered into one cohesive system. Strategy, build, and ongoing management — all handled.
+                                    </p>
+                                </div>
+                                <div className="text-right shrink-0">
+                                    <div className="flex items-baseline gap-2 justify-end">
+                                        <span className="text-4xl md:text-5xl font-bold text-white">£15,000</span>
+                                    </div>
+                                    <p className="text-sm text-gray-500 mt-1">One-time investment + ongoing support</p>
+                                </div>
+                            </div>
+
+                            {/* Key stats */}
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                                    <div className="text-2xl font-bold text-amber-400 mb-1">360°</div>
+                                    <p className="text-xs text-gray-400">Full AI audit & strategy</p>
+                                </div>
+                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                                    <div className="text-2xl font-bold text-amber-400 mb-1">Custom</div>
+                                    <p className="text-xs text-gray-400">AI website or app</p>
+                                </div>
+                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                                    <div className="text-2xl font-bold text-amber-400 mb-1">Team</div>
+                                    <p className="text-xs text-gray-400">AI assistant deployed</p>
+                                </div>
+                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                                    <div className="text-2xl font-bold text-amber-400 mb-1">90 Days</div>
+                                    <p className="text-xs text-gray-400">Managed onboarding</p>
+                                </div>
+                            </div>
+
+                            {/* Deliverables */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 mb-10">
+                                {[
+                                    "Comprehensive AI Readiness Audit",
+                                    "Custom AI-powered website or app",
+                                    "Team AI Assistant (Slack/Teams/WhatsApp)",
+                                    "CRM & workflow automations",
+                                    "Ongoing strategic advisory (12 months)",
+                                    "Monthly strategy & performance calls",
+                                    "Priority support & dedicated Slack channel",
+                                    "Quarterly roadmap reviews & optimisation",
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3 py-2">
+                                        <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0" />
+                                        <span className="text-sm text-gray-300">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* CTA */}
+                            <div className="flex flex-col sm:flex-row gap-4 items-center">
+                                <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-4 rounded-xl font-bold text-base bg-gradient-to-r from-amber-500 to-amber-400 text-black hover:from-amber-400 hover:to-amber-300 transition-all duration-300 shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:shadow-[0_0_50px_rgba(245,158,11,0.5)]">
+                                    Apply for Growth Partnership <ArrowRight className="w-5 h-5" />
+                                </Link>
+                                <span className="text-sm text-gray-500">Limited availability — max 3 partners per quarter</span>
+                            </div>
                         </div>
                     </div>
                 </div>
