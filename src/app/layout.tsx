@@ -4,7 +4,7 @@ import "./globals.css";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { BookCallWidget } from "@/components/layout/BookCallWidget";
-import { OrganizationSchema } from "@/lib/jsonLd";
+import { OrganizationSchema, WebSiteSchema } from "@/lib/jsonLd";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
@@ -73,6 +73,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <OrganizationSchema />
+        <WebSiteSchema />
         {/* Prefetch Spline 3D scene so it's cached before the user hits /services */}
         <link rel="prefetch" href="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode" as="fetch" crossOrigin="anonymous" />
       </head>

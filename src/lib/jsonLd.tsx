@@ -48,6 +48,24 @@ export function OrganizationSchema() {
 }
 
 /**
+ * WebSite schema — tells Google the official site name.
+ * @see https://developers.google.com/search/docs/appearance/site-names
+ */
+export function WebSiteSchema() {
+    return (
+        <JsonLd
+            data={{
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'Quantum Flow Automation',
+                alternateName: 'QFA',
+                url: BASE_URL,
+            }}
+        />
+    );
+}
+
+/**
  * WebPage schema — used on standard pages.
  */
 export function WebPageSchema({
