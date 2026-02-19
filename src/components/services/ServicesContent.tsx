@@ -40,7 +40,6 @@ export function ServicesContent() {
                         <SplineScene
                             scene="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode"
                             interactive={false}
-                            rootMargin="0px"
                         />
                     </div>
                     {/* Gradient overlay for text readability */}
@@ -746,8 +745,8 @@ export function ServicesContent() {
                                     <p className="text-xs text-gray-400">AI assistant deployed</p>
                                 </div>
                                 <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-                                    <div className="text-2xl font-bold text-amber-400 mb-1">90 Days</div>
-                                    <p className="text-xs text-gray-400">Managed onboarding</p>
+                                    <div className="text-2xl font-bold text-amber-400 mb-1">180 Days</div>
+                                    <p className="text-xs text-gray-400">Growth partnership</p>
                                 </div>
                             </div>
 

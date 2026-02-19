@@ -31,7 +31,6 @@ export default function SplineTestPage() {
                 <div className="absolute inset-0" style={{ transform: 'scale(1.5)', transformOrigin: 'center center' }}>
                     <SplineScene
                         scene="https://prod.spline.design/13hUBQ6WPaSGm2Zk/scene.splinecode"
-                        rootMargin="0px"
                     />
                 </div>
             </div>
