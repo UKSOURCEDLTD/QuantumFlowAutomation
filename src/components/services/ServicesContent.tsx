@@ -39,7 +39,6 @@ export function ServicesContent() {
                     <div className="absolute inset-0" style={{ transform: 'scale(1.15)', transformOrigin: 'center center' }}>
                         <SplineScene
                             scene="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode"
-                            interactive={false}
                         />
                     </div>
                     {/* Gradient overlay for text readability */}
