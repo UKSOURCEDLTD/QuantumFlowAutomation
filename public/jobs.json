@@ -1,5 +1,17 @@
 [
   {
+    "title": "AI Agent Developer (ML, LLMs, Applied Reinforcement Learning)",
+    "budget": "$800.00",
+    "tags": [
+      "AI Agent Development",
+      "Machine Learning"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-span-class-highlight-Agent-span-Developer-LLMs-Applied-Reinforcement-Learning_~022025531542856552050/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Agent_Developer_ML_LLMs_Applied_Reinforcement_L_2026-02-22",
+    "date": "",
+    "description": "Project Overview:\n\nWe are looking for a highly skilled AI Engineer (Master\u2019s or PhD background preferred) to build a robust, autonomous AI agent.\n\nThis project goes beyond simple API wrappers and basi..."
+  },
+  {
     "title": "Develop Virtual Receptionist / Appointment Booking Agent (Voice + LLM)",
     "budget": "$500.00",
     "tags": [
@@ -12,6 +24,20 @@
     "folder": "Develop_Virtual_Receptionist_Appointment_Booking_A_2026-02-19",
     "date": "",
     "description": "Look at the attached document for more details.\n\nWe need to build a virtual receptionist voice agent that answers inbound phone calls and helps customers book, reschedule, or cancel appointments.\nThis..."
+  },
+  {
+    "title": "AI Integration Project Manager",
+    "budget": "$2,000.00",
+    "tags": [
+      "Artificial Intelligence",
+      "Data Engineering",
+      "Automation",
+      "System Deployment"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-Integration-Project-Manager_~022025314298720102138/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Integration_Project_Manager_2026-02-22",
+    "date": "",
+    "description": "The project aims to develop a unified AI interface for an automotive garage to centralize all data from its various tools: ERP, email, document management system, expert/insurer portals, and Excel fil..."
   },
   {
     "title": "Full-Stack Developer for MVP Website Monitoring and Audit Suite",
@@ -45,6 +71,24 @@
     "folder": "AI-Powered_Campaign_Creative_Generator_2026-02-18",
     "date": "",
     "description": "We are looking for an experienced AI/ML developer to build an AI-powered campaign creative generation system.\n\nProject Overview:\nEnd users will select an \u201cAI Campaign\u201d option inside our platform. Base..."
+  },
+  {
+    "title": "Shadow Marketplace",
+    "budget": "$2,500.00",
+    "tags": [
+      "API Integration",
+      "FastAPI",
+      "JavaScript",
+      "React",
+      "Python",
+      "PostgreSQL",
+      "Web Development",
+      "React Native"
+    ],
+    "url": "https://www.upwork.com/jobs/Shadow-Marketplace_~022024922874447465136/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Shadow_Marketplace_2026-02-22",
+    "date": "",
+    "description": "Hey I'm the co founder of Shadow, a marketplace where traders/investors publish their trading strategies/model portfolios and users can subscribe via automated trading.\n\nI'm not a developer, but I've ..."
   },
   {
     "title": "AI Systems Expert Needed - Build AI Workflows + Optimize Sales Systems",
@@ -104,6 +148,20 @@
     "description": "**Job Title: Freelance GeoJSON Polygon Creator for Venue Addresses**\n\n**Job Overview:**\nWe are seeking a skilled freelancer to generate GeoJSON polygons for a specified list of venue addresses. These ..."
   },
   {
+    "title": "Base44",
+    "budget": "$2,500.00",
+    "tags": [
+      "AI Agent Development",
+      "AI Development",
+      "AI-Generated Code",
+      "Web Application"
+    ],
+    "url": "https://www.upwork.com/jobs/Base44_~022025337721693293321/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Base44_2026-02-22",
+    "date": "",
+    "description": "To develop a solution, preferably on base 44 to save time. It is a permission/authorization/verified solution to ensure signatures are given when kids go on trips etc..."
+  },
+  {
     "title": "Google Apps Script Developer Needed for Time Card and Payroll System Fix",
     "budget": "$150.00",
     "tags": [
@@ -150,6 +208,19 @@
     "folder": "Whatsapp_based_AI_Agent_to_Compare_Prices_Across_Z_2026-02-19",
     "date": "",
     "description": "We are building an AI Grocery Assistant that compares prices across multiple grocery apps (Zepto, Blinkit, Swiggy Instamart, Amazon, Country Delight, etc.) and automatically places orders after user c..."
+  },
+  {
+    "title": "Senior Magento 2 Backend Developer: Customizing Mirasvit AI Assistant (Vision API & Image Gen)",
+    "budget": "$300.00",
+    "tags": [
+      "Magento 2",
+      "JavaScript",
+      "jQuery"
+    ],
+    "url": "https://www.upwork.com/jobs/Senior-Magento-Backend-Developer-Customizing-Mirasvit-Assistant-Vision-span-class-highlight-API-span-amp-Image-Gen_~022024912165968935241/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Senior_Magento_2_Backend_Developer_Customizing_Mir_2026-02-22",
+    "date": "",
+    "description": "Project Overview:\nWe are an established apparel e-commerce brand, running on Magento 2. We are utilizing the Mirasvit GPT AI Assistant & Content Generator.\n\nWe need an expert Magento 2 developer to bu..."
   },
   {
     "title": "Senior Automation Engineer: GoHighLevel + Make.com + Gemini AI.",
@@ -330,6 +401,31 @@
     "description": "Setup an instance of OpenClaw on AWS server.  \n\nI require an AI assistant to:\n1: generate social media content with text and images/videos\n2: Post to facebook, insta, tiktok, and twitter on its own\n3:..."
   },
   {
+    "title": "AI Operations Assistant for Short-Term Rental Business (n8n + APIs)",
+    "budget": "$450.00",
+    "tags": [
+      "AI Agent Development",
+      "n8n",
+      "Airtable",
+      "Payment Gateway Integration"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-Operations-Assistant-for-Short-Term-Rental-Business-n8n-APIs_~022025333512193754758/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Operations_Assistant_for_Short-Term_Rental_Busi_2026-02-22",
+    "date": "",
+    "description": "We are building an AI-powered operations assistant for a short-term rental business (multiple properties). The system will run through n8n and integrate with:\n\n- WhatsApp (guest communication)\n- Guest..."
+  },
+  {
+    "title": "Build No-Code AI Agent for Email Automation Workflow",
+    "budget": "$150.00",
+    "tags": [
+      "AI Agent Development"
+    ],
+    "url": "https://www.upwork.com/jobs/Build-Code-span-class-highlight-span-span-class-highlight-Agent-span-for-Email-Automation-Workflow_~022025583045347000569/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Build_No-Code_AI_Agent_for_Email_Automation_Workfl_2026-02-22",
+    "date": "",
+    "description": "Job Description:\n\nLooking for someone to help us build a no-code AI agent to support our email automation process.\n\nThis is a one-off project, with potential for ongoing work if it\u2019s a good fit.\n\nGoal..."
+  },
+  {
     "title": "Openclaw Ai: Build a Fashion Retail AI Agent \u2013 Brand & Supplier Tracker",
     "budget": "$1,000.00",
     "tags": [
@@ -340,6 +436,21 @@
     "folder": "Openclaw_Ai_Build_a_Fashion_Retail_AI_Agent_Brand__2026-02-15",
     "date": "",
     "description": "What I need:\nA real dev (not a bot) to build me an OpenClaw agent on my Mac\u2014everything local, no public exposure, no data leaks. Start with one fashion brand: track new product drops (with photos), cu..."
+  },
+  {
+    "title": "Openclaw expert",
+    "budget": "$300.00",
+    "tags": [
+      "Automation",
+      "WordPress",
+      "JavaScript",
+      "Social Media Marketing",
+      "Server"
+    ],
+    "url": "https://www.upwork.com/jobs/Openclaw-expert_~022025459087378968674/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Openclaw_expert_2026-02-22",
+    "date": "",
+    "description": "Hello!\n\nWe're looking for someone who is an expert in AI, Claude, OpenClaw and similar tools to help us with a few automations.\n\nWe're a company who is in eCom services and we want to automate a few o..."
   },
   {
     "title": "Livekit Whatsapp AI Agent Development",
@@ -403,6 +514,22 @@
     "description": "AI Companion \u2014 Multilingual Conversational Agent\n\nPROJECT OVERVIEW\n\nWe are looking to build a human-like AI conversational companion \u2014 a real-time talking agent that can engage users in deep, natural,..."
   },
   {
+    "title": "AVA app upgrade and MVP prep",
+    "budget": "$3,000.00",
+    "tags": [
+      "AI Agent Development",
+      "Android",
+      "iOS",
+      "React Native",
+      "Web Development",
+      "Claude"
+    ],
+    "url": "https://www.upwork.com/jobs/AVA-app-upgrade-and-MVP-prep_~022025574646717923912/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AVA_app_upgrade_and_MVP_prep_2026-02-22",
+    "date": "",
+    "description": "AVA Digital Services \u2014 MVP Development Team\nContract Engagement | Fixed-Price | Mobile + Backend + Design\n\nClassification: Public \u2014 Job Posting\nContract Type: Fixed-Price, Milestone-Based\nTeam Locatio..."
+  },
+  {
     "title": "AI Agents Developer",
     "budget": "$800.00",
     "tags": [
@@ -433,6 +560,22 @@
     "folder": "Golf_Tee_Time_Rate_Collection_Scraper_to_Google_Sh_2026-02-15",
     "date": "",
     "description": "Project Overview\n\nWe are looking for a developer to build and manage an ongoing system that collects tee time rates across major Scottsdale golf courses and stores them in a structured Google Sheets d..."
+  },
+  {
+    "title": "Install Clawbot on VPS (with Tailscale Security) With LLM Browser Capability+ Configure 4 AI Agents",
+    "budget": "$300.00",
+    "tags": [
+      "Linux System Administration",
+      "Network Security",
+      "Ubuntu",
+      "Virtual Private Server",
+      "Firewall",
+      "System Administration"
+    ],
+    "url": "https://www.upwork.com/jobs/Install-Clawbot-VPS-with-Tailscale-Security-With-LLM-Browser-Capability-Configure-Agents_~022025073613067238990/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Install_Clawbot_on_VPS_with_Tailscale_Security_Wit_2026-02-22",
+    "date": "",
+    "description": "I am looking for an experienced AI automation engineer to properly install and configure Clawbot on my VPS (Ubuntu) with secure Tailscale networking, integrate native Browser/LLM browser capabilities ..."
   },
   {
     "title": "Job Automation Working Demo using OpenClaw",
@@ -642,6 +785,25 @@
     "description": "\ud83d\ude80 The Opportunity\nWe're launching in the rapidly growing AI agent infrastructure space and need a technical specialist with deep OpenClaw and Claude Code expertise. 3-4 week funded sprint to launch.\n\n..."
   },
   {
+    "title": "Build an AI-Powered Email Response & Automation System (Make.com / Airtable / Claude API / Front)",
+    "budget": "$3,500.00",
+    "tags": [
+      "Automation",
+      "API",
+      "API Integration",
+      "Email Automation",
+      "Claude",
+      "Make.com",
+      "JavaScript",
+      "Front",
+      "Airtable"
+    ],
+    "url": "https://www.upwork.com/jobs/Build-Powered-Email-Response-amp-span-class-highlight-Automation-span-System-Make-com-Airtable-span-class-highlight-Claude-span-span-class-highlight-API-span-Front_~022025407224966857288/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Build_an_AI-Powered_Email_Response_Automation_Syst_2026-02-22",
+    "date": "",
+    "description": "We send ~2,000 cold outreach emails per week and need a system to intelligently handle the 100\u2013200 inbound replies this generates each week. The system classifies each reply (9 types), routes it appro..."
+  },
+  {
     "title": "Magento 2 expert",
     "budget": "$600.00",
     "tags": [
@@ -670,6 +832,22 @@
     "folder": "LLM_Fine-Tuning_Engineer_Needed_Autism_Support_AI__2026-02-19",
     "date": "",
     "description": "I\u2019m building an AI-powered support tool specifically for autism parents. The tool is connected to OpenAI\u2019s GPT-4o API and currently gives responses that are too generic. I need an experienced ML/LLM e..."
+  },
+  {
+    "title": "Multi-Agent Customer Support Automation",
+    "budget": "$3,000.00",
+    "tags": [
+      "Claude 3.5 Sonnet",
+      "Python",
+      "AI Bot",
+      "AI Builder",
+      "TypeScript",
+      "Node.js"
+    ],
+    "url": "https://www.upwork.com/jobs/Multi-Agent-Customer-Support-span-class-highlight-Automation-span_~022024704103460656271/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Multi-Agent_Customer_Support_Automation_2026-02-22",
+    "date": "",
+    "description": "Multi-Agent Customer Support Automation\nGlobal SaaS Company\n\nThe Project\nWe need a production-ready, multi-agent AI support system that handles 100% of first-line customer support across WhatsApp, Dis..."
   },
   {
     "title": "Develop a Custom Bot for Automated Instagram Video Posting",
@@ -728,6 +906,20 @@
     "description": "We are looking for an experienced AI OpenClaw Expert to develop and optimize an AI-powered OpenClaw system. The project involves integrating computer vision, machine learning, and real-time automation..."
   },
   {
+    "title": "Make.com Expert: Automate AI Image Pipeline (JSON \u27a1\ufe0f Nano Banana \u27a1\ufe0f Placid)",
+    "budget": "$100.00",
+    "tags": [
+      "API",
+      "Claude",
+      "Make.com",
+      "JSON"
+    ],
+    "url": "https://www.upwork.com/jobs/Make-com-Expert-span-class-highlight-Automate-span-Image-Pipeline-JSON-Nano-Banana-Placid_~022025150034025263374/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Makecom_Expert_Automate_AI_Image_Pipeline_JSON_Nan_2026-02-22",
+    "date": "",
+    "description": "We are looking for a Make.com expert to build a robust image generation pipeline. We have a content-creation system that outputs structured JSON, and we need to automate the visual execution.\n\nThe Wor..."
+  },
+  {
     "title": "LinkedIn URL to Sales Navigator URL Conversion Specialist",
     "budget": "$500.00",
     "tags": [
@@ -741,6 +933,18 @@
     "folder": "LinkedIn_URL_to_Sales_Navigator_URL_Conversion_Spe_2026-02-15",
     "date": "",
     "description": "We\u2019re looking for a detail-oriented LinkedIn expert who can convert standard LinkedIn profile URLs into their corresponding LinkedIn Sales Navigator profile links.\n\nThis is not scraping emails or lead..."
+  },
+  {
+    "title": "Python Developer Needed \u2014 Fire Scanner Monitoring & SMS Alert System",
+    "budget": "$1,000.00",
+    "tags": [
+      "API",
+      "Python"
+    ],
+    "url": "https://www.upwork.com/jobs/Python-Developer-Needed-Fire-Scanner-Monitoring-SMS-Alert-System_~022025285281545886305/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Python_Developer_Needed_Fire_Scanner_Monitoring_SM_2026-02-22",
+    "date": "",
+    "description": "Timeline: 2 weeks\n\n---\n\nABOUT THE PROJECT\n\nI need a fully functional Python application that monitors live public Broadcastify scanner streams (fire/EMS), transcribes audio in real time, and sends SMS..."
   },
   {
     "title": "AI Engine Developer for SEO & Ads Optimization",
@@ -872,6 +1076,39 @@
     "description": "We are seeking a skilled developer to create AI receptionist bots using n8n, Make, and Go High Level tailored for small businesses such as barbershops, wellness centers, and restaurants. The ideal can..."
   },
   {
+    "title": "AI engineer for Education curriculum Automation (Claude, LLM, RAG)",
+    "budget": "$3,000.00",
+    "tags": [
+      "RESTful API",
+      "Automation",
+      "Claude",
+      "Python",
+      "Artificial Intelligence",
+      "n8n",
+      "NLP Tokenization",
+      "Machine Learning"
+    ],
+    "url": "https://www.upwork.com/jobs/engineer-for-Education-curriculum-span-class-highlight-Automation-span-span-class-highlight-Claude-span-LLM-RAG_~022024809835187325734/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_engineer_for_Education_curriculum_Automation_Cl_2026-02-22",
+    "date": "",
+    "description": "We\u2019re an education company and we need someone to build an automation system that turns our raw coursebook Word files into a full production package: corrected and completed coursebooks, Tutor and Stu..."
+  },
+  {
+    "title": "AI Systems Architect: Multi-Source Meeting Memory Sync (Fathom, Gemini, Limitless API)",
+    "budget": "$450.00",
+    "tags": [
+      "Claude",
+      "API Integration",
+      "Business Process Automation",
+      "Database Design",
+      "Database Architecture"
+    ],
+    "url": "https://www.upwork.com/jobs/Systems-Architect-Multi-Source-Meeting-Memory-Sync-Fathom-Gemini-Limitless-span-class-highlight-API-span_~022025374547406975074/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Systems_Architect_Multi-Source_Meeting_Memory_S_2026-02-22",
+    "date": "",
+    "description": "I'm the CEO of a fast-growing real estate company. I need a senior automation specialist to build a \"Corporate Brain\" \u2014 a system that captures every meeting I have and feeds it into a structured Airta..."
+  },
+  {
     "title": "AI-Driven Sales Outreach Automation for Mortgage Sector",
     "budget": "$250.00",
     "tags": [
@@ -944,6 +1181,17 @@
     "description": "Title:\nMake.com + Notion Automation Developer (Job Application System, Mobile-First)\nDescription:\nI\u2019m looking for an experienced Make.com automation developer to build a mobile-first job application m..."
   },
   {
+    "title": "Senior Engineer \u2013 Build AI Execution Browser (Electron + Chromium + Extension + Agent Runtime)",
+    "budget": "$10,000.00",
+    "tags": [
+      "Python"
+    ],
+    "url": "https://www.upwork.com/jobs/Senior-Engineer-Build-span-class-highlight-span-Execution-Browser-Electron-Chromium-Extension-span-class-highlight-Agent-span-Runtime_~022025397232891875373/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Senior_Engineer_Build_AI_Execution_Browser_Electro_2026-02-22",
+    "date": "",
+    "description": "Overview\n\nWe\u2019re building Pixis Browser \u2014 an execution-first AI browser.\n\nThis is NOT a chat browser or summarization tool.\nIt is a structured task execution runtime embedded inside a Chromium wrapper...."
+  },
+  {
     "title": "Voice AI Agent Development for Recruitment",
     "budget": "$5,000.00",
     "tags": [
@@ -959,6 +1207,19 @@
     "description": "We are seeking a skilled developer to create a Voice AI agent tailored for the recruitment process. This agent should be capable of conducting initial interviews, answering candidate queries, and prov..."
   },
   {
+    "title": "Rust, WASM, Agent development, OpenClaw Clone",
+    "budget": "$900.00",
+    "tags": [
+      "Rust",
+      "Web Development",
+      "WebAssembly"
+    ],
+    "url": "https://www.upwork.com/jobs/Rust-WASM-Agent-development-OpenClaw-Clone_~022025454635707505636/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Rust_WASM_Agent_development_OpenClaw_Clone_2026-02-22",
+    "date": "",
+    "description": "OpenClaw (Rust) \u2014 AI Gateway\n\n\n\nWhat is OpenClaw (in simple terms)?\nOpenClaw is a AI gateway that connects chat applications and AI agents, with supporting features such as scheduling (cron jobs), wor..."
+  },
+  {
     "title": "AI Article Generator Platform Development",
     "budget": "$1,000.00",
     "tags": [
@@ -971,6 +1232,21 @@
     "folder": "AI_Article_Generator_Platform_Development_2026-02-19",
     "date": "",
     "description": "Please contact us only if you have done something similar.\n\nWe are building an AI\u2011powered article generation system with a clean dashboard interface for managing multiple websites, uploading keyword l..."
+  },
+  {
+    "title": "Content Creation & Distribution Manager, AI automation case study to multi-platform publishing",
+    "budget": "$1,000.00",
+    "tags": [
+      "AI Content Creation",
+      "Content Audit",
+      "Content Distribution & Promotion",
+      "Content Creation",
+      "Content Calendar"
+    ],
+    "url": "https://www.upwork.com/jobs/Content-Creation-amp-Distribution-Manager-span-class-highlight-automation-span-case-study-multi-platform-publishing_~022024703481404991451/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Content_Creation_Distribution_Manager_AI_automatio_2026-02-22",
+    "date": "",
+    "description": "Overview\nI run a B2B AI automation consultancy with a documented, functional waterfall system that converts completed client projects into portfolio case studies, YouTube videos, digital products, and..."
   },
   {
     "title": "Setup Claude Cowork for Email and WhatsApp Integration",
@@ -1029,6 +1305,19 @@
     "description": "We are hiring a AI automation / RevOps / Sales Automation / ML Engineer to build a complete automated outbound engine that runs with minimal human input. The system should generate leads, find and ver..."
   },
   {
+    "title": "Commission-Only Job Hunter Needed to help landing a 6-Figure Remote Tech Role in the US",
+    "budget": "$2,000.00",
+    "tags": [
+      "Recruiting",
+      "Candidate Sourcing",
+      "Data Entry"
+    ],
+    "url": "https://www.upwork.com/jobs/Commission-Only-Job-Hunter-Needed-help-landing-Figure-Remote-Tech-Role-the_~022025435224747658618/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Commission-Only_Job_Hunter_Needed_to_help_landing__2026-02-22",
+    "date": "",
+    "description": "About the Client \ud83d\udc68\u200d\ud83d\udcbb\n\nSenior Software Engineer and Software Architect with 10+ years of experience in the US technology market. He has steadily grown in role, responsibility, and compensation \u2014 moving..."
+  },
+  {
     "title": "ML/ AI EXPERT URGENT PROJECt",
     "budget": "$3,000.00",
     "tags": [
@@ -1053,6 +1342,35 @@
     "folder": "AI_Prompt_Engineer_2026-02-16",
     "date": "",
     "description": "Job Overview:\nAbout the role: We\u2019re hiring an AI Prompt Engineer who knows how to turn AI into real operational leverage.\n\u200b\u200b\u200b\u200b\u200bThis is not a \u201ccasual AI user\u201d role. We need someone who understands how ..."
+  },
+  {
+    "title": "Need Agent Developer to install Openclaw",
+    "budget": "$500.00",
+    "tags": [
+      "AI Model Integration",
+      "PHP",
+      "API"
+    ],
+    "url": "https://www.upwork.com/jobs/Need-Agent-Developer-install-Openclaw_~022025060893368322736/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Need_Agent_Developer_to_install_Openclaw_2026-02-22",
+    "date": "",
+    "description": "I want to install openclaw on my linux vps. I want to use ollama model.\nThe ideal candidate will have a deep understanding of Openclaw and prove his work experience. \nIf you have the right skills and ..."
+  },
+  {
+    "title": "Set Up OpenClaw Autonomous AI System on Mac Mini (Cost-Optimized Setup)",
+    "budget": "$120.00",
+    "tags": [
+      "macOS",
+      "Windows Server",
+      "Ubuntu",
+      "Google Cloud Platform",
+      "Python",
+      "Artificial Intelligence"
+    ],
+    "url": "https://www.upwork.com/jobs/Set-OpenClaw-Autonomous-System-Mac-Mini-Cost-Optimized-Setup_~022024906965079100080/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Set_Up_OpenClaw_Autonomous_AI_System_on_Mac_Mini_C_2026-02-22",
+    "date": "",
+    "description": "I\u2019m looking for an experienced AI/automation engineer to set up a lean, cost-optimized OpenClaw system on my Mac Mini M1 (8GB RAM / 256GB SSD).\n\nThe goal is to run a 24/7 AI-powered workflow locally, ..."
   },
   {
     "title": "n8n + HubSpot + Clay + Lusha API Automation Specialist \u2014 AI Sales Workflow Build",
@@ -1143,6 +1461,24 @@
     "folder": "AI_Software_Development_for_Education_Consultant_S_2026-02-19",
     "date": "",
     "description": "We are seeking a skilled developer to create AI software that automates the application process for offer letters, scholarships, and visa filing targeted towards education consultants. The ideal candi..."
+  },
+  {
+    "title": "Telemedicine Web & Mobile App Development with Complete AI Integration",
+    "budget": "$900.00",
+    "tags": [
+      "Generative AI",
+      "AI Agent Development",
+      "React",
+      "Android",
+      "iOS",
+      "JavaScript",
+      "Java",
+      "Smartphone"
+    ],
+    "url": "https://www.upwork.com/jobs/Telemedicine-Web-amp-Mobile-App-Development-with-Complete-span-class-highlight-span-Integration_~022025484250965698919/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Telemedicine_Web_Mobile_App_Development_with_Compl_2026-02-22",
+    "date": "",
+    "description": "We are seeking skilled developers to create a telemedicine web application and mobile app with AI integration. The project will involve designing intuitive front-end interfaces for both platforms and ..."
   },
   {
     "title": "QUICK HIRE: Agent Development, build a OpenClaw alternative in Rust",
@@ -1291,6 +1627,21 @@
     "folder": "AI_Voice_Receptionist_for_Call_Handling_and_Meetin_2026-02-19",
     "date": "",
     "description": "We are seeking someone to either BUILD or IMPLEMENT using a white labelled solution an AI Voice Receptionist to efficiently manage incoming calls and schedule appointments. We would prefer if to use a..."
+  },
+  {
+    "title": "Forward Deployed AI Engineer for B2B Tech Solutions",
+    "budget": "$1,000.00",
+    "tags": [
+      "Artificial Intelligence",
+      "Python",
+      "Machine Learning",
+      "Amazon Web Services",
+      "Chatbot Development"
+    ],
+    "url": "https://www.upwork.com/jobs/Forward-Deployed-span-class-highlight-span-Engineer-for-B2B-Tech-Solutions_~022025513194187440712/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Forward_Deployed_AI_Engineer_for_B2B_Tech_Solution_2026-02-22",
+    "date": "",
+    "description": "Build Agentic GTM Systems for Sophisticated B2B Tech Companies\n\nWe\u2019re building AI-native GTM systems for B2B tech companies ($5M\u2013$50M ARR).\n\nThis is not a prompt engineering gig.\nThis is not a chatbot..."
   },
   {
     "title": "AI Voice Intake & Automation System \u2013 Insurance Agencies (GoHighLevel)",
