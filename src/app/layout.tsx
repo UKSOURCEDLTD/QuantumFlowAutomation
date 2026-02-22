@@ -69,6 +69,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Quantum Flow Automation",
+    "alternateName": ["Quantum Flow", "QFA"],
+    "url": "https://quantumflowautomation.ai"
+  };
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -78,6 +86,10 @@ export default function RootLayout({
         <link rel="prefetch" href="https://prod.spline.design/QYEJMLhOC333ohDS/scene.splinecode" as="fetch" crossOrigin="anonymous" />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} bg-black text-white antialiased selection:bg-primary/30 selection:text-white`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <SmoothScroll>
           <CustomCursor />
           {children}
