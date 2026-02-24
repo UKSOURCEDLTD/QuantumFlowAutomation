@@ -1,5 +1,103 @@
 [
   {
+    "title": "Full Stack Developer \u2014 AI-Powered Document Analysis SaaS Platform (Google Cloud + Claude AI)",
+    "budget": "$150.00",
+    "tags": [
+      "AI Agent Development",
+      "SaaS",
+      "React",
+      "Google Cloud Platform",
+      "Python",
+      "Node.js",
+      "API Integration"
+    ],
+    "url": "https://www.upwork.com/jobs/Full-Stack-Developer-span-class-highlight-span-Powered-Document-Analysis-SaaS-Platform-Google-Cloud-span-class-highlight-Claude-span-span-class-highlight-span_~022026207596524645657/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Full_Stack_Developer_AI-Powered_Document_Analysis__2026-02-24",
+    "date": "2026-02-24T08:08:31.177Z",
+    "description": "I am building a B2B SaaS web application that processes uploaded PDF documents using Claude AI (Anthropic) and delivers structured analysis outputs to enterprise customers. The platform serves profess...",
+    "pdf_url": "/pdfs/Full_Stack_Developer_AI-Powered_Document_Analysis__2026-02-24.pdf"
+  },
+  {
+    "title": "OpenClaw AI Assistant Implementation",
+    "budget": "$250.00",
+    "tags": [
+      "Linux",
+      "Docker Compose"
+    ],
+    "url": "https://www.upwork.com/jobs/OpenClaw-Assistant-Implementation_~022026199785783087653/?referrer_url_path=/nx/search/jobs/",
+    "folder": "OpenClaw_AI_Assistant_Implementation_2026-02-24",
+    "date": "2026-02-24T07:37:28.939Z",
+    "description": "I am seeking a skilled freelancer to implement the OpenClaw virtual AI assistant on my systems. The ideal candidate will have experience in AI integration and system administration, ensuring seamless ...",
+    "pdf_url": "/pdfs/OpenClaw_AI_Assistant_Implementation_2026-02-24.pdf"
+  },
+  {
+    "title": "Expert Needed for Vision Detection System on Robotic Arm",
+    "budget": "$250.00",
+    "tags": [
+      "Computer Vision",
+      "Machine Learning",
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "Deep Learning",
+      "C++"
+    ],
+    "url": "https://www.upwork.com/jobs/Expert-Needed-for-Vision-Detection-System-Robotic-Arm_~022026198146783499831/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Expert_Needed_for_Vision_Detection_System_on_Robot_2026-02-24",
+    "date": "2026-02-24T07:30:58.222Z",
+    "description": "We are seeking an expert in vision detection systems specifically for robotic arms. The ideal candidate will have extensive experience in both hardware and software support using ROS2. Responsibilitie...",
+    "pdf_url": "/pdfs/Expert_Needed_for_Vision_Detection_System_on_Robot_2026-02-24.pdf"
+  },
+  {
+    "title": "Full stack developer needed for OpenClaw - Personal AI Assistant for Ads Management & AI Expert",
+    "budget": "$1,700.00",
+    "tags": [
+      "AI Agent Development",
+      "AI Development",
+      "AI Bot",
+      "AI-Generated Code",
+      "JavaScript",
+      "Java",
+      "Scala"
+    ],
+    "url": "https://www.upwork.com/jobs/Full-stack-developer-needed-for-OpenClaw-Personal-Assistant-for-Ads-Management-Expert_~022026171175945513042/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Full_stack_developer_needed_for_OpenClaw_-_Persona_2026-02-24",
+    "date": "2026-02-24T05:43:47.949Z",
+    "description": "Looking for a developer experienced with OpenClaw (formerly Clawdbot) the open-source personal AI agent to set it up on my infrastructure and configure it for two key use cases:\n1. Ads Manager Control...",
+    "pdf_url": "/pdfs/Full_stack_developer_needed_for_OpenClaw_-_Persona_2026-02-24.pdf"
+  },
+  {
+    "title": "AI Automation Expert for Research & Lead Pipeline",
+    "budget": "$500.00",
+    "tags": [
+      "AI Agent Development",
+      "Python",
+      "n8n",
+      "Airtable"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-Automation-Expert-for-Research-amp-Lead-Pipeline_~022026149649079434685/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Automation_Expert_for_Research_Lead_Pipeline_2026-02-24",
+    "date": "2026-02-24T04:18:15.357Z",
+    "description": "I am looking for an automation expert to build a research pipeline. The goal is to identify public events and draft personalized outreach into an Airtable dashboard for my manual review. Must have exp...",
+    "pdf_url": "/pdfs/AI_Automation_Expert_for_Research_Lead_Pipeline_2026-02-24.pdf"
+  },
+  {
+    "title": "AI Voice Receptionist Developer Needed",
+    "budget": "$1,000.00",
+    "tags": [
+      "US English Dialect",
+      "Artificial Intelligence",
+      "English",
+      "Elearning",
+      "Chatbot Development"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-Voice-Receptionist-Developer-Needed_~022026127967880574580/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Voice_Receptionist_Developer_Needed_2026-02-24",
+    "date": "2026-02-24T02:52:06.133Z",
+    "description": "We are seeking a skilled AI Voice Agent developer (Retell AI experience preferred) to build intelligent AI receptionists that handle both inbound and outbound calls for our agency clients.\nWhat We Nee...",
+    "pdf_url": "/pdfs/AI_Voice_Receptionist_Developer_Needed_2026-02-24.pdf"
+  },
+  {
     "title": "Twilio: Simple IVR & SIP Call Routing (2 Phone Numbers)",
     "budget": "$100.00",
     "tags": [
