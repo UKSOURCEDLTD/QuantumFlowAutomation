@@ -115,21 +115,38 @@
       return d.toLocaleString('en-GB', {timeZone:'UTC'}) + ' UTC';
     }
 
-    function isAmazonJob(job){
-      const text = `${job.title || ''} ${(job.description || '')} ${(job.tags || []).join(' ')}`.toLowerCase();
-      const keywords = [
-        'amazon','fba','fbm','seller central','vendor central','listing optimization',
-        'listing','catalog','a+ content','account management','ppc','buy box','brand registry','storefront'
-      ];
-      return keywords.some(k => text.includes(k));
+    const AMAZON_KEYWORDS_STRONG = [
+      'seller central','vendor central','amazon ppc','amazon fba','amazon fbm','amazon account manager',
+      'listing optimization','a+ content','brand registry','buy box','flat file'
+    ];
+    const AMAZON_KEYWORDS_MEDIUM = [
+      'amazon','fba','fbm','listing','catalog','storefront','ppc','asin','variation listing'
+    ];
+
+    const AI_KEYWORDS_STRONG = [
+      'openclaw','claude code','llm','langchain','langgraph','multi-agent','ai agent','agentic'
+    ];
+    const AI_KEYWORDS_MEDIUM = [
+      'ai','artificial intelligence','automation','agent','chatbot','gpt','claude','n8n','make.com'
+    ];
+
+    function scoreByKeywords(text, strong, medium){
+      let score = 0;
+      for (const k of strong) if (text.includes(k)) score += 3;
+      for (const k of medium) if (text.includes(k)) score += 1;
+      return score;
     }
 
-    function isAiOpenClawJob(job){
+    function classifyJob(job){
       const text = `${job.title || ''} ${(job.description || '')} ${(job.tags || []).join(' ')}`.toLowerCase();
-      const keywords = [
-        'openclaw','ai','artificial intelligence','automation','agent','llm','claude','gpt','chatbot','n8n'
-      ];
-      return keywords.some(k => text.includes(k));
+      const amazonScore = scoreByKeywords(text, AMAZON_KEYWORDS_STRONG, AMAZON_KEYWORDS_MEDIUM);
+      const aiScore = scoreByKeywords(text, AI_KEYWORDS_STRONG, AI_KEYWORDS_MEDIUM);
+
+      if (amazonScore >= aiScore && amazonScore >= 2) return 'amazon';
+      if (aiScore > amazonScore && aiScore >= 2) return 'ai';
+
+      // fallback to AI section since pipeline is AI-focused
+      return 'ai';
     }
 
     function renderCards(items){
@@ -155,8 +172,8 @@
       const latest = items[0]?.date ? fmtDate(items[0].date) : 'n/a';
       const sourceLabel = file.startsWith('supabase:') ? 'Supabase (live)' : `Static file (${file})`;
 
-      const amazonJobs = items.filter(isAmazonJob);
-      const aiJobs = items.filter(j => isAiOpenClawJob(j) && !isAmazonJob(j));
+      const amazonJobs = items.filter(j => classifyJob(j) === 'amazon');
+      const aiJobs = items.filter(j => classifyJob(j) === 'ai');
 
       document.getElementById('ai-count').textContent = aiJobs.length;
       document.getElementById('amazon-count').textContent = amazonJobs.length;
