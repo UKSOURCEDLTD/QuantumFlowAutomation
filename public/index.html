@@ -45,9 +45,9 @@
 
   <script>
     const FILES = [
+      '/jobs.json',
       '/upwork-jobs-report.json',
-      '/upwork jobsreport.json',
-      '/jobs.json'
+      '/upwork jobsreport.json'
     ];
 
     // Optional Supabase source (set these in a small inline script before this block)
@@ -58,6 +58,7 @@
 
     async function loadData(){
       const bust = `t=${Date.now()}`;
+      let supabaseIssue = '';
 
       // Preferred source: Supabase table
       if (SUPABASE_URL && SUPABASE_ANON_KEY) {
@@ -76,8 +77,13 @@
             if (Array.isArray(data) && data.length) {
               return {file:'supabase:upwork_jobs', data};
             }
+            supabaseIssue = 'supabase empty';
+          } else {
+            supabaseIssue = `supabase ${res.status}`;
           }
-        } catch (e) {}
+        } catch (e) {
+          supabaseIssue = `supabase error`;
+        }
       }
 
       // Fallback source: static JSON files
@@ -87,7 +93,8 @@
           const res = await fetch(url, {cache:'no-store'});
           if(res.ok){
             const data = await res.json();
-            return {file:f,data};
+            const source = supabaseIssue ? `${f} (fallback: ${supabaseIssue})` : f;
+            return {file:source,data};
           }
         }catch(e){}
       }
