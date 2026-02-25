@@ -19,6 +19,10 @@
     .toplinks{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
     .section{margin-top:22px}
     .section h2{font-size:18px;margin-bottom:10px;color:#c9d7e6}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center}
+    .tab{cursor:pointer}
+    .tab.active{border-color:#4ea1ff;background:#223041}
+    select.sort{background:#182230;color:#e6edf3;border:1px solid #2b3a4d;border-radius:8px;padding:8px 10px}
   </style>
 </head>
 <body>
@@ -31,16 +35,26 @@
     <a class="btn" href="/pdfs/" target="_blank" rel="noreferrer">Open PDFs Folder</a>
     <button class="btn" id="refresh-btn" type="button">Refresh Jobs</button>
   </div>
+
+  <div class="toolbar">
+    <button class="btn tab active" id="tab-all" type="button">All Jobs (<span id="all-count">0</span>)</button>
+    <button class="btn tab" id="tab-ai" type="button">AI / OpenClaw (<span id="ai-count">0</span>)</button>
+    <button class="btn tab" id="tab-amazon" type="button">Amazon (<span id="amazon-count">0</span>)</button>
+
+    <label class="muted" for="sort-order">Sort:</label>
+    <select id="sort-order" class="sort">
+      <option value="newest" selected>Most recent first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="budget_high">Budget high to low</option>
+      <option value="budget_low">Budget low to high</option>
+    </select>
+  </div>
+
   <div class="muted" id="refresh-meta" style="margin-top:8px"></div>
 
   <div class="section">
-    <h2>AI / OpenClaw Jobs (<span id="ai-count">0</span>)</h2>
-    <div class="grid" id="jobs-ai"></div>
-  </div>
-
-  <div class="section">
-    <h2>Amazon Jobs (<span id="amazon-count">0</span>)</h2>
-    <div class="grid" id="jobs-amazon"></div>
+    <h2 id="section-title">All Jobs</h2>
+    <div class="grid" id="jobs-main"></div>
   </div>
 
   <script>
@@ -156,6 +170,30 @@
       return 'ai';
     }
 
+    let allJobs = [];
+    let currentView = 'all';
+
+    function parseBudget(budgetStr){
+      if (!budgetStr) return 0;
+      const n = String(budgetStr).replace(/,/g,'').match(/[\d.]+/);
+      return n ? Number(n[0]) : 0;
+    }
+
+    function sortJobs(items){
+      const mode = document.getElementById('sort-order').value;
+      const arr = [...items];
+      if (mode === 'oldest') {
+        arr.sort((a,b) => new Date(a.date || 0) - new Date(b.date || 0));
+      } else if (mode === 'budget_high') {
+        arr.sort((a,b) => parseBudget(b.budget) - parseBudget(a.budget));
+      } else if (mode === 'budget_low') {
+        arr.sort((a,b) => parseBudget(a.budget) - parseBudget(b.budget));
+      } else {
+        arr.sort((a,b) => new Date(b.date || 0) - new Date(a.date || 0));
+      }
+      return arr;
+    }
+
     function renderCards(items){
       if (!items.length) return '<div class="muted">No jobs in this section yet.</div>';
       return items.map(j => `
@@ -171,25 +209,49 @@
       `).join('');
     }
 
-    function render(items,file){
-      const status = document.getElementById('status');
-      const sourceIndicator = document.getElementById('source-indicator');
-      const aiGrid = document.getElementById('jobs-ai');
-      const amazonGrid = document.getElementById('jobs-amazon');
-      const latest = items[0]?.date ? fmtDate(items[0].date) : 'n/a';
-      const sourceLabel = file.startsWith('supabase:') ? 'Supabase (live)' : `Static file (${file})`;
+    function setActiveTab(view){
+      currentView = view;
+      const tabs = ['all','ai','amazon'];
+      for (const t of tabs) {
+        document.getElementById(`tab-${t}`).classList.toggle('active', t === view);
+      }
+      renderCurrentView();
+    }
 
-      const amazonJobs = items.filter(j => classifyJob(j) === 'amazon');
-      const aiJobs = items.filter(j => classifyJob(j) === 'ai');
+    function renderCurrentView(){
+      const mainGrid = document.getElementById('jobs-main');
+      const title = document.getElementById('section-title');
+      const amazonJobs = allJobs.filter(j => classifyJob(j) === 'amazon');
+      const aiJobs = allJobs.filter(j => classifyJob(j) === 'ai');
 
+      document.getElementById('all-count').textContent = allJobs.length;
       document.getElementById('ai-count').textContent = aiJobs.length;
       document.getElementById('amazon-count').textContent = amazonJobs.length;
 
+      let viewJobs = allJobs;
+      if (currentView === 'ai') {
+        title.textContent = 'AI / OpenClaw Jobs';
+        viewJobs = aiJobs;
+      } else if (currentView === 'amazon') {
+        title.textContent = 'Amazon Jobs';
+        viewJobs = amazonJobs;
+      } else {
+        title.textContent = 'All Jobs';
+      }
+
+      mainGrid.innerHTML = renderCards(sortJobs(viewJobs));
+    }
+
+    function render(items,file){
+      const status = document.getElementById('status');
+      const sourceIndicator = document.getElementById('source-indicator');
+      const latest = items[0]?.date ? fmtDate(items[0].date) : 'n/a';
+      const sourceLabel = file.startsWith('supabase:') ? 'Supabase (live)' : `Static file (${file})`;
+
+      allJobs = [...items];
       status.textContent = `${items.length} jobs loaded. Latest: ${latest}`;
       sourceIndicator.textContent = `Data source: ${sourceLabel}`;
-
-      aiGrid.innerHTML = renderCards(aiJobs);
-      amazonGrid.innerHTML = renderCards(amazonJobs);
+      renderCurrentView();
     }
 
     async function reloadJobs(){
@@ -205,6 +267,11 @@
     }
 
     document.getElementById('refresh-btn').addEventListener('click', reloadJobs);
+    document.getElementById('sort-order').addEventListener('change', renderCurrentView);
+    document.getElementById('tab-all').addEventListener('click', () => setActiveTab('all'));
+    document.getElementById('tab-ai').addEventListener('click', () => setActiveTab('ai'));
+    document.getElementById('tab-amazon').addEventListener('click', () => setActiveTab('amazon'));
+
     reloadJobs();
   </script>
 </body>
