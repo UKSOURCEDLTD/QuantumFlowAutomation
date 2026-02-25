@@ -1,5 +1,79 @@
 [
   {
+    "title": "Multitimeframe trading automation",
+    "budget": "$105.00",
+    "tags": [
+      "Python",
+      "API",
+      "MetaTrader 4",
+      "Forex Trading",
+      "Financial Analysis",
+      "Automation"
+    ],
+    "url": "https://www.upwork.com/jobs/Multitimeframe-trading-automation_~022026535867406057651/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Multitimeframe_trading_automation_2026-02-25",
+    "date": "2026-02-25T05:52:57.030Z",
+    "description": "Looking to automate my trading strategy with heavy reasoning LLM (that can do discretion like understanding news/price action and pattern recognition)\n\nMonitors the market 23/5 \n\nI want it backtested ...",
+    "pdf_url": "/pdfs/Multitimeframe_trading_automation_2026-02-25.pdf"
+  },
+  {
+    "title": "AI Video Pipeline Specialist (ComfyUI / AI Video Models)",
+    "budget": "$3,000.00",
+    "tags": [
+      "AI-Generated Video",
+      "Artificial Intelligence",
+      "Video Production"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-Video-Pipeline-Specialist-ComfyUI-span-class-highlight-span-Video-Models_~022026531096947009023/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Video_Pipeline_Specialist_ComfyUI_AI_Video_Mode_2026-02-25",
+    "date": "2026-02-25T05:33:59.787Z",
+    "description": "We\u2019re hiring a senior AI Video Pipeline Engineer to build a production-ready automated AI video system for YouTube Shorts / TikTok / Reels.\n\nWe already have an MVP (Kling API integrated), scripts, and...",
+    "pdf_url": "/pdfs/AI_Video_Pipeline_Specialist_ComfyUI_AI_Video_Mode_2026-02-25.pdf"
+  },
+  {
+    "title": "OpenClaw AI Setup on VPS - Gmail/Streak/Instantly Triage + Prospecting ($250 Fixed)",
+    "budget": "$250.00",
+    "tags": [
+      "AI Agent Development",
+      "AI App Development"
+    ],
+    "url": "https://www.upwork.com/jobs/OpenClaw-span-class-highlight-span-Setup-VPS-Gmail-Streak-Instantly-Triage-Prospecting-250-Fixed_~022026499018914098329/?referrer_url_path=/nx/search/jobs/",
+    "folder": "OpenClaw_AI_Setup_on_VPS_-_GmailStreakInstantly_Tr_2026-02-25",
+    "date": "2026-02-25T03:26:31.551Z",
+    "description": "OpenClaw AI Setup on VPS - Gmail/Streak/Instantly Triage + Prospecting ($250 Fixed)\n\nNeed experienced OpenClaw dev to deploy self-hosted agent on Contabo VPS (I'll provide) for B2B lead gen automation...",
+    "pdf_url": "/pdfs/OpenClaw_AI_Setup_on_VPS_-_GmailStreakInstantly_Tr_2026-02-25.pdf"
+  },
+  {
+    "title": "Agentic AI for woocommerce",
+    "budget": "$500.00",
+    "tags": [
+      "AI Agent Development",
+      "WooCommerce",
+      "WordPress"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-Agentic-span-span-class-highlight-span-for-woocommerce_~022026441713835420055/?referrer_url_path=/nx/search/jobs/",
+    "folder": "Agentic_AI_for_woocommerce_2026-02-25",
+    "date": "2026-02-24T23:38:49.088Z",
+    "description": "I would like to develop an AI agent which every two hours will connect to woocommerce site and update latest orders with relevant data and submit an order with lalamove company for shipping. Should be...",
+    "pdf_url": "/pdfs/Agentic_AI_for_woocommerce_2026-02-25.pdf"
+  },
+  {
+    "title": "AI Developer for High-Volume Cannabis Order Processing System",
+    "budget": "$1,000.00",
+    "tags": [
+      "Artificial Intelligence",
+      "RESTful API",
+      "AWS Amplify",
+      "Python",
+      "Amazon Web Services"
+    ],
+    "url": "https://www.upwork.com/jobs/span-class-highlight-span-Developer-for-High-Volume-Cannabis-Order-Processing-System_~022026396555197389640/?referrer_url_path=/nx/search/jobs/",
+    "folder": "AI_Developer_for_High-Volume_Cannabis_Order_Proces_2026-02-25",
+    "date": "2026-02-24T20:39:22.377Z",
+    "description": "We\u2019re building an AI-powered order processing system for a high-volume cannabis delivery operation (~100+ orders/day)\n\nThis is not a chatbot project.\n\nThis is operational automation:\n\nMulti-channel or...",
+    "pdf_url": "/pdfs/AI_Developer_for_High-Volume_Cannabis_Order_Proces_2026-02-25.pdf"
+  },
+  {
     "title": "AI Engineer | LLM, RAG, LangGraph & AI Agent Development Specialist for MVP Development",
     "budget": "$100.00",
     "tags": [
