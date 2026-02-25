@@ -17,6 +17,8 @@
     .btn{display:inline-block;padding:8px 10px;border-radius:8px;border:1px solid #2b3a4d;color:#e6edf3;background:#182230;font-size:13px}
     .btn:hover{background:#223041}
     .toplinks{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+    .section{margin-top:22px}
+    .section h2{font-size:18px;margin-bottom:10px;color:#c9d7e6}
   </style>
 </head>
 <body>
@@ -30,7 +32,16 @@
     <button class="btn" id="refresh-btn" type="button">Refresh Jobs</button>
   </div>
   <div class="muted" id="refresh-meta" style="margin-top:8px"></div>
-  <div class="grid" id="jobs"></div>
+
+  <div class="section">
+    <h2>AI / OpenClaw Jobs (<span id="ai-count">0</span>)</h2>
+    <div class="grid" id="jobs-ai"></div>
+  </div>
+
+  <div class="section">
+    <h2>Amazon Jobs (<span id="amazon-count">0</span>)</h2>
+    <div class="grid" id="jobs-amazon"></div>
+  </div>
 
   <script>
     const FILES = [
@@ -104,15 +115,26 @@
       return d.toLocaleString('en-GB', {timeZone:'UTC'}) + ' UTC';
     }
 
-    function render(items,file){
-      const status = document.getElementById('status');
-      const sourceIndicator = document.getElementById('source-indicator');
-      const jobs = document.getElementById('jobs');
-      const latest = items[0]?.date ? fmtDate(items[0].date) : 'n/a';
-      const sourceLabel = file.startsWith('supabase:') ? 'Supabase (live)' : `Static file (${file})`;
-      status.textContent = `${items.length} jobs loaded. Latest: ${latest}`;
-      sourceIndicator.textContent = `Data source: ${sourceLabel}`;
-      jobs.innerHTML = items.map(j => `
+    function isAmazonJob(job){
+      const text = `${job.title || ''} ${(job.description || '')} ${(job.tags || []).join(' ')}`.toLowerCase();
+      const keywords = [
+        'amazon','fba','fbm','seller central','vendor central','listing optimization',
+        'listing','catalog','a+ content','account management','ppc','buy box','brand registry','storefront'
+      ];
+      return keywords.some(k => text.includes(k));
+    }
+
+    function isAiOpenClawJob(job){
+      const text = `${job.title || ''} ${(job.description || '')} ${(job.tags || []).join(' ')}`.toLowerCase();
+      const keywords = [
+        'openclaw','ai','artificial intelligence','automation','agent','llm','claude','gpt','chatbot','n8n'
+      ];
+      return keywords.some(k => text.includes(k));
+    }
+
+    function renderCards(items){
+      if (!items.length) return '<div class="muted">No jobs in this section yet.</div>';
+      return items.map(j => `
         <div class="card">
           <a href="${j.url || '#'}" target="_blank" rel="noreferrer"><strong>${j.title || 'Untitled'}</strong></a>
           <div class="meta"><span>${fmtDate(j.date)}</span><span class="budget">${j.budget || 'N/A'}</span></div>
@@ -123,6 +145,27 @@
           </div>
         </div>
       `).join('');
+    }
+
+    function render(items,file){
+      const status = document.getElementById('status');
+      const sourceIndicator = document.getElementById('source-indicator');
+      const aiGrid = document.getElementById('jobs-ai');
+      const amazonGrid = document.getElementById('jobs-amazon');
+      const latest = items[0]?.date ? fmtDate(items[0].date) : 'n/a';
+      const sourceLabel = file.startsWith('supabase:') ? 'Supabase (live)' : `Static file (${file})`;
+
+      const amazonJobs = items.filter(isAmazonJob);
+      const aiJobs = items.filter(j => isAiOpenClawJob(j) && !isAmazonJob(j));
+
+      document.getElementById('ai-count').textContent = aiJobs.length;
+      document.getElementById('amazon-count').textContent = amazonJobs.length;
+
+      status.textContent = `${items.length} jobs loaded. Latest: ${latest}`;
+      sourceIndicator.textContent = `Data source: ${sourceLabel}`;
+
+      aiGrid.innerHTML = renderCards(aiJobs);
+      amazonGrid.innerHTML = renderCards(amazonJobs);
     }
 
     async function reloadJobs(){
