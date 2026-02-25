@@ -37,9 +37,9 @@
   </div>
 
   <div class="toolbar">
-    <span class="muted">Total jobs: <strong id="all-count">0</strong></span>
-    <button class="btn" id="toggle-ai" type="button">Collapse AI / OpenClaw</button>
-    <button class="btn" id="toggle-amazon" type="button">Collapse Amazon</button>
+    <button class="btn tab active" id="tab-all" type="button">All (<span id="all-count">0</span>)</button>
+    <button class="btn tab" id="tab-ai" type="button">OpenClaw / AI (<span id="ai-count">0</span>)</button>
+    <button class="btn tab" id="tab-amazon" type="button">Amazon (<span id="amazon-count">0</span>)</button>
 
     <label class="muted" for="sort-order">Sort:</label>
     <select id="sort-order" class="sort">
@@ -53,13 +53,8 @@
   <div class="muted" id="refresh-meta" style="margin-top:8px"></div>
 
   <div class="section">
-    <h2>AI / OpenClaw Jobs (<span id="ai-count">0</span>)</h2>
-    <div class="grid" id="jobs-ai"></div>
-  </div>
-
-  <div class="section">
-    <h2>Amazon Jobs (<span id="amazon-count">0</span>)</h2>
-    <div class="grid" id="jobs-amazon"></div>
+    <h2 id="section-title">All Jobs</h2>
+    <div class="grid" id="jobs-main"></div>
   </div>
 
   <script>
@@ -176,7 +171,7 @@
     }
 
     let allJobs = [];
-    let collapsed = { ai: false, amazon: false };
+    let currentView = 'all';
 
     function parseBudget(budgetStr){
       if (!budgetStr) return 0;
@@ -214,29 +209,37 @@
       `).join('');
     }
 
-    function renderSections(){
-      const aiGrid = document.getElementById('jobs-ai');
-      const amazonGrid = document.getElementById('jobs-amazon');
-      const amazonJobs = sortJobs(allJobs.filter(j => classifyJob(j) === 'amazon'));
-      const aiJobs = sortJobs(allJobs.filter(j => classifyJob(j) === 'ai'));
+    function setActiveTab(view){
+      currentView = view;
+      const tabs = ['all','ai','amazon'];
+      for (const t of tabs) {
+        document.getElementById(`tab-${t}`).classList.toggle('active', t === view);
+      }
+      renderCurrentView();
+    }
+
+    function renderCurrentView(){
+      const mainGrid = document.getElementById('jobs-main');
+      const title = document.getElementById('section-title');
+      const amazonJobs = allJobs.filter(j => classifyJob(j) === 'amazon');
+      const aiJobs = allJobs.filter(j => classifyJob(j) === 'ai');
 
       document.getElementById('all-count').textContent = allJobs.length;
       document.getElementById('ai-count').textContent = aiJobs.length;
       document.getElementById('amazon-count').textContent = amazonJobs.length;
 
-      aiGrid.style.display = collapsed.ai ? 'none' : 'grid';
-      amazonGrid.style.display = collapsed.amazon ? 'none' : 'grid';
+      let viewJobs = allJobs;
+      if (currentView === 'ai') {
+        title.textContent = 'OpenClaw / AI Jobs';
+        viewJobs = aiJobs;
+      } else if (currentView === 'amazon') {
+        title.textContent = 'Amazon Jobs';
+        viewJobs = amazonJobs;
+      } else {
+        title.textContent = 'All Jobs';
+      }
 
-      aiGrid.innerHTML = collapsed.ai ? '' : renderCards(aiJobs);
-      amazonGrid.innerHTML = collapsed.amazon ? '' : renderCards(amazonJobs);
-
-      document.getElementById('toggle-ai').textContent = collapsed.ai ? 'Expand AI / OpenClaw' : 'Collapse AI / OpenClaw';
-      document.getElementById('toggle-amazon').textContent = collapsed.amazon ? 'Expand Amazon' : 'Collapse Amazon';
-    }
-
-    function toggleSection(section){
-      collapsed[section] = !collapsed[section];
-      renderSections();
+      mainGrid.innerHTML = renderCards(sortJobs(viewJobs));
     }
 
     function render(items,file){
@@ -248,7 +251,7 @@
       allJobs = [...items];
       status.textContent = `${items.length} jobs loaded. Latest: ${latest}`;
       sourceIndicator.textContent = `Data source: ${sourceLabel}`;
-      renderSections();
+      renderCurrentView();
     }
 
     async function reloadJobs(){
@@ -264,9 +267,10 @@
     }
 
     document.getElementById('refresh-btn').addEventListener('click', reloadJobs);
-    document.getElementById('sort-order').addEventListener('change', renderSections);
-    document.getElementById('toggle-ai').addEventListener('click', () => toggleSection('ai'));
-    document.getElementById('toggle-amazon').addEventListener('click', () => toggleSection('amazon'));
+    document.getElementById('sort-order').addEventListener('change', renderCurrentView);
+    document.getElementById('tab-all').addEventListener('click', () => setActiveTab('all'));
+    document.getElementById('tab-ai').addEventListener('click', () => setActiveTab('ai'));
+    document.getElementById('tab-amazon').addEventListener('click', () => setActiveTab('amazon'));
 
     reloadJobs();
   </script>
