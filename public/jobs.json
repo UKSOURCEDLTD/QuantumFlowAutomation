@@ -1,5 +1,200 @@
 [
   {
+    "title": "AI Full Stack Automation Engineer (API & CRM Integration Specialist)",
+    "budget": "$0",
+    "tags": [
+      "Artificial Intelligence",
+      "Python",
+      "Amazon Web Services",
+      "React",
+      "JavaScript",
+      "Machine Learning",
+      "Node.js",
+      "API Integration"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028622905248095205/",
+    "folder": "AI_Full_Stack_Automation_Engineer_API_CRM_Integrat_2026-03-03",
+    "date": "2026-03-03T00:06:25.910Z",
+    "description": "We are seeking an experienced AI Full Stack Automation Engineer to design, develop, and deploy intelligent automation workflows that integrate AI models, third-party APIs, and CRM platforms. The ideal...",
+    "pdf_url": "/pdfs/AI_Full_Stack_Automation_Engineer_API_CRM_Integrat_2026-03-03.pdf"
+  },
+  {
+    "title": "ML Model Engineer for Customer Lists",
+    "budget": "$0",
+    "tags": [
+      "AI Agent Development",
+      "SAS",
+      "Core ML",
+      "Data Science",
+      "Machine Learning",
+      "Python"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028611413507776446/",
+    "folder": "ML_Model_Engineer_for_Customer_Lists_2026-03-03",
+    "date": "2026-03-02T23:20:46.310Z",
+    "description": "We are seeking an ML Model Engineer to design and deploy a simple but scalable machine learning model that generates dynamic customer lists based on time of purchase and item-level purchase behavior. ...",
+    "pdf_url": "/pdfs/ML_Model_Engineer_for_Customer_Lists_2026-03-03.pdf"
+  },
+  {
+    "title": "Amazon Business Setup & Workflow Expert",
+    "budget": "$0",
+    "tags": [
+      "Amazon",
+      "Virtual Assistance",
+      "Administrative Support"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028599564597356575/",
+    "folder": "Amazon_Business_Setup_Workflow_Expert_2026-03-03",
+    "date": "2026-03-02T22:33:47.889Z",
+    "description": "Job Description:\nWe are looking for an experienced Amazon Business specialist to help us properly set up and optimize our Amazon Business account for our company.\n\nThis is not a basic account setup \u2014 ...",
+    "pdf_url": "/pdfs/Amazon_Business_Setup_Workflow_Expert_2026-03-03.pdf"
+  },
+  {
+    "title": "Agentic AI Engineer (Multi-Agent Systems)",
+    "budget": "$1200",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Python"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028549321842045746/",
+    "folder": "Agentic_AI_Engineer_Multi-Agent_Systems_2026-03-03",
+    "date": "2026-03-02T19:37:18.692Z",
+    "description": "Agentic AI Engineer (Multi-Agent Systems)\n\n\nRemote | Full-Time\n\nI\u2019m hiring an Agentic AI Engineer to build our next-generation Agentic AI platform where autonomous AI agents plan, collaborate, and exe...",
+    "pdf_url": "/pdfs/Agentic_AI_Engineer_Multi-Agent_Systems_2026-03-03.pdf"
+  },
+  {
+    "title": "Setup OpenClaw on Local PC",
+    "budget": "$250",
+    "tags": [],
+    "url": "https://www.upwork.com/jobs/apply/_~022028540582685515710/",
+    "folder": "Setup_OpenClaw_on_Local_PC_2026-03-03",
+    "date": "2026-03-02T18:50:32.025Z",
+    "description": "I am seeking someone to setup OpenClaw on my local PC and show me the basics of use....",
+    "pdf_url": "/pdfs/Setup_OpenClaw_on_Local_PC_2026-03-03.pdf"
+  },
+  {
+    "title": "Senior AI Architect needed for LLM + MCP integration with async backend APIs",
+    "budget": "$0",
+    "tags": [
+      "Artificial Intelligence",
+      "Amazon Web Services",
+      "Python",
+      "Node.js",
+      "SQL",
+      "Software Architecture & Design",
+      "API Integration",
+      "API Development",
+      "Machine Learning"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028521443420432415/",
+    "folder": "Senior_AI_Architect_needed_for_LLM_MCP_integration_2026-03-03",
+    "date": "2026-03-02T17:23:16.454Z",
+    "description": "We are hiring a senior AI systems architect to lead the design and technical coordination of an AI integration project involving large datasets, inefficient third-party APIs, and Model Context Protoco...",
+    "pdf_url": "/pdfs/Senior_AI_Architect_needed_for_LLM_MCP_integration_2026-03-03.pdf"
+  },
+  {
+    "title": "Looking for a Systems Minded Developer to Build a Policy Compliant Content Engine",
+    "budget": "$0",
+    "tags": [
+      "AI Agent Development",
+      "AI Development"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028508073557516095/",
+    "folder": "Looking_for_a_Systems_Minded_Developer_to_Build_a__2026-03-03",
+    "date": "2026-03-02T16:30:09.177Z",
+    "description": "Summary\n\nI am building a semi automated content engine for an Instagram account focused on AI news and trends.\n\nThis is not a growth hack project and it is not a spam automation build.\n\nThe goal is to...",
+    "pdf_url": "/pdfs/Looking_for_a_Systems_Minded_Developer_to_Build_a__2026-03-03.pdf"
+  },
+  {
+    "title": "Teach Me How To Use Openclaw",
+    "budget": "$0",
+    "tags": [],
+    "url": "https://www.upwork.com/jobs/apply/_~022028499055980519358/",
+    "folder": "Teach_Me_How_To_Use_Openclaw_2026-03-03",
+    "date": "2026-03-02T15:54:18.252Z",
+    "description": "I am trying to get into Openclaw, but I find it to be so janky that I cannot get it to actually do anything useful. It can't use the browser. Cron jobs don't. It's constantly crashing... I really don'...",
+    "pdf_url": "/pdfs/Teach_Me_How_To_Use_Openclaw_2026-03-03.pdf"
+  },
+  {
+    "title": "AI Automation Engineer (U.S. Only) \u2014 Run Prompt Files Weekly and Email Reports",
+    "budget": "$0",
+    "tags": [
+      "API Integration",
+      "Cloudflare",
+      "AWS Lambda",
+      "Microsoft 365 Copilot",
+      "Claude"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028357927782815580/",
+    "folder": "AI_Automation_Engineer_US_Only_Run_Prompt_Files_We_2026-03-02",
+    "date": "2026-03-02T09:33:12.788Z",
+    "description": "Description:\nI\u2019m looking for a U.S.-based automation engineer to build a small but important workflow. I already have refined AI prompt files (saved as .txt files in a OneDrive folder). Each file repr...",
+    "pdf_url": "/pdfs/AI_Automation_Engineer_US_Only_Run_Prompt_Files_We_2026-03-02.pdf"
+  },
+  {
+    "title": "Part-Time Technical Sales | Outreach & Pipeline | AI Software Testing Platform",
+    "budget": "$0",
+    "tags": [
+      "Sales Development",
+      "High-Ticket Closing",
+      "B2B Lead Generation",
+      "Business Development",
+      "SaaS"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028331848667378510/",
+    "folder": "Part-Time_Technical_Sales_Outreach_Pipeline_AI_Sof_2026-03-02",
+    "date": "2026-03-02T04:49:49.155Z",
+    "description": "## The Role\n\nPart-time outbound sales contractor for an early-stage AI infrastructure startup.  You will own prospecting, outreach, follow-up, and pipeline management. The founder hosts all technical ...",
+    "pdf_url": "/pdfs/Part-Time_Technical_Sales_Outreach_Pipeline_AI_Sof_2026-03-02.pdf"
+  },
+  {
+    "title": "Claude Automation Setup Specialist",
+    "budget": "$0",
+    "tags": [
+      "Automation",
+      "Marketing Automation",
+      "Email Marketing",
+      "Python",
+      "Lead Generation",
+      "Community Engagement"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022028078262377132878/",
+    "folder": "Claude_Automation_Setup_Specialist_2026-03-02",
+    "date": "2026-03-01T12:02:20.947Z",
+    "description": "We are seeking an experienced professional to assist us in setting up Claude for automating various work functions. The ideal candidate will have a deep understanding of Claude's capabilities and how ...",
+    "pdf_url": "/pdfs/Claude_Automation_Setup_Specialist_2026-03-02.pdf"
+  },
+  {
+    "title": "Full-Stack AI Developer \u2013 Custom AI Chatbot",
+    "budget": "$0",
+    "tags": [
+      "AI Agent Development",
+      "Chatbot Development",
+      "Web Development",
+      "API",
+      "Retrieval Augmented Generation"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022027950144089212354/",
+    "folder": "Full-Stack_AI_Developer_Custom_AI_Chatbot_2026-03-02",
+    "date": "2026-03-01T03:33:10.835Z",
+    "description": "I want to build a custom GPT chatbot that will be capable of doing all the tasks below: \n\u2022\u2060  \u2060AI-powered enterprise assistant that combines intelligent conversations, \n\u2022\u2060  \u2060document-based knowledge re...",
+    "pdf_url": "/pdfs/Full-Stack_AI_Developer_Custom_AI_Chatbot_2026-03-02.pdf"
+  },
+  {
+    "title": "OpenClaw Setup and Training Specialist",
+    "budget": "$0",
+    "tags": [
+      "AI Instruction",
+      "Training"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022027947593625869996/",
+    "folder": "OpenClaw_Setup_and_Training_Specialist_2026-03-02",
+    "date": "2026-03-01T03:23:02.589Z",
+    "description": "We are seeking an experienced professional to assist with the setup and training of OpenClaw. The ideal candidate will be well-versed in the platform and capable of guiding our team through the instal...",
+    "pdf_url": "/pdfs/OpenClaw_Setup_and_Training_Specialist_2026-03-02.pdf"
+  },
+  {
     "title": "People who are using AI tools like OpenClaw or ClaudeCode",
     "budget": "$500",
     "tags": [
@@ -2142,6 +2337,16 @@
     "date": "2026-02-20T04:31:42.177Z",
     "description": "Overview\nI run a B2B AI automation consultancy with a documented, functional waterfall system that converts completed client projects into portfolio case studies, YouTube videos, digital products, and...",
     "pdf_url": "/pdfs/Content_Creation_Distribution_Manager_AI_automatio_2026-02-22.pdf"
+  },
+  {
+    "title": "Fractional Principal Engineer \u2013 AI-Native Engineering Platform (Regulated Fintech)",
+    "budget": "$0",
+    "tags": [],
+    "url": "https://www.upwork.com/jobs/apply/_~022024700166167130343/",
+    "folder": "Fractional_Principal_Engineer_AI-Native_Engineerin_2026-03-02",
+    "date": "2026-02-20T04:19:00.300Z",
+    "description": "We are seeking a hands-on Principal/Staff-level engineer to design and pressure-test the architecture for a secure, AI-enabled development platform layered on top of our existing CI/CD workflows.\n\nSco...",
+    "pdf_url": "/pdfs/Fractional_Principal_Engineer_AI-Native_Engineerin_2026-03-02.pdf"
   },
   {
     "title": "Salesforce Certified Architect",
