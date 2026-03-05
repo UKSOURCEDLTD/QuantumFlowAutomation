@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Task Dashboard</title>
+  <style>
+    body{font-family:Inter,Arial,sans-serif;background:#0b0f14;color:#e8eef5;margin:0;padding:24px}
+    .wrap{max-width:980px;margin:0 auto}
+    h1{margin:0 0 6px;font-size:30px}
+    .muted{color:#9fb0c3;font-size:13px;margin-bottom:18px}
+    .card{background:#121924;border:1px solid #233042;border-radius:12px;padding:14px 16px;margin-bottom:12px}
+    .title{font-size:18px;margin-bottom:8px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+    .pill{padding:4px 8px;border-radius:999px;font-size:12px;border:1px solid #32445b}
+    .ok{background:#123221;border-color:#1f7046;color:#9df0bf}
+    .ip{background:#2f250f;border-color:#8f6a1b;color:#ffd98f}
+    .blk{background:#391818;border-color:#8d3434;color:#ffb0b0}
+    ul{margin:8px 0 0 18px}
+    li{margin:4px 0;color:#d8e1eb}
+    a{color:#7cc4ff}
+    code{background:#0c131d;border:1px solid #22344a;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Quantum Task Dashboard</h1>
+    <div class="muted">Live snapshot • <span id="last-updated">2026-03-05 UTC</span> • Auto-refresh every 60s</div>
+
+    <div class="card">
+      <div class="title">1) Upwork Automation + Deploy</div>
+      <div class="row"><span class="pill ip">In Progress</span><span class="pill blk">Data source blocked by Apify limit</span></div>
+      <ul>
+        <li>Pipeline/deploy flow works.</li>
+        <li>Fresh jobs blocked when usage limit is hit.</li>
+        <li>Next: refresh active token/limit, rerun and verify new timestamps.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="title">2) AI Social Media System</div>
+      <div class="row"><span class="pill ip">In Progress</span></div>
+      <ul>
+        <li>Account framework created under <code>AI Social media/accounts/</code>.</li>
+        <li>Standardized folders include <code>characters</code>, <code>media/pics</code>, <code>media/vids</code>.</li>
+        <li>Next: launch pilots and track weekly winners.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="title">3) Ella Hart Account</div>
+      <div class="row"><span class="pill ip">In Progress</span></div>
+      <ul>
+        <li>Character profile complete.</li>
+        <li>30-day calendar + first 20 scripts done.</li>
+        <li>Next: publish first 7 videos and score 12h/24h metrics.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="title">4) Psychic Sisters Content Ops</div>
+      <div class="row"><span class="pill ip">In Progress</span></div>
+      <ul>
+        <li>Assets organized and archived.</li>
+        <li>Workflow docs + first briefs done (incl. pyjamas brief).</li>
+        <li>Next: shot-by-shot script pack + 7-day publishing batch.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="title">5) Enhanced Memory System</div>
+      <div class="row"><span class="pill ip">In Progress</span></div>
+      <ul>
+        <li>Skill scaffold + API skeleton created at <code>skills/enhanced-memory</code>.</li>
+        <li>Next: bootstrap DB/runtime and enable sync/promote jobs.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="title">6) Google Sheets Automation (gog)</div>
+      <div class="row"><span class="pill blk">Blocked</span></div>
+      <ul>
+        <li>Needs runtime keyring unlock so agent can write sheets.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="title">Quick Links</div>
+      <ul>
+        <li>Upwork dashboard: <a href="https://upwork-jobs-report-public.vercel.app">upwork-jobs-report-public.vercel.app</a></li>
+        <li>Task markdown source: <code>/home/clawd/.openclaw/workspace/TASK-DASHBOARD.md</code></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    function fmtUTC(d){
+      const pad=n=>String(n).padStart(2,'0');
+      return `${d.getUTCFullYear()}-${pad(d.getUTCMonth()+1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} UTC`;
+    }
+    const el=document.getElementById('last-updated');
+    function tick(){ el.textContent = fmtUTC(new Date()); }
+    tick();
+    setInterval(tick, 1000);
+    setInterval(()=>location.reload(), 60000);
+  </script>
+</body>
+</html>
