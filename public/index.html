@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantumFlow — Upwork Pipeline</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --bg-card: #121922;
+      --bg-hover: #162030;
+      --border: #223041;
+      --accent: #00e87a;
+      --accent-dim: rgba(0,232,122,0.1);
+      --accent-border: rgba(0,232,122,0.25);
+      --text: #e6edf3;
+      --muted: #9fb0c3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 0 32px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-size: 17px; font-weight: 700; letter-spacing: -0.3px; }
+    .logo em { color: var(--accent); font-style: normal; }
+    .header-right { font-size: 12px; color: var(--muted); text-align: right; line-height: 1.5; }
+
+    /* ── Main ── */
+    main { max-width: 1440px; margin: 0 auto; padding: 32px; }
+
+    /* ── Stats ── */
+    .stats {
+      display: flex; gap: 0; margin-bottom: 28px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden;
+    }
+    .stat {
+      flex: 1; padding: 18px 24px; border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-val { font-size: 26px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 4px; }
+    .stat-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Controls ── */
+    .controls { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; align-items: center; }
+    .search-wrap { flex: 1; min-width: 260px; position: relative; }
+    .search-wrap input {
+      width: 100%; background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--text); padding: 10px 14px; border-radius: 8px; font-size: 13px;
+      outline: none; transition: border-color 0.15s;
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .pill {
+      padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--bg-card); color: var(--muted); font-size: 12px;
+      cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    }
+    .pill:hover { border-color: var(--accent-border); color: var(--accent); }
+    .pill.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    /* ── Status bar ── */
+    .status-bar {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 22px;
+      font-size: 12px; color: var(--muted);
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* ── Grid ── */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 14px; }
+
+    /* ── Card ── */
+    .card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 18px; display: flex; flex-direction: column; gap: 10px;
+      transition: border-color 0.15s;
+    }
+    .card:hover { border-color: var(--accent-border); }
+
+    .card-title a { font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
+    .card-title a:hover { color: var(--accent); }
+
+    .card-meta { display: flex; justify-content: space-between; align-items: center; }
+    .budget { font-size: 14px; font-weight: 700; color: var(--accent); }
+    .date-str { font-size: 11px; color: var(--muted); }
+
+    .desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); color: var(--muted); }
+
+    /* ── Source badge ── */
+    .source-badge {
+      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 2px 8px; border-radius: 4px;
+    }
+    .source-openclaw { background: rgba(0,232,122,0.12); color: var(--accent); border: 1px solid rgba(0,232,122,0.3); }
+    .source-amazon { background: rgba(255,165,0,0.12); color: #ffaa33; border: 1px solid rgba(255,165,0,0.3); }
+
+    /* ── Application block ── */
+    .app-block { border-top: 1px solid var(--border); padding-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+
+    .app-field-label {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--muted); margin-bottom: 5px; font-weight: 600;
+    }
+    .app-title-box {
+      font-size: 13px; font-weight: 600; color: var(--text);
+      padding: 10px 12px; border-radius: 6px; line-height: 1.4;
+      background: var(--accent-dim); border: 1px solid var(--accent-border);
+    }
+    .app-body-box {
+      font-size: 12px; color: var(--text); line-height: 1.65;
+      padding: 10px 12px; border-radius: 6px;
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      max-height: 130px; overflow-y: auto;
+      white-space: pre-wrap; font-family: inherit;
+    }
+    .app-body-box::-webkit-scrollbar { width: 4px; }
+    .app-body-box::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .no-app {
+      font-size: 12px; color: var(--muted); text-align: center;
+      padding: 10px; border: 1px dashed var(--border); border-radius: 6px; font-style: italic;
+    }
+
+    /* ── Buttons ── */
+    .actions { display: flex; gap: 7px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 11px; border-radius: 6px; border: 1px solid var(--border);
+      color: var(--text); background: rgba(255,255,255,0.03);
+      font-size: 11px; cursor: pointer; text-decoration: none;
+      transition: all 0.15s; white-space: nowrap; font-family: inherit;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+    .btn-accent { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+    .btn.ok { border-color: #4caf50; color: #4caf50; }
+
+    /* ── Empty ── */
+    .empty { grid-column: 1/-1; text-align: center; padding: 80px 20px; color: var(--muted); }
+    .empty-icon { font-size: 40px; margin-bottom: 12px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border); margin-top: 60px;
+      padding: 20px 32px; text-align: center; font-size: 12px; color: var(--muted);
+    }
+    footer em { color: var(--accent); font-style: normal; font-weight: 600; }
+
+    @media(max-width: 640px) {
+      main { padding: 16px; }
+      header { padding: 0 16px; }
+      .stats { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><em>Quantum</em>Flow — Upwork Pipeline</div>
+  <div class="header-right">
+    <div id="hdr-refresh"></div>
+    <div id="hdr-source"></div>
+  </div>
+</header>
+
+<main>
+  <div class="stats">
+    <div class="stat"><div class="stat-val" id="s-total">—</div><div class="stat-lbl">Total Jobs</div></div>
+    <div class="stat"><div class="stat-val" id="s-openclaw">—</div><div class="stat-lbl">OpenClaw</div></div>
+    <div class="stat"><div class="stat-val" id="s-amazon">—</div><div class="stat-lbl">Amazon</div></div>
+    <div class="stat"><div class="stat-val" id="s-ready">—</div><div class="stat-lbl">Applications Ready</div></div>
+    <div class="stat"><div class="stat-val" id="s-latest">—</div><div class="stat-lbl">Latest Posted</div></div>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Search jobs, skills, keywords..." oninput="filter()" />
+    </div>
+    <button class="pill active" onclick="setF('all',this)">All</button>
+    <button class="pill" onclick="setF('openclaw',this)">OpenClaw</button>
+    <button class="pill" onclick="setF('amazon',this)">Amazon</button>
+    <button class="pill" onclick="setF('ready',this)">Application Ready</button>
+    <button class="pill" onclick="setF('budget',this)">Has Budget</button>
+    <a class="btn" href="/jobs.json" target="_blank">JSON</a>
+    <button class="btn" onclick="reload()">↺ Refresh</button>
+  </div>
+
+  <div class="status-bar">
+    <div class="dot"></div>
+    <span id="status">Loading...</span>
+  </div>
+
+  <div class="grid" id="grid">
+    <div class="empty"><div class="empty-icon">⚡</div><div>Loading jobs...</div></div>
+  </div>
+</main>
+
+<footer>
+  <em>Quantum</em>Flow Automation Ltd &nbsp;•&nbsp; AI Agency &nbsp;•&nbsp; Burnley, UK &nbsp;•&nbsp; hello@quantumflow.ai
+</footer>
+
+<script>
+  const SUPABASE_URL = 'https://vcjhompqxlklhibuyosn.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_RAt-BI9SnN0s5DOX4Crkwg_QacwnAm8';
+  const FILES = ['/upwork-jobs-report.json', '/jobs.json'];
+
+  // Amazon ecommerce tags (excludes AWS/cloud)
+  const AMAZON_TAGS = new Set([
+    'amazon','amazon fba','amazon seller central','amazon listing optimization',
+    'amazon ppc','amazon advertising','amazon seo','amazon store','amazon vendor',
+    'amazon marketing','amazon product listing','amazon account management',
+    'amazon seller','fba','product listing','amazon brand registry',
+    'product research','amazon marketplace','ecommerce listing',
+    'amazon review','helium 10','jungle scout','keepa','amazon analytics'
+  ]);
+  const AMAZON_TITLE_KW = ['amazon fba','amazon seller','amazon ppc','amazon seo','amazon listing','amazon store','fba seller','amazon account'];
+
+  function isAmazon(j) {
+    const tags = (j.tags || []).map(t => t.toLowerCase());
+    if (tags.some(t => AMAZON_TAGS.has(t))) return true;
+    const title = (j.title || '').toLowerCase();
+    return AMAZON_TITLE_KW.some(k => title.includes(k));
+  }
+
+  let all = [], activeF = 'all';
+
+  async function loadData() {
+    const t = Date.now();
+    if (SUPABASE_URL) {
+      try {
+        const r = await fetch(`${SUPABASE_URL}/rest/v1/upwork_jobs?select=*&order=date.desc&limit=300&t=${t}`, {
+          cache: 'no-store',
+          headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
+        });
+        if (r.ok) {
+          const d = await r.json();
+          if (Array.isArray(d) && d.length) return { src: 'Supabase (live)', data: d };
+        }
+      } catch (_) {}
+    }
+    for (const f of FILES) {
+      try {
+        const r = await fetch(`${f}?t=${t}`, { cache: 'no-store' });
+        if (r.ok) { const d = await r.json(); return { src: f, data: d }; }
+      } catch (_) {}
+    }
+    throw new Error('No data available');
+  }
+
+  function fmt(iso) {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    return isNaN(d) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function copy(txt, btn) {
+    navigator.clipboard.writeText(txt).then(() => {
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied';
+      btn.classList.add('ok');
+      setTimeout(() => { btn.textContent = orig; btn.classList.remove('ok'); }, 2000);
+    });
+  }
+
+  function setF(f, el) {
+    activeF = f;
+    document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    filter();
+  }
+
+  function filter() {
+    const q = document.getElementById('search').value.toLowerCase();
+    let rows = all;
+    if (q) rows = rows.filter(j =>
+      (j.title||'').toLowerCase().includes(q) ||
+      (j.description||'').toLowerCase().includes(q) ||
+      (j.tags||[]).some(t => t.toLowerCase().includes(q))
+    );
+    if (activeF === 'openclaw') rows = rows.filter(j => !isAmazon(j));
+    if (activeF === 'amazon') rows = rows.filter(j => isAmazon(j));
+    if (activeF === 'ready') rows = rows.filter(j => j.application_title || j.application_body);
+    if (activeF === 'budget') rows = rows.filter(j => j.budget && j.budget !== '$0');
+    render(rows);
+  }
+
+  function render(jobs) {
+    const el = document.getElementById('grid');
+    if (!jobs.length) {
+      el.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><div>No jobs match your filters.</div></div>`;
+      return;
+    }
+    el.innerHTML = jobs.map((j, i) => {
+      const budget = j.budget && j.budget !== '$0' ? j.budget : 'Budget TBC';
+      const tags = (j.tags||[]).slice(0,7).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+      const desc = (j.description||'').slice(0,200) + ((j.description||'').length > 200 ? '…' : '');
+      const hasApp = j.application_title || j.application_body;
+      const amazon = isAmazon(j);
+      const badge = amazon
+        ? `<span class="source-badge source-amazon">Amazon</span>`
+        : `<span class="source-badge source-openclaw">OpenClaw</span>`;
+
+      const appBlock = hasApp ? `
+        <div class="app-block">
+          ${j.application_title ? `
+            <div>
+              <div class="app-field-label">Application Title</div>
+              <div class="app-title-box" id="at${i}">${esc(j.application_title)}</div>
+            </div>
+            <button class="btn btn-accent" onclick="copy(document.getElementById('at${i}').textContent,this)">Copy Title</button>
+          ` : ''}
+          ${j.application_body ? `
+            <div>
+              <div class="app-field-label">Cover Letter</div>
+              <div class="app-body-box" id="ab${i}">${esc(j.application_body)}</div>
+            </div>
+            <button class="btn btn-accent" onclick="copy(document.getElementById('ab${i}').textContent,this)">Copy Cover Letter</button>
+          ` : ''}
+        </div>` : `
+        <div class="app-block">
+          <div class="no-app">Application not yet generated — run enrich_jobs.py to generate</div>
+        </div>`;
+
+      return `
+        <div class="card">
+          <div class="card-title"><a href="${j.url||'#'}" target="_blank" rel="noreferrer">${esc(j.title||'Untitled')}</a></div>
+          <div>${badge}</div>
+          <div class="card-meta">
+            <span class="budget">${esc(budget)}</span>
+            <span class="date-str">${fmt(j.date)}</span>
+          </div>
+          <div class="desc">${esc(desc)}</div>
+          <div class="tags">${tags}</div>
+          ${appBlock}
+          <div class="actions">
+            <a class="btn" href="${j.url||'#'}" target="_blank" rel="noreferrer">View on Upwork ↗</a>
+            ${j.pdf_url ? `<a class="btn" href="${j.pdf_url}" target="_blank">PDF</a>` : ''}
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  function esc(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  async function reload() {
+    document.getElementById('status').textContent = 'Refreshing...';
+    try {
+      const { src, data } = await loadData();
+      all = data;
+
+      const amazonJobs = data.filter(isAmazon);
+      document.getElementById('s-total').textContent = data.length;
+      document.getElementById('s-openclaw').textContent = data.length - amazonJobs.length;
+      document.getElementById('s-amazon').textContent = amazonJobs.length;
+      document.getElementById('s-ready').textContent = data.filter(j => j.application_title || j.application_body).length;
+      document.getElementById('s-latest').textContent = data[0]?.date ? fmt(data[0].date) : '—';
+      document.getElementById('status').textContent = `${data.length} jobs loaded`;
+      document.getElementById('hdr-source').textContent = `Source: ${src}`;
+
+      try {
+        const m = await fetch(`/dashboard-refresh.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (m.ok) {
+          const { refreshedAt } = await m.json();
+          if (refreshedAt) document.getElementById('hdr-refresh').textContent = `Last refresh: ${fmt(refreshedAt)}`;
+        }
+      } catch (_) {}
+
+      filter();
+    } catch (err) {
+      document.getElementById('status').textContent = 'Error: ' + err.message;
+    }
+  }
+
+  reload();
+</script>
+</body>
+</html>
