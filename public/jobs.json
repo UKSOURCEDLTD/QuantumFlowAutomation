@@ -1,5 +1,75 @@
 [
   {
+    "title": "Ai Enablement and Software - Picture Framing Company",
+    "budget": "$0",
+    "tags": [
+      "AI Development",
+      "API Development",
+      "React",
+      "QuickBooks Online API",
+      "Visualization"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022033005351882794896/",
+    "folder": "Ai_Enablement_and_Software_-_Picture_Framing_Compa_2026-03-15",
+    "date": "2026-03-15T02:20:42.678Z",
+    "description": "Description\n\nWe are a premium custom framing company building an internal software platform to modernize and automate our business operations.\n\nToday our workflow is fragmented across Excel, QuickBook...",
+    "pdf_url": "/pdfs/Ai_Enablement_and_Software_-_Picture_Framing_Compa_2026-03-15.pdf"
+  },
+  {
+    "title": "Full-Stack Developer Needed for Social Content Creation Application",
+    "budget": "$0",
+    "tags": [
+      "Web Development",
+      "Full-Stack Development",
+      "AI App Development",
+      "Database Architecture"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022032999270629444329/",
+    "folder": "Full-Stack_Developer_Needed_for_Social_Content_Cre_2026-03-15",
+    "date": "2026-03-15T02:19:42.726Z",
+    "description": "We are building an web application that lets users create and share short animated content as GIFs. The core experience is a browser-based editor with real-time preview and one-click export. And we al...",
+    "pdf_url": "/pdfs/Full-Stack_Developer_Needed_for_Social_Content_Cre_2026-03-15.pdf"
+  },
+  {
+    "title": "Senior DevOps Engineer - AWS/Terraform/EKS/CI - 60 Day Contract Full Time",
+    "budget": "$0",
+    "tags": [
+      "Amazon Web Services",
+      "macOS",
+      "Git",
+      "DevOps",
+      "CI/CD",
+      "Docker",
+      "CI/CD Platform",
+      "Deployment Automation"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022032898850832901080/",
+    "folder": "Senior_DevOps_Engineer_-_AWSTerraformEKSCI_-_60_Da_2026-03-15",
+    "date": "2026-03-14T19:17:32.427Z",
+    "description": "Overview\nWe are looking for a senior DevOps contractor based in the United States to support our engineering team for the next ~60 days (full-time, 40 hours/week).\n\nThis role is focused on CI/CD autom...",
+    "pdf_url": "/pdfs/Senior_DevOps_Engineer_-_AWSTerraformEKSCI_-_60_Da_2026-03-15.pdf"
+  },
+  {
+    "title": "Full-Stack Developer (Firebase / Next.js / Vercel) \u2013 Production Launch for sports media company",
+    "budget": "$0",
+    "tags": [
+      "Vercel",
+      "WordPress",
+      "React",
+      "Next.js",
+      "Firebase Cloud Firestore",
+      "Node.js",
+      "API Integration",
+      "Firebase",
+      "API"
+    ],
+    "url": "https://www.upwork.com/jobs/apply/_~022032870318762035945/",
+    "folder": "Full-Stack_Developer_Firebase_Nextjs_Vercel_Produc_2026-03-15",
+    "date": "2026-03-14T17:24:26.803Z",
+    "description": "We\u2019re launching a technical product and need an experienced full-stack developer to finalize deployment architecture, secure our APIs, and prepare the system for production.\n\nThis is a short, clearly ...",
+    "pdf_url": "/pdfs/Full-Stack_Developer_Firebase_Nextjs_Vercel_Produc_2026-03-15.pdf"
+  },
+  {
     "title": "CMS Website Developer Needed for Minor Fixes",
     "budget": "$0",
     "tags": [
@@ -4866,38 +4936,5 @@
     "date": "2026-02-13T08:51:17.265Z",
     "description": "We are looking for a highly experienced OpenClaw AI specialist to build and manage a fully automated inbound lead follow-up system using OpenClaw.\n\nThis is not a beginner role, you must already have h...",
     "pdf_url": "/pdfs/OpenClaw_AI_Specialist_-_SMS_Voice_Automation_for__2026-02-16.pdf"
-  },
-  {
-    "title": "AI Engineer to Build Claude\u2011Driven Design Automation Platform",
-    "budget": "$5,000.00",
-    "tags": [
-      "JavaScript",
-      "TypeScript",
-      "PostgreSQL",
-      "Python",
-      "Node.js",
-      "Artificial Intelligence"
-    ],
-    "url": "https://www.upwork.com/jobs/Engineer-Build-Claude-Driven-Design-Automation-Platform_~022022135544244052960/?referrer_url_path=/nx/search/jobs/",
-    "folder": "AI_Engineer_to_Build_ClaudeDriven_Design_Automatio_2026-02-16",
-    "date": "2026-02-13T02:27:38.225Z",
-    "description": "We are a performance marketing agency building an internal platform to automate advertising banner design in Figma. The goal is to combine Anthropic Claude Skills with Figma\u2019s Model Context Protocol (...",
-    "pdf_url": "/pdfs/AI_Engineer_to_Build_ClaudeDriven_Design_Automatio_2026-02-16.pdf"
-  },
-  {
-    "title": "AI Automation Using Make.com for Financial Data",
-    "budget": "$0",
-    "tags": [
-      "AI Agent Development",
-      "Claude",
-      "Automation",
-      "Make.com",
-      "API"
-    ],
-    "url": "https://www.upwork.com/jobs/apply/_~022022035556393516893/",
-    "folder": "AI_Automation_Using_Makecom_for_Financial_Data_2026-02-26",
-    "date": "2026-02-12T22:51:03.399Z",
-    "description": "What We Need\nBuild a simple automated financial reporting workflow using Make.com + Claude API. This is a paid test project ($1000-$1500) to see if you can handle our bigger automation work.\n\nThe Task...",
-    "pdf_url": "/pdfs/AI_Automation_Using_Makecom_for_Financial_Data_2026-02-26.pdf"
   }
 ]
